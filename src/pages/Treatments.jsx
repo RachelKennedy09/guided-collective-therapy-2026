@@ -30,8 +30,8 @@ export default function Treatments() {
           We are happy to help you connect to someone that will help you apply.
         </p>
 
-        {/* --- Small service cards / overview --- */}
-        {/* <div className="treatment-grid">
+        {/* --- Small service cards / overview ---  */}
+        <div className="treatment-grid">
           <div className="treatment-card">
             <h3>Ketamine-Assisted Therapy</h3>
             <p>
@@ -78,7 +78,7 @@ export default function Treatments() {
               View therapy & group details
             </a>
           </div>
-        </div>  */}
+        </div>
 
         {/* --- Full details (your original accordion HTML, JSX-ified) --- */}
         <div className="accordion">

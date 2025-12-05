@@ -29,15 +29,10 @@ export default function Home() {
           <div className="hero-with-about">
             <h1>Guided Therapy Collective</h1>
             <p className="hero-subtitle">We're gald you're here.</p>
-            <p className="hero-about">
-              We strive to offer a safe space in which, together, we can seek a
-              deeper connection with the self. Here, you can explore what you
-              may be seeking, be that reduced suffering, growth, understanding,
-              or healing.
-            </p>
-            <Link to="/treatments" className="btn hero-btn">
+
+            {/* <Link to="/treatments" className="btn hero-btn">
               Learn more about Guided
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -66,9 +61,12 @@ export default function Home() {
             psychedelics and are grateful these medicines are now becoming more
             accessible as one avenue to help with mental health conditions.
           </p>
+            <Link to="/treatments" className="btn hero-btn">
+              Learn more about Guided
+            </Link>
         </div>
       </section>
-
+ 
       {/* HOME: TREATMENT OVERVIEW */}
       <section className="home-section">
         <div className="home-section-inner">
@@ -78,7 +76,12 @@ export default function Home() {
             integrative approaches that combine medication, psychotherapy, and
             nervous-system support.
           </p>
-
+           <Link to="/treatments" className="text-link">
+              Read full treatment descriptions →
+            </Link>
+          </div>
+          </section>
+ {/*
           <div className="treatment-grid">
             <article className="treatment-card">
               <h3>Ketamine-assisted psychotherapy (KAP)</h3>
@@ -170,15 +173,15 @@ export default function Home() {
                 Learn More
               </Link>
             </article>
-          </div>
+          </div> */}
 
-          <div className="home-section-cta">
+          {/* <div className="home-section-cta">
             <Link to="/treatments" className="text-link">
               Read full treatment descriptions →
             </Link>
-          </div>
-        </div>
-      </section>
+          </div> */}
+        {/* </div>
+      </section> */}
 
       {/* HOME: TEAM PREVIEW */}
       <section className="home-section">
@@ -283,8 +286,6 @@ export default function Home() {
             <a href="#">Disclaimer</a>
           </nav>
         </div>
-
-  
       </footer>
     </>
   );

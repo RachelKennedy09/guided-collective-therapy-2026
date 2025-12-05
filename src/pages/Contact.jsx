@@ -39,7 +39,9 @@ export default function Contact() {
 
           <div className="field">
             <label htmlFor="name">Name</label>
-            <span>How would you like us to address you?</span>
+            <span>
+              How would you like us to address you? What are your pronouns? 
+            </span>
             <input id="name" name="name" type="text" required />
           </div>
 
@@ -53,15 +55,11 @@ export default function Contact() {
             <label htmlFor="reason">Reason for reaching out</label>
             <select id="reason" name="reason" required>
               <option value="">Select an option</option>
-              <option value="personal-care">
-                I&apos;m seeking care for myself
-              </option>
+              <option value="personal-care">I'm seeking care for myself</option>
               <option value="loved-one">
-                I&apos;m reaching out for a loved one
+                I'm reaching out for a loved one
               </option>
-              <option value="professional">
-                I&apos;m a clinician / provider
-              </option>
+              <option value="professional">I'm a clinician / provider</option>
               <option value="other">Something else</option>
             </select>
           </div>

@@ -252,6 +252,9 @@ a {
   margin: 0.75rem 0 1rem;
   color: #f8f6f2;
   font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .hero-about {
@@ -261,6 +264,13 @@ a {
   margin: 0 0 1.75rem;
 }
 
+.about-text {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 .hero-btn {
   margin-top: 0.25rem;
 }
@@ -819,6 +829,11 @@ a {
 .home-section {
   padding: 3rem 1.5rem;
   background: var(--beige-2);
+  text-align: center; /* centers text */
+  display: flex; /* allow centering inside */
+  flex-direction: column;
+  align-items: center; /* centers horizontally */
+  justify-content: center;
 }
 
 .home-section:nth-of-type(even) {
@@ -828,6 +843,11 @@ a {
 .home-section-inner {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center; /* centers text */
+  display: flex; /* allow centering inside */
+  flex-direction: column;
+  align-items: center; /* centers horizontally */
+  justify-content: center;
 }
 
 .home-section h2 {
@@ -894,6 +914,11 @@ a {
   box-shadow: 0 4px 10px var(--elev-1);
   border: 1px solid var(--stroke);
   text-align: center;
+  text-align: center; /* centers text */
+  display: flex; /* allow centering inside */
+  flex-direction: column;
+  align-items: center; /* centers horizontally */
+  justify-content: center;
 }
 
 .team-avatar {
