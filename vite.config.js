@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/guided-collective-therapy-2026/",
+  base: "/guided-collective-therapy-2026/", // 👈 EXACT repo name part in URL
 });
