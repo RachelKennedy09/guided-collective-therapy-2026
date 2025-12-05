@@ -12,7 +12,7 @@ import Contact from "./pages/Contact.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* IMPORTANT: basename MUST match your repo path */}
+    {/* IMPORTANT: must match GitHub repo name path */}
     <BrowserRouter basename="/guided-collective-therapy-2026/">
       <AppLayout>
         <Routes>
