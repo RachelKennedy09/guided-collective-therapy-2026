@@ -1,13 +1,8 @@
-// src/components/AppLayout.jsx
-import { useState } from "react";
+import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleToggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -15,27 +10,27 @@ export default function AppLayout() {
     <>
       <header className="site-header">
         <nav className="navbar">
+          {/* Logo */}
           <div className="logo">
-            {/* logo stays white due to .logo a in CSS */}
             <NavLink to="/" onClick={closeMenu}>
               guided
             </NavLink>
           </div>
 
-          {/* Hamburger button (shown on mobile via CSS) */}
+          {/* Hamburger button (mobile) */}
           <button
             className="menu-toggle"
             type="button"
-            onClick={handleToggleMenu}
             aria-label="Toggle navigation"
             aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
           >
             <span className="bar" />
             <span className="bar" />
             <span className="bar" />
           </button>
 
-          {/* Nav links container */}
+          {/* Nav links */}
           <ul className={`nav-links ${menuOpen ? "is-open" : ""}`}>
             <li>
               <NavLink to="/" onClick={closeMenu}>
@@ -61,10 +56,25 @@ export default function AppLayout() {
         </nav>
       </header>
 
-      {/* Page content */}
+      {/* Main content area */}
       <main>
         <Outlet />
       </main>
+
+      {/* Footer – keep your existing flags/treaty content here */}
+      <footer className="site-footer">
+        <div className="footer-links">
+          <a href="#top">Back to top</a>
+        </div>
+        <div className="footer-flags">
+          <img
+            src="/public/images/EveryChildMatters.png"
+            alt="Every Child Matters"
+          />
+          {/* replace with your real image paths or use /images/... from public */}
+        </div>
+        <p className="footer-treaty">{/* your treaty statement text here */}</p>
+      </footer>
     </>
   );
 }
