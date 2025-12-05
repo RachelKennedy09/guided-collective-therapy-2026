@@ -1,4 +1,5 @@
-// src/pages/Contact.jsx
+import React from "react";
+
 export default function Contact() {
   return (
     <section
@@ -6,103 +7,91 @@ export default function Contact() {
       style={{ "--bg-image": "url('/images/hero_background_web.jpg')" }}
     >
       <div className="section-card">
-        <h1>Contact</h1>
+        <h1>Contact & referrals</h1>
+
         <p className="contact-intro">
-          Please share your email and we will reach out.{" "}
-          <strong>Do not include any personal health information.</strong>
+          If you’re curious about ketamine-assisted psychotherapy, wondering
+          whether you might qualify for psychedelic-assisted treatments through
+          Canada’s Special Access Program, or seeking support for a loved one,
+          we’d be happy to connect.
+        </p>
+
+        <p className="contact-privacy">
+          Please avoid sending urgent or highly detailed medical information by
+          email. This form is for general inquiries only. We’ll follow up with
+          next steps, including how to share referrals or records securely.
         </p>
 
         <form
           id="contact-form"
-          action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+          name="guided-contact"
           method="POST"
-          noValidate
+          data-netlify="true"
+          netlify-honeypot="bot-field"
         >
-          {/* Name */}
-          <label className="field">
-            <span>Name</span>
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
+          {/* Netlify config */}
+          <input type="hidden" name="form-name" value="guided-contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
 
-          {/* Place of residence */}
-          <label className="field">
-            <span>Place of residence</span>
-            <input
-              type="text"
-              name="location"
-              placeholder="City / region (e.g., Prince George, BC)"
-            />
-          </label>
+          <div className="field">
+            <label htmlFor="name">Name</label>
+            <span>How would you like us to address you?</span>
+            <input id="name" name="name" type="text" required />
+          </div>
 
-          {/* Service of interest */}
-          <label className="field">
-            <span>Service you’re inquiring about</span>
-            <select name="service" required>
-              <option value="">Please select an option</option>
-              <option value="Ketamine-Assisted Therapy">
-                Ketamine-Assisted Therapy
+          <div className="field">
+            <label htmlFor="email">Email</label>
+            <span>We’ll only use this to respond to your inquiry.</span>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div className="field">
+            <label htmlFor="reason">Reason for reaching out</label>
+            <select id="reason" name="reason" required>
+              <option value="">Select an option</option>
+              <option value="personal-care">
+                I&apos;m seeking care for myself
               </option>
-              <option value="Psilocybin-Assisted Therapy (via SAP)">
-                Psilocybin-Assisted Therapy (via Special Access Program)
+              <option value="loved-one">
+                I&apos;m reaching out for a loved one
               </option>
-              <option value="MDMA-Assisted Therapy (via SAP)">
-                MDMA-Assisted Therapy (via Special Access Program)
+              <option value="professional">
+                I&apos;m a clinician / provider
               </option>
-              <option value="Couples Therapy">Couples Therapy</option>
-              <option value="Group Psychodynamic Therapy">
-                Group Psychodynamic Therapy
-              </option>
-              <option value="Individual Psychodynamic Therapy">
-                Individual Psychodynamic Therapy
-              </option>
-              <option value="Circle of Security Parenting Group">
-                Circle of Security Parenting Group
-              </option>
-              <option value="General Outpatient / Psychotherapy">
-                General Outpatient / Psychotherapy
-              </option>
-              <option value="Exploring options / not yet sure">
-                I&apos;m exploring options / not yet sure
-              </option>
+              <option value="other">Something else</option>
             </select>
-          </label>
+          </div>
 
-          {/* Email */}
-          <label className="field">
-            <span>Email</span>
-            <input
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              required
+          <div className="field">
+            <label htmlFor="message">Anything else you’d like us to know</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              style={{ resize: "vertical", padding: "0.75rem 0.9rem" }}
             />
-          </label>
+          </div>
 
-          {/* Honeypot + subject */}
-          <input type="text" name="_honey" style={{ display: "none" }} />
-          <input
-            type="hidden"
-            name="_subject"
-            value="Guided — Contact Request"
-          />
-
-          {/* Consent */}
-          <label className="consent">
-            <input type="checkbox" required />I agree to be contacted by email
-            and will not include personal health information online.
-          </label>
+          <div className="consent">
+            <input id="consent" name="consent" type="checkbox" required />
+            <label htmlFor="consent">
+              I understand this form is not for emergencies and does not
+              establish an immediate treatment relationship.
+            </label>
+          </div>
 
           <button type="submit" className="btn">
-            Request an email back
+            Submit
           </button>
 
-          {/* You can add a React status message later if you want */}
+          <p className="form-status">
+            We aim to respond within a few business days.
+          </p>
         </form>
-
-        <p className="contact-privacy">
-          We do not store medical information on this website. Appointment
-          details are handled securely offline.
-        </p>
       </div>
     </section>
   );

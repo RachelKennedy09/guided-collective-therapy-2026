@@ -31,6 +31,7 @@ function TeamMember({ name, title, imgSrc, children }) {
 export default function Team() {
   return (
     <>
+      {/* Intro section at top of page */}
       <section
         className="about"
         style={{ "--bg-image": "url('/images/hero_background_web.jpg')" }}
@@ -45,6 +46,7 @@ export default function Team() {
         </div>
       </section>
 
+      {/* Bios using the same layout + background */}
       <section id="bios" className="bios">
         <TeamMember
           name="Dr. Christine Kennedy, MD, FRCPC, Psychiatry"

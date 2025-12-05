@@ -1,48 +1,94 @@
-// src/pages/Treatments.jsx
+import React from "react";
+
 export default function Treatments() {
   return (
     <section
-      id="services"
       className="services"
       style={{ "--bg-image": "url('/images/hero_background_web.jpg')" }}
     >
       <div className="section-card">
-        <h1>Guided Services</h1>
+        <h1>Treatments & services</h1>
         <p>
-          We offer psychedelic assisted therapy for a variety of mental health diagnoses. However
-          currently only Ketamine is available without requiring special access from Health Canada.
-          Psilocybin and MDMA are available for those that qualify for these treatments through Canada&apos;s
-          <br />
-          <br />
-          <a
-            className="sap-link"
-            href="https://www.canada.ca/en/health-canada/services/drugs-health-products/special-access/drugs.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Special Access Program (opens in a new tab)"
-          >
-            Special Access Program
-          </a>
-          .
-          <br />
-          <br />
-          We are happy to help you connect to someone that will help you apply.
+          Every person’s path is different. Below is a general outline of how we
+          work with ketamine and related therapies. Final plans are always
+          tailored to your needs, medical history, and support system.
         </p>
 
         <div className="accordion">
-          {/* All your <details class="service"> blocks go here exactly as in your HTML,
-              just change class -> className. I won't paste the whole thing again to keep this shorter. */}
-        </div>
+          <details className="service" open>
+            <summary>Ketamine-assisted psychotherapy (KAP)</summary>
+            <div className="service-content">
+              <h3>Who this may help</h3>
+              <ul>
+                <li>Depression that has not fully responded to medication</li>
+                <li>PTSD and complex trauma</li>
+                <li>Anxiety and mood disorders</li>
+              </ul>
 
-        <p>
-          <i>
-            <b>Please note</b>
-          </i>{" "}
-          treatment may be partially covered by MSP if you have a doctor&apos;s referral. Private health
-          insurance companies may cover parts of your treatment. As we practice under the supervision of a
-          psychiatrist we are able to offer the actual medicine sessions at a much lower cost than other
-          clinics if a family doctor has sent us a referral.
-        </p>
+              <h3>What to expect</h3>
+              <ul>
+                <li>Initial psychiatric assessment and safety screening</li>
+                <li>Preparation sessions with your therapist</li>
+                <li>
+                  Medicine sessions in a calm, medically supervised setting
+                </li>
+                <li>Integration sessions to help you apply insights</li>
+              </ul>
+
+              <p className="price">
+                Fees depend on session length and whether MSP / insurance is
+                involved. We will review this with you before starting.
+              </p>
+            </div>
+          </details>
+
+          <details className="service">
+            <summary>Preparation & integration therapy</summary>
+            <div className="service-content">
+              <p>
+                These sessions focus on resourcing, nervous-system regulation,
+                and meaning-making before and after medicine work — whether
+                you’re working with us or another clinic.
+              </p>
+
+              <h3>Examples</h3>
+              <ul>
+                <li>Clarifying intentions and boundaries</li>
+                <li>Planning support for the days after treatment</li>
+                <li>
+                  Working with imagery, themes, or emotions that arise in
+                  sessions
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details className="service">
+            <summary>Consultation, referrals & SAP support</summary>
+            <div className="service-content">
+              <p>
+                For some therapies, like psilocybin or MDMA, access may be
+                through Health Canada’s Special Access Program (SAP). We can
+                help you understand whether this is appropriate and connect you
+                with providers who offer those treatments.
+              </p>
+
+              <p>
+                Learn more about SAP on Health Canada’s website or reach out to
+                us if you’d like support navigating options.
+              </p>
+
+              <a
+                href="https://www.canada.ca/en/health-canada/services/drugs-medication/special-access/drugs.html"
+                target="_blank"
+                rel="noreferrer"
+                className="sap-link"
+              >
+                Read about the Special Access Program
+              </a>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
   );
