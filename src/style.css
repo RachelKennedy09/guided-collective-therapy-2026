@@ -82,9 +82,9 @@ a {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: normal;
-  color: var(--green);
   text-transform: lowercase;
   letter-spacing: 0.6rem;
+  color: #fff; /* ← make logo white again */
 }
 
 .nav-links {
@@ -271,6 +271,12 @@ a {
   background-size: cover;
   background-position: center;
   z-index: 0;
+}
+/* Make sure any hero text sits above video + overlay */
+.hero-content,
+.hero-with-about {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 600px) {
