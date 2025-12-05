@@ -1201,3 +1201,99 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+
+/* Base header stays fixed/absolute at top */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Home: keep it transparent over the hero video */
+.site-header--home {
+  background: transparent;
+}
+
+/* Inner pages: give it a soft beige bar so white text isn't lost */
+.site-header--inner {
+  position: sticky; /* or keep absolute if you prefer */
+  top: 0;
+  background: rgba(249, 248, 246, 0.96); /* soft beige */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--stroke);
+}
+
+/* Default nav link style = white (for home over hero) */
+.nav-links a {
+  color: #fff;
+}
+
+/* On inner pages, switch to dark text + no text-shadow */
+.site-header--inner .logo a,
+.site-header--inner .nav-links a {
+  color: var(--green);
+  text-shadow: none;
+}
+
+/* Make hamburger bars dark on inner pages so they show on beige */
+.site-header--inner .menu-toggle .bar {
+  background: var(--green);
+}
+@media (max-width: 900px) {
+  .navbar {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    background: rgba(0, 0, 0, 0); /* for home */
+    border-top: none;
+    box-shadow: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 2000;
+    text-align: right;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #fff !important;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    display: block;
+    text-align: right !important;
+  }
+
+  /* Inner pages: give the dropdown a beige background + dark text */
+  .site-header--inner .nav-links {
+    background: rgba(249, 248, 246, 0.98);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .site-header--inner .nav-links a {
+    color: var(--green) !important;
+    text-shadow: none;
+    font-weight: 600;
+  }
+}
+
+.nav-links li {
+  text-align: right;
+}

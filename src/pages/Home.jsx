@@ -307,7 +307,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer">
+      {/* <footer className="site-footer">
         <div className="footer-top">
           <p>© 2025 Guided Therapy Collective Inc. All rights reserved.</p>
           <nav className="footer-links">
@@ -316,7 +316,7 @@ export default function Home() {
             <a href="#">Disclaimer</a>
           </nav>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }

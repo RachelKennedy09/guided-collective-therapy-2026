@@ -1,14 +1,21 @@
 import React, { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
 
+  const isHome = location.pathname === "/";
+
   return (
     <>
-      <header className="site-header">
+      <header
+        className={`site-header ${
+          isHome ? "site-header--home" : "site-header--inner"
+        }`}
+      >
         <nav className="navbar">
           {/* Logo */}
           <div className="logo">
@@ -56,12 +63,10 @@ export default function AppLayout() {
         </nav>
       </header>
 
-      {/* Main content area */}
       <main>
         <Outlet />
       </main>
 
-      {/* Footer – keep your existing flags/treaty content here */}
       <footer className="site-footer">
         <div className="footer-flags">
           <img
