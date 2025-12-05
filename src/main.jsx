@@ -10,7 +10,7 @@ import Contact from "./pages/Contact.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+   <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Home />} />
