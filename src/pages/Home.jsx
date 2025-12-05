@@ -232,7 +232,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="team-card">
+              {/* <article className="team-card">
                 <img
                   src="/images/AboutLaura.jpg"
                   alt="Laura Fisher"
@@ -251,7 +251,7 @@ export default function Home() {
                     Meet Laura Fisher
                   </Link>
                 </div>
-              </article>
+              </article> */}
 
               <article className="team-card">
                 <h3>Your care team</h3>
