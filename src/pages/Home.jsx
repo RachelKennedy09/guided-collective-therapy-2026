@@ -28,20 +28,44 @@ export default function Home() {
         <div className="hero-content">
           <div className="hero-with-about">
             <h1>Guided Therapy Collective</h1>
-            <p className="hero-subtitle">
-              Psychedelic-assisted and trauma-informed care in Prince George, BC.
-            </p>
+            <p className="hero-subtitle">We're gald you're here.</p>
             <p className="hero-about">
-              Guided is a small, collaborative practice offering
-              ketamine-assisted psychotherapy and evidence-based treatments for
-              depression, PTSD, anxiety, and other mood concerns. We work
-              slowly, intentionally, and always in partnership with your
-              existing care team when possible.
+              We strive to offer a safe space in which, together, we can seek a
+              deeper connection with the self. Here, you can explore what you
+              may be seeking, be that reduced suffering, growth, understanding,
+              or healing.
             </p>
             <Link to="/treatments" className="btn hero-btn">
               Learn more about Guided
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        className="about"
+        // style={{ "--bg-image": "url('/images/hero_background_web.jpg')" }}
+      >
+        <div className="about-text">
+          <h1>About Guided</h1>
+          <p>
+            We strive to offer a safe space in which, together, we can seek a
+            deeper connection with the self. Here, you can explore what you may
+            be seeking, be that reduced suffering, growth, understanding, or
+            healing.
+            <br />
+            <br />
+            Through an emotionally and attachment focused lens, along with
+            utilizing acceptance and commitment and psychodynamic therapy tools,
+            we can work with you through a traditional psychotherapy framework
+            or with the assistance of psychedelic medicines.
+            <br />
+            <br />
+            We have dedicated our time to this healing experience with
+            psychedelics and are grateful these medicines are now becoming more
+            accessible as one avenue to help with mental health conditions.
+          </p>
         </div>
       </section>
 
@@ -117,8 +141,8 @@ export default function Home() {
         <div className="home-section-inner">
           <h2>Meet the team</h2>
           <p className="home-section-intro">
-            Guided is led by psychiatrist Dr. Christine Kennedy and a
-            small circle of trusted therapists and collaborators.
+            Guided is led by psychiatrist Dr. Christine Kennedy and a small
+            circle of trusted therapists and collaborators.
           </p>
 
           <div className="team-grid">
@@ -189,6 +213,40 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <footer className="site-footer">
+        <div className="footer-top">
+          <p>© 2025 Guided Therapy Collective Inc. All rights reserved.</p>
+          <nav className="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Disclaimer</a>
+          </nav>
+        </div>
+
+        <div className="footer-flags">
+          <img
+            src="/images/EveryChildMatters.png"
+            alt="Every Child Matters flag"
+          />
+          <img src="/images/Pride.png" alt="Pride flag" />
+          <img
+            src="/images/BlackLivesMatter.png"
+            alt="Black Lives Matter flag"
+          />
+        </div>
+
+        <div className="footer-treaty">
+          <p>
+            We acknowledge that we live, work, and create on the traditional and
+            unceded territories of the Indigenous peoples of Canada. Guided
+            Therapy Collective Inc. is situated in the traditional territories
+            of the Dakelh(Carrier) people of the Lheidli T&apos;enneh First
+            Nation. We honour and commit to reconciliation, respect, and the
+            Land Back movement
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
