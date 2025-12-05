@@ -88,42 +88,86 @@ export default function Home() {
                 depression, anxiety, or PTSD.
               </p>
               <Link to="/treatments" className="btn btn-outline">
-                View KAP details
+                Learn More
               </Link>
             </article>
 
             <article className="treatment-card">
-              <h3>Preparation & integration</h3>
+              <h3>Psilocybin-Assisted Therapy</h3>
               <p>
-                Therapy focused on getting ready for medicine work and making
-                sense of insights afterward — even if you received treatment
-                elsewhere.
+                vailable via Health Canada’s Special Access Program for eligible
+                clients. We would be happy to help you navigate the application
+                process.
               </p>
               <Link to="/treatments" className="btn btn-outline">
-                Preparation & integration
+                Learn More
               </Link>
             </article>
 
             <article className="treatment-card">
-              <h3>Group & family support</h3>
+              <h3>MDMA-Assisted Therapy</h3>
               <p>
-                When appropriate, we involve partners, family, or group work to
-                help you feel held and supported outside of session.
+                Available via Special Access Program for qualifying cases.
+                Please contact us for current guidance and eligibility.
               </p>
               <Link to="/treatments" className="btn btn-outline">
-                Explore options
+                Learn More
               </Link>
             </article>
 
             <article className="treatment-card">
-              <h3>Consultation & referrals</h3>
+              <h3>Couples Therapy</h3>
               <p>
-                Not sure where to start? We can help you explore options,
-                understand Health Canada’s Special Access Program, and connect
-                with other services if needed.
+                Attachment-focused, emotionally-oriented psychotherapy for
+                couples. Custom treatment plans available
               </p>
               <Link to="/contact" className="btn btn-outline">
-                Book a consult
+                Learn More
+              </Link>
+            </article>
+
+            <article className="treatment-card">
+              <h3>Group Psychodynamic Therapy</h3>
+              <p>
+                Group offerings scheduled periodically. Register your interest
+                to be notified of upcoming cohorts.
+              </p>
+              <Link to="/contact" className="btn btn-outline">
+                Learn More
+              </Link>
+            </article>
+
+            <article className="treatment-card">
+              <h3>Individual Psychodynamic Therapy</h3>
+              <p>
+                Relational, psychodynamic therapy tailored to your goals.
+                Optional integration after medicine sessions.
+              </p>
+              <Link to="/contact" className="btn btn-outline">
+                Learn More
+              </Link>
+            </article>
+
+            <article className="treatment-card">
+              <h3>Circle of Security Parenting Group</h3>
+              <p>
+                Foundations in attachment and connection for caregivers. New
+                groups open based on interest.
+              </p>
+              <Link to="/contact" className="btn btn-outline">
+                Learn More
+              </Link>
+            </article>
+
+            <article className="treatment-card">
+              <h3>General Outpatient or Psychotherapy</h3>
+              <p>
+                If you’re interested in traditional, psychodynamic therapy
+                without the use of psychedelics, this is also available with Dr.
+                Kennedy or Laura Fisher.
+              </p>
+              <Link to="/contact" className="btn btn-outline">
+                Learn More
               </Link>
             </article>
           </div>
@@ -141,8 +185,8 @@ export default function Home() {
         <div className="home-section-inner">
           <h2>Meet the team</h2>
           <p className="home-section-intro">
-            Guided is led by psychiatrist Dr. Christine Kennedy and a small
-            circle of trusted therapists and collaborators.
+            Guided is led by the medical director and psychiatrist Dr. Christine
+            Kennedy and a small circle of trusted therapists and collaborators.
           </p>
 
           <div className="team-grid">
@@ -158,6 +202,22 @@ export default function Home() {
                 Christine is a psychiatrist with a special focus on
                 psychedelic-assisted therapies, ketamine, and trauma-informed
                 care.
+              </p>
+            </article>
+
+            <article className="team-card">
+              <img
+                src="/images/AboutLaura.jpg"
+                alt="Laura Fisher"
+                className="team-avatar"
+              />
+              <h3>Laura Fisher</h3>
+              <p className="team-role">Registered Nurse</p>
+              <p>
+                Laura Fisher is a registered nurse with a special focus on
+                addictions and mental health. She also specializes in Ketamine
+                Assited therapy and additional training in psilocybin and MDMA
+                therapy.
               </p>
             </article>
 
@@ -205,7 +265,7 @@ export default function Home() {
             doctor’s referral, and private health insurance may cover portions
             of your care. Because we practice under the supervision of a
             psychiatrist, we are often able to offer medicine sessions at a
-            lower cost when a family doctor has referred you.
+            lower investment when a family doctor has referred you.
           </p>
 
           <Link to="/contact" className="contact-btn">
@@ -224,28 +284,7 @@ export default function Home() {
           </nav>
         </div>
 
-        <div className="footer-flags">
-          <img
-            src="/images/EveryChildMatters.png"
-            alt="Every Child Matters flag"
-          />
-          <img src="/images/Pride.png" alt="Pride flag" />
-          <img
-            src="/images/BlackLivesMatter.png"
-            alt="Black Lives Matter flag"
-          />
-        </div>
-
-        <div className="footer-treaty">
-          <p>
-            We acknowledge that we live, work, and create on the traditional and
-            unceded territories of the Indigenous peoples of Canada. Guided
-            Therapy Collective Inc. is situated in the traditional territories
-            of the Dakelh(Carrier) people of the Lheidli T&apos;enneh First
-            Nation. We honour and commit to reconciliation, respect, and the
-            Land Back movement
-          </p>
-        </div>
+  
       </footer>
     </>
   );

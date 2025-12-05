@@ -63,17 +63,28 @@ export default function AppLayout() {
 
       {/* Footer – keep your existing flags/treaty content here */}
       <footer className="site-footer">
-        <div className="footer-links">
-          <a href="#top">Back to top</a>
-        </div>
         <div className="footer-flags">
           <img
-            src="/public/images/EveryChildMatters.png"
-            alt="Every Child Matters"
+            src="/images/EveryChildMatters.png"
+            alt="Every Child Matters flag"
           />
-          {/* replace with your real image paths or use /images/... from public */}
+          <img src="/images/Pride.png" alt="Pride flag" />
+          <img
+            src="/images/BlackLivesMatter.png"
+            alt="Black Lives Matter flag"
+          />
         </div>
-        <p className="footer-treaty">{/* your treaty statement text here */}</p>
+
+        <div className="footer-treaty">
+          <p>
+            We acknowledge that we live, work, and create on the traditional and
+            unceded territories of the Indigenous peoples of Canada. Guided
+            Therapy Collective Inc. is situated in the traditional territories
+            of the Dakelh(Carrier) people of the Lheidli T&apos;enneh First
+            Nation. We honour and commit to reconciliation, respect, and the
+            Land Back movement
+          </p>
+        </div>
       </footer>
     </>
   );
