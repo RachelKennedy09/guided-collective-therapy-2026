@@ -1,43 +1,57 @@
-// src/components/AppLayout.jsx
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
 export default function AppLayout({ children }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <>
-      <header>
+      <header className="site-header">
         <nav className="navbar">
           <div className="logo">
-            <a href="/">guided</a>
+            <Link to="/">guided</Link>
           </div>
 
+          {/* Hamburger button (mobile) */}
           <button
             className="menu-toggle"
             aria-label="Toggle menu"
-            aria-expanded="false"
+            aria-expanded={menuOpen}
             aria-controls="primary-navigation"
             onClick={toggleMenu}
           >
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+            <span className="bar" />
+            <span className="bar" />
+            <span className="bar" />
           </button>
 
-          <ul id="primary-navigation" className="nav-links">
+          {/* Nav links */}
+          <ul
+            id="primary-navigation"
+            className={`nav-links ${menuOpen ? "is-open" : ""}`}
+          >
             <li>
-              <Link to="/">Home</Link>
-            </li>
-            {/* These two jump to sections on the home page */}
-            {/* <li>
-              <a href="/#about">About</a>
-            </li> */}
-            <li>
-              <Link to="/treatments">Treatments</Link>
-            </li>
-            <li>
-              <Link to="/team">Team</Link>
+              <NavLink to="/" onClick={closeMenu}>
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <NavLink to="/treatments" onClick={closeMenu}>
+                Treatments
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/team" onClick={closeMenu}>
+                Team
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={closeMenu}>
+                Contact
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -56,35 +70,28 @@ export default function AppLayout({ children }) {
         </div>
 
         <div className="footer-flags">
-          <img src="/images/EveryChildMatters.png" alt="Every Child Matters flag" />
+          <img
+            src="/images/EveryChildMatters.png"
+            alt="Every Child Matters flag"
+          />
           <img src="/images/Pride.png" alt="Pride flag" />
-          <img src="/images/BlackLivesMatter.png" alt="Black Lives Matter flag" />
+          <img
+            src="/images/BlackLivesMatter.png"
+            alt="Black Lives Matter flag"
+          />
         </div>
 
         <div className="footer-treaty">
           <p>
-            We acknowledge that we live, work, and create on the traditional and unceded territories
-            of the Indigenous peoples of Canada. Guided Therapy Collective Inc. is situated in the
-            traditional territories of the Dakelh (Carrier) people of the Lheidli T&apos;enne h First Nation.
-            We honour and commit to reconciliation, respect, and the Land Back movement.
+            We acknowledge that we live, work, and create on the traditional and
+            unceded territories of the Indigenous peoples of Canada. Guided
+            Therapy Collective Inc. is situated in the traditional territories
+            of the Dakelh (Carrier) people of the Lheidli T'enneh First Nation.
+            We honour and commit to reconciliation, respect, and the Land Back
+            movement.
           </p>
         </div>
       </footer>
     </>
   );
-}
-
-/**
- * Very small JS to toggle the mobile menu.
- * This mimics what you had in <script> before.
- */
-function toggleMenu(e) {
-  const btn = e.currentTarget;
-  const nav = document.getElementById("primary-navigation");
-  if (!nav) return;
-
-  const open = !nav.classList.contains("is-open");
-  nav.classList.toggle("is-open", open);
-  btn.setAttribute("aria-expanded", String(open));
-  document.body.style.overflow = open ? "hidden" : "";
 }
