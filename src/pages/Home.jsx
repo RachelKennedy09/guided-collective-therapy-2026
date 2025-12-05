@@ -40,7 +40,7 @@ export default function Home() {
       <section
         id="about"
         className="about"
-        // style={{ "--bg-image": "url('/images/hero_background_web.jpg')" }}
+        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
       >
         <div className="about-text">
           <h1>About Guided</h1>
@@ -61,27 +61,41 @@ export default function Home() {
             psychedelics and are grateful these medicines are now becoming more
             accessible as one avenue to help with mental health conditions.
           </p>
-            <Link to="/treatments" className="btn hero-btn">
-              Learn more about Guided
-            </Link>
+          <Link to="/treatments" className="btn hero-btn">
+            Learn more about Guided
+          </Link>
         </div>
       </section>
- 
+
       {/* HOME: TREATMENT OVERVIEW */}
-      <section className="home-section">
+      <section id="Treatment" className="home-section treatment-section">
+        <video
+          className="treatment-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/here_video_still.jpg"
+        >
+          <source src="/images/videos/NewHeroVideo.mp4" type="video/mp4" />
+        </video>
+
         <div className="home-section-inner">
-          <h2>Treatment pathways</h2>
-          <p className="home-section-intro">
-            We offer medically supervised ketamine-assisted psychotherapy and
-            integrative approaches that combine medication, psychotherapy, and
-            nervous-system support.
-          </p>
-           <Link to="/treatments" className="text-link">
+          <div className="treatment-pill">
+            <h2>Treatment pathways</h2>
+            <p className="home-section-intro">
+              We offer medically supervised ketamine-assisted psychotherapy and
+              integrative approaches that combine medication, psychotherapy, and
+              nervous-system support.
+            </p>
+            <Link to="/treatments" className="text-link">
               Read full treatment descriptions →
             </Link>
           </div>
-          </section>
- {/*
+        </div>
+      </section>
+
+      {/*
           <div className="treatment-grid">
             <article className="treatment-card">
               <h3>Ketamine-assisted psychotherapy (KAP)</h3>
@@ -175,69 +189,85 @@ export default function Home() {
             </article>
           </div> */}
 
-          {/* <div className="home-section-cta">
+      {/* <div className="home-section-cta">
             <Link to="/treatments" className="text-link">
               Read full treatment descriptions →
             </Link>
           </div> */}
-        {/* </div>
+      {/* </div>
       </section> */}
 
       {/* HOME: TEAM PREVIEW */}
-      <section className="home-section">
+      <section
+        className="home-section team-section"
+        style={{ "--bg-image": "url('/images/ForestOfTheWorlds.jpg')" }}
+      >
         <div className="home-section-inner">
-          <h2>Meet the team</h2>
-          <p className="home-section-intro">
-            Guided is led by the medical director and psychiatrist Dr. Christine
-            Kennedy and a small circle of trusted therapists and collaborators.
-          </p>
+          <div className="section-card team-section-card">
+            <h2>Meet the team</h2>
+            <p className="home-section-intro">
+              Guided is led by the medical director and psychiatrist Dr.
+              Christine Kennedy and a small circle of trusted therapists and
+              collaborators.
+            </p>
 
-          <div className="team-grid">
-            <article className="team-card">
-              <img
-                src="/images/AboutChristine.jpg"
-                alt="Dr. Christine"
-                className="team-avatar"
-              />
-              <h3>Dr. Christine Kennedy</h3>
-              <p className="team-role">MD, FRCPC – Psychiatry</p>
-              <p>
-                Christine is a psychiatrist with a special focus on
-                psychedelic-assisted therapies, ketamine, and trauma-informed
-                care.
-              </p>
-            </article>
+            <div className="team-grid">
+              <article className="team-card">
+                <img
+                  src="/images/AboutChristine.jpg"
+                  alt="Dr. Christine"
+                  className="team-avatar"
+                />
+                <h3>Dr. Christine Kennedy</h3>
+                <p className="team-role">MD, FRCPC – Psychiatry</p>
+                <p>
+                  Christine is a psychiatrist with a special focus on
+                  psychedelic-assisted therapies, ketamine, and trauma-informed
+                  care.
+                </p>
+                <div className="home-section-cta">
+                  <Link to="/team" className="text-link">
+                    Meet Dr. Christine Kennedy
+                  </Link>
+                </div>
+              </article>
 
-            <article className="team-card">
-              <img
-                src="/images/AboutLaura.jpg"
-                alt="Laura Fisher"
-                className="team-avatar"
-              />
-              <h3>Laura Fisher</h3>
-              <p className="team-role">Registered Nurse</p>
-              <p>
-                Laura Fisher is a registered nurse with a special focus on
-                addictions and mental health. She also specializes in Ketamine
-                Assited therapy and additional training in psilocybin and MDMA
-                therapy.
-              </p>
-            </article>
+              <article className="team-card">
+                <img
+                  src="/images/AboutLaura.jpg"
+                  alt="Laura Fisher"
+                  className="team-avatar"
+                />
+                <h3>Laura Fisher</h3>
+                <p className="team-role">Registered Nurse</p>
+                <p>
+                  Laura Fisher is a registered nurse with a special focus on
+                  addictions and mental health. She also specializes in ketamine
+                  assisted therapy and has additional training in psilocybin and
+                  MDMA therapy.
+                </p>
+                <div className="home-section-cta">
+                  <Link to="/team" className="text-link">
+                    Meet Laura Fisher
+                  </Link>
+                </div>
+              </article>
 
-            <article className="team-card">
-              <h3>Your care team</h3>
-              <p className="team-role">Therapists & collaborators</p>
-              <p>
-                We collaborate with therapists, physicians, and other providers
-                who share a grounded, relational approach to care.
-              </p>
-            </article>
-          </div>
+              <article className="team-card">
+                <h3>Your care team</h3>
+                <p className="team-role">Therapists & collaborators</p>
+                <p>
+                  We collaborate with therapists, physicians, and other
+                  providers who share a grounded, relational approach to care.
+                </p>
+              </article>
+            </div>
 
-          <div className="home-section-cta">
-            <Link to="/team" className="text-link">
-              Learn more about the team →
-            </Link>
+            <div className="home-section-cta">
+              <Link to="/team" className="text-link">
+                Learn more about the team →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -767,13 +767,13 @@ a {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.08) 0%,
       rgba(0, 0, 0, 0.04) 35%,
       rgba(0, 0, 0, 0) 100%
-    ),
-    rgba(255, 255, 255, 0.3);
+    ), */
+  /* rgba(255, 255, 255, 0.3); */
 }
 
 /* Ensure cards sit on top */
@@ -828,18 +828,15 @@ a {
 
 .home-section {
   padding: 3rem 1.5rem;
-  background: var(--beige-2);
-  text-align: center; /* centers text */
-  display: flex; /* allow centering inside */
-  flex-direction: column;
-  align-items: center; /* centers horizontally */
-  justify-content: center;
+  /* If --bg-image is provided, use it. Otherwise fall back to beige. */
+  background: var(--bg-image, var(--beige-2)) center/cover no-repeat;
+  position: relative;
+  isolation: isolate;
 }
 
 .home-section:nth-of-type(even) {
-  background: var(--beige);
+  background-color: var(--beige);
 }
-
 .home-section-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -1058,4 +1055,142 @@ a {
 
 .hero-content h1 {
   color: #ffffff !important;
+}
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.06) 0%,
+      rgba(0, 0, 0, 0.03) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.15);
+}
+
+.home-section-inner {
+  position: relative;
+  z-index: 1; /* keeps text above the overlay */
+}
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-with-about {
+  text-align: center;
+}
+
+/* Treatment section with video background */
+.treatment-section {
+  position: relative;
+  padding: 4.5rem 1.5rem;
+  overflow: hidden;
+}
+
+.treatment-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+/* Soft overlay on top of video */
+.treatment-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.18) 40%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+/* Make sure content lines up above video + overlay */
+.treatment-section .home-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Frosted-pill card for Treatment text */
+.treatment-pill {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 1.75rem; /* pill-ish */
+  padding: 2rem 2.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  max-width: 720px;
+  text-align: center;
+}
+
+.treatment-pill h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--green);
+}
+
+.treatment-pill .home-section-intro {
+  margin-bottom: 1.5rem;
+  color: var(--text-subtle);
+}
+
+.home-section {
+  padding: 4rem 1.5rem;
+  background: var(--bg-image, var(--beige-2)) center/cover no-repeat;
+  position: relative;
+  isolation: isolate;
+  margin: 64px 0; /* <-- this gives top & bottom breathing room */
+}
+.team-section-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers all children horizontally */
+  justify-content: center;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  max-width: 900px;
+  margin: 0 auto; /* centers the whole pill card */
+}
+
+.team-section-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--green);
+}
+
+.team-section-card .home-section-intro {
+  margin-bottom: 2rem;
+}
+.team-section-card .home-section-intro {
+  text-align: center;
+  max-width: 65ch;
+  margin-bottom: 2rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem;
+  width: 100%;
+  justify-items: center; /* centers each card */
+}
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
