@@ -20,7 +20,7 @@ export default function Home() {
             playsInline
             poster="/images/here_video_still.jpg"
           >
-            <source src="/images/videos/NewHeroVideo.mp4" type="video/mp4" />
+            <source src="/images/videos/introvideo.mp4" type="video/mp4" />
           </video>
           <div className="hero-overlay" />
         </div>
