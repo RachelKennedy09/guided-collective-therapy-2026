@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import "./style.css";
-
 import AppLayout from "../components/AppLayout.jsx";
 import Home from "./pages/Home.jsx";
 import Treatments from "./pages/Treatments.jsx";
@@ -12,8 +10,7 @@ import Contact from "./pages/Contact.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* IMPORTANT: must match GitHub repo name path */}
-    <BrowserRouter basename="/guided-collective-therapy-2026/">
+    <BrowserRouter>
       <AppLayout>
         <Routes>
           <Route path="/" element={<Home />} />
