@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+// src/components/AppLayout.jsx
+import { useState } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
-export default function AppLayout({ children }) {
+export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const handleToggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -12,27 +16,27 @@ export default function AppLayout({ children }) {
       <header className="site-header">
         <nav className="navbar">
           <div className="logo">
-            <Link to="/">guided</Link>
+            {/* logo stays white due to .logo a in CSS */}
+            <NavLink to="/" onClick={closeMenu}>
+              guided
+            </NavLink>
           </div>
 
-          {/* Hamburger button (mobile) */}
+          {/* Hamburger button (shown on mobile via CSS) */}
           <button
             className="menu-toggle"
-            aria-label="Toggle menu"
+            type="button"
+            onClick={handleToggleMenu}
+            aria-label="Toggle navigation"
             aria-expanded={menuOpen}
-            aria-controls="primary-navigation"
-            onClick={toggleMenu}
           >
             <span className="bar" />
             <span className="bar" />
             <span className="bar" />
           </button>
 
-          {/* Nav links */}
-          <ul
-            id="primary-navigation"
-            className={`nav-links ${menuOpen ? "is-open" : ""}`}
-          >
+          {/* Nav links container */}
+          <ul className={`nav-links ${menuOpen ? "is-open" : ""}`}>
             <li>
               <NavLink to="/" onClick={closeMenu}>
                 Home
@@ -57,41 +61,10 @@ export default function AppLayout({ children }) {
         </nav>
       </header>
 
-      <main>{children}</main>
-
-      <footer className="site-footer">
-        <div className="footer-top">
-          <p>© 2025 Guided Therapy Collective Inc. All rights reserved.</p>
-          <nav className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Disclaimer</a>
-          </nav>
-        </div>
-
-        <div className="footer-flags">
-          <img
-            src="/images/EveryChildMatters.png"
-            alt="Every Child Matters flag"
-          />
-          <img src="/images/Pride.png" alt="Pride flag" />
-          <img
-            src="/images/BlackLivesMatter.png"
-            alt="Black Lives Matter flag"
-          />
-        </div>
-
-        <div className="footer-treaty">
-          <p>
-            We acknowledge that we live, work, and create on the traditional and
-            unceded territories of the Indigenous peoples of Canada. Guided
-            Therapy Collective Inc. is situated in the traditional territories
-            of the Dakelh (Carrier) people of the Lheidli T'enneh First Nation.
-            We honour and commit to reconciliation, respect, and the Land Back
-            movement.
-          </p>
-        </div>
-      </footer>
+      {/* Page content */}
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }
