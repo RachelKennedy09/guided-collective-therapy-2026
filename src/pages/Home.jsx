@@ -5,318 +5,86 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="hero">
-        <div className="hero-bg is-ready">
+      <section className="home-hero">
+        <div className="home-hero__bg">
           <img
             src="/images/hero_background_web.jpg"
-            alt="Guided Therapy Collective"
-            className="hero-still"
+            alt=""
+            className="home-hero__still"
+            aria-hidden="true"
           />
           <video
-            className="hero-video"
+            className="home-hero__video"
             autoPlay
             muted
             loop
             playsInline
             poster="/images/here_video_still.jpg"
           >
-            <source src="/images/videos/introvideo.mp4" type="video/mp4" />
+            <source src="/images/videos/Pgvideo_h264.mp4" type="video/mp4" />
           </video>
-          <div className="hero-overlay" />
+          <div className="home-hero__overlay" />
         </div>
 
-        <div className="hero-content">
-          <div className="hero-with-about">
-            <h1>Guided Therapy Collective</h1>
-            <p className="hero-subtitle">We're gald you're here.</p>
+        <div className="home-hero__content">
+          <div className="home-hero__panel">
+            <h1 className="home-hero__title">Guided Therapy Collective</h1>
+            <p className="home-hero__subtitle">We’re glad you’re here.</p>
 
-            {/* <Link to="/treatments" className="btn hero-btn">
-              Learn more about Guided
-            </Link> */}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="about"
-        className="about"
-        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
-      >
-        <div className="about-text">
-          <h1>About Guided</h1>
-          <p>
-            We strive to offer a safe space in which, together, we can seek a
-            deeper connection with the self. Here, you can explore what you may
-            be seeking, be that reduced suffering, growth, understanding, or
-            healing.
-            <br />
-            <br />
-            Through an emotionally and attachment focused lens, along with
-            utilizing acceptance and commitment and psychodynamic therapy tools,
-            we can work with you through a traditional psychotherapy framework
-            or with the assistance of psychedelic medicines.
-            <br />
-            <br />
-            We have dedicated our time to this healing experience with
-            psychedelics and are grateful these medicines are now becoming more
-            accessible as one avenue to help with mental health conditions.
-          </p>
-          <Link to="/treatments" className="btn hero-btn">
-            Learn more about Guided
-          </Link>
-        </div>
-      </section>
-
-      {/* HOME: TREATMENT OVERVIEW */}
-      <section id="Treatment" className="home-section treatment-section">
-        <video
-          className="treatment-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/here_video_still.jpg"
-        >
-          <source src="/images/videos/NewHeroVideo.mp4" type="video/mp4" />
-        </video>
-
-        <div className="home-section-inner">
-          <div className="treatment-pill">
-            <h2>Treatment pathways</h2>
-            <p className="home-section-intro">
-              We offer medically supervised ketamine-assisted psychotherapy and
-              integrative approaches that combine medication, psychotherapy, and
-              nervous-system support.
-            </p>
-            <Link to="/treatments" className="text-link">
-              Read full treatment descriptions →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/*
-          <div className="treatment-grid">
-            <article className="treatment-card">
-              <h3>Ketamine-assisted psychotherapy (KAP)</h3>
+            <div className="home-hero__about">
+              <h2>About Guided</h2>
               <p>
-                Individual, carefully prepared sessions supported by an MD
-                psychiatrist and a trained therapist to help shift patterns of
-                depression, anxiety, or PTSD.
+                We strive to offer a safe space in which, together, we can seek a
+                deeper connection with the self. Here, you can explore what you may
+                be seeking, be that reduced suffering, growth, understanding, or
+                healing.
+                <br /><br />
+                Through an emotionally and attachment focused lens, along with
+                utilizing acceptance and commitment and psychodynamic therapy tools,
+                we can work with you through a traditional psychotherapy framework
+                or with the assistance of psychedelic medicines.
+                <br /><br />
+                We have dedicated our time to this healing experience with
+                psychedelics and are grateful these medicines are now becoming more
+                accessible as one avenue to help with mental health conditions.
               </p>
-              <Link to="/treatments" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-
-            <article className="treatment-card">
-              <h3>Psilocybin-Assisted Therapy</h3>
-              <p>
-                vailable via Health Canada’s Special Access Program for eligible
-                clients. We would be happy to help you navigate the application
-                process.
-              </p>
-              <Link to="/treatments" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-
-            <article className="treatment-card">
-              <h3>MDMA-Assisted Therapy</h3>
-              <p>
-                Available via Special Access Program for qualifying cases.
-                Please contact us for current guidance and eligibility.
-              </p>
-              <Link to="/treatments" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-
-            <article className="treatment-card">
-              <h3>Couples Therapy</h3>
-              <p>
-                Attachment-focused, emotionally-oriented psychotherapy for
-                couples. Custom treatment plans available
-              </p>
-              <Link to="/contact" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-
-            <article className="treatment-card">
-              <h3>Group Psychodynamic Therapy</h3>
-              <p>
-                Group offerings scheduled periodically. Register your interest
-                to be notified of upcoming cohorts.
-              </p>
-              <Link to="/contact" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-
-            <article className="treatment-card">
-              <h3>Individual Psychodynamic Therapy</h3>
-              <p>
-                Relational, psychodynamic therapy tailored to your goals.
-                Optional integration after medicine sessions.
-              </p>
-              <Link to="/contact" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-
-            <article className="treatment-card">
-              <h3>Circle of Security Parenting Group</h3>
-              <p>
-                Foundations in attachment and connection for caregivers. New
-                groups open based on interest.
-              </p>
-              <Link to="/contact" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-
-            <article className="treatment-card">
-              <h3>General Outpatient or Psychotherapy</h3>
-              <p>
-                If you’re interested in traditional, psychodynamic therapy
-                without the use of psychedelics, this is also available with Dr.
-                Kennedy or Laura Fisher.
-              </p>
-              <Link to="/contact" className="btn btn-outline">
-                Learn More
-              </Link>
-            </article>
-          </div> */}
-
-      {/* <div className="home-section-cta">
-            <Link to="/treatments" className="text-link">
-              Read full treatment descriptions →
-            </Link>
-          </div> */}
-      {/* </div>
-      </section> */}
-
-      {/* HOME: TEAM PREVIEW */}
-      <section
-        className="home-section team-section"
-        style={{ "--bg-image": "url('/images/ForestOfTheWorlds.jpg')" }}
-      >
-        <div className="home-section-inner">
-          <div className="section-card team-section-card">
-            <h2>Meet the team</h2>
-            <p className="home-section-intro">
-              Guided is led by the medical director and psychiatrist Dr.
-              Christine Kennedy and a small circle of trusted therapists and
-              collaborators.
-            </p>
-
-            <div className="team-grid">
-              <article className="team-card">
-                <img
-                  src="/images/AboutChristine.jpg"
-                  alt="Dr. Christine"
-                  className="team-avatar"
-                />
-                <h3>Dr. Christine Kennedy</h3>
-                <p className="team-role">MD, FRCPC – Psychiatry</p>
-                <p>
-                  Christine is a psychiatrist with a special focus on
-                  psychedelic-assisted therapies, ketamine, and trauma-informed
-                  care.
-                </p>
-                <div className="home-section-cta">
-                  <Link to="/team" className="text-link">
-                    Meet Dr. Christine Kennedy
-                  </Link>
-                </div>
-              </article>
-
-              {/* <article className="team-card">
-                <img
-                  src="/images/AboutLaura.jpg"
-                  alt="Laura Fisher"
-                  className="team-avatar"
-                />
-                <h3>Laura Fisher</h3>
-                <p className="team-role">Registered Nurse</p>
-                <p>
-                  Laura Fisher is a registered nurse with a special focus on
-                  addictions and mental health. She also specializes in ketamine
-                  assisted therapy and has additional training in psilocybin and
-                  MDMA therapy.
-                </p>
-                <div className="home-section-cta">
-                  <Link to="/team" className="text-link">
-                    Meet Laura Fisher
-                  </Link>
-                </div>
-              </article> */}
-
-              <article className="team-card">
-                <h3>Your care team</h3>
-                <p className="team-role">Therapists & collaborators</p>
-                <p>
-                  We collaborate with therapists, physicians, and other
-                  providers who share a grounded, relational approach to care.
-                </p>
-              </article>
-            </div>
-
-            <div className="home-section-cta">
-              <Link to="/team" className="text-link">
-                Learn more about the team →
-              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* HOME: CONTACT PREVIEW */}
-      <section className="contact-preview">
-        <div className="contact-preview-inner">
-          <h2>Connect about treatment or referrals</h2>
-          <p>
-            We offer psychedelic-assisted therapy for a variety of mental health
-            diagnoses. However, currently only ketamine is available without
-            requiring special access from Health Canada. Psilocybin and MDMA may
-            be available if you qualify through Canada’s{" "}
-            <a
-              href="https://www.canada.ca/en/health-canada/services/drugs-medication/special-access/drugs.html"
-              target="_blank"
-              rel="noreferrer"
-              className="sap-link-inline"
-            >
-              Special Access Program
-            </a>
-            .
-          </p>
+      {/* LINK CARDS */}
+      <section className="home-links" aria-label="Explore Guided">
+        <div className="home-links__inner">
+          <h2 className="home-links__title">Explore</h2>
 
-          <p>
-            We’re happy to help you connect to someone who can support your SAP
-            application. Treatment may be partially covered by MSP with a
-            doctor’s referral, and private health insurance may cover portions
-            of your care. Because we practice under the supervision of a
-            psychiatrist, we are often able to offer medicine sessions at a
-            lower investment when a family doctor has referred you.
-          </p>
+          <div className="home-links__grid">
+            <Link to="/treatments" className="home-card">
+              <h3>Treatments</h3>
+              <p>Learn about ketamine-assisted psychotherapy and guided care.</p>
+              <span className="home-card__cta">View treatments →</span>
+            </Link>
 
-          <Link to="/contact" className="contact-btn">
-            Go to contact form
-          </Link>
+            <Link to="/team" className="home-card">
+              <h3>Meet the Team</h3>
+              <p>Get to know the medical director and collaborators.</p>
+              <span className="home-card__cta">Meet the team →</span>
+            </Link>
+
+            <Link to="/referrals" className="home-card">
+              <h3>Referrals</h3>
+              <p>How to get started, eligibility, and what you’ll need.</p>
+              <span className="home-card__cta">Referral info →</span>
+            </Link>
+
+            <Link to="/contact" className="home-card home-card--primary">
+              <h3>Contact</h3>
+              <p>Questions or referrals? Send a note and we’ll respond.</p>
+              <span className="home-card__cta">Go to contact →</span>
+            </Link>
+          </div>
         </div>
       </section>
-
-      {/* <footer className="site-footer">
-        <div className="footer-top">
-          <p>© 2025 Guided Therapy Collective Inc. All rights reserved.</p>
-          <nav className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Disclaimer</a>
-          </nav>
-        </div>
-      </footer> */}
     </>
   );
 }
