@@ -1,5 +1,7 @@
 // src/pages/Treatments.jsx
 import React from "react";
+import BackToHome from "../components/FloatingBack";
+
 
 export default function Treatments() {
   return (
@@ -10,6 +12,7 @@ export default function Treatments() {
         style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
       >
         <div className="treatments-hero__inner">
+                  <BackToHome />
           <div className="treatments-hero__panel">
             <h1 className="treatments-hero__title">Guided Services</h1>
 

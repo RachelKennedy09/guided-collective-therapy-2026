@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
+import FloatingBack from "./FloatingBack";
 
 export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,9 +55,11 @@ export default function AppLayout() {
                 Team
               </NavLink>
             </li>
-            <NavLink to="/referrals" onClick={closeMenu}>
-              Referrals
-            </NavLink>
+            <li>
+              <NavLink to="/referrals" onClick={closeMenu}>
+                Referrals
+              </NavLink>
+            </li>
             <li>
               <NavLink to="/contact" onClick={closeMenu}>
                 Contact
@@ -65,7 +68,7 @@ export default function AppLayout() {
           </ul>
         </nav>
       </header>
-
+      {!isHome && <FloatingBack />}
       <main>
         <Outlet />
       </main>
