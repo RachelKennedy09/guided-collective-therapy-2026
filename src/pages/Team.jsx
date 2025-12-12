@@ -5,18 +5,11 @@ export default function Team() {
   return (
     <section className="team-page">
       {/* TOP: video behind intro + mini team bubbles */}
-      <div className="team-hero" id="team-top">
-        <video
-          className="team-hero__video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/here_video_still.jpg"
-        >
-          <source src="/images/videos/Pgvideo_h264.mp4" type="video/mp4" />
-        </video>
-
+      <div
+        className="team-hero"
+        id="team-top"
+        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
+      >
         <div className="team-hero__overlay" />
 
         <div className="team-hero__inner">
@@ -81,9 +74,10 @@ export default function Team() {
               feels aligned with you.
             </p>
             <p>
-              I am grateful to live and work on the unceded traditional territory
-              of the Lheidli T&apos;enneh Nation. I was raised in the North and am
-              honored to continue to serve and work with people in Northern BC.
+              I am grateful to live and work on the unceded traditional
+              territory of the Lheidli T&apos;enneh Nation. I was raised in the
+              North and am honored to continue to serve and work with people in
+              Northern BC.
             </p>
             <p>
               In my general practice I offer psychodynamic therapy with a
@@ -92,9 +86,9 @@ export default function Team() {
             </p>
             <p>
               I am passionate about the use of psychedelics as a way of opening
-              one&apos;s heart and mind to what lies beyond defenses formed through
-              suffering. With supportive integration, there can be healing and
-              growth in life and relationships.
+              one&apos;s heart and mind to what lies beyond defenses formed
+              through suffering. With supportive integration, there can be
+              healing and growth in life and relationships.
             </p>
 
             <a href="#team-top" className="text-link">
@@ -113,24 +107,22 @@ export default function Team() {
               />
               <div>
                 <h2>Laura Fisher</h2>
-                <p className="team-role">
-                  RN • Ketamine-Assisted Therapist
-                </p>
+                <p className="team-role">RN • Ketamine-Assisted Therapist</p>
               </div>
             </div>
 
             <p>Welcome to a space that supports community and connection.</p>
             <p>
-              I&apos;m a registered nurse who began my career on Vancouver&apos;s
-              Downtown Eastside, working in addictions and mental health. Four
-              years ago, I moved to Prince George to be closer to nature and
-              community.
+              I&apos;m a registered nurse who began my career on
+              Vancouver&apos;s Downtown Eastside, working in addictions and
+              mental health. Four years ago, I moved to Prince George to be
+              closer to nature and community.
             </p>
             <p>
-              For the past two years I&apos;ve specialized as a Ketamine-Assisted
-              Therapist, with additional training in psilocybin and MDMA therapy
-              through Therapsil. I am currently working toward my Masters in
-              Counselling at UNBC.
+              For the past two years I&apos;ve specialized as a
+              Ketamine-Assisted Therapist, with additional training in
+              psilocybin and MDMA therapy through Therapsil. I am currently
+              working toward my Masters in Counselling at UNBC.
             </p>
             <p>
               I believe clients are the experts of their own healing. My role is

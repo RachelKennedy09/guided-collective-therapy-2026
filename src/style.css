@@ -157,19 +157,6 @@ a {
   z-index: 1000;
 }
 
-.site-header--home {
-  background: transparent;
-}
-
-.site-header--inner {
-  position: sticky;
-  top: 0;
-  background: rgba(249, 248, 246, 0.96);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(191, 196, 189, 0.65);
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -187,11 +174,6 @@ a {
   color: #fff;
 }
 
-.site-header--inner .logo a {
-  color: var(--green);
-  letter-spacing: 0.35rem;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -204,11 +186,6 @@ a {
 
 .nav-links a {
   color: #fff;
-  font-weight: 600;
-}
-
-.site-header--inner .nav-links a {
-  color: var(--green);
   font-weight: 600;
 }
 
@@ -646,21 +623,16 @@ a {
   background: var(--beige);
 }
 
-/* Top video hero */
 .team-hero {
   position: relative;
   padding: 7rem 1.25rem 4rem;
   overflow: hidden;
+
+  /* NEW: photo background */
+  background: var(--bg-image) center/cover no-repeat;
 }
 
-.team-hero__video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* keep the overlay exactly as-is */
 .team-hero__overlay {
   position: absolute;
   inset: 0;
@@ -818,7 +790,70 @@ a {
   }
 }
 
-/* Form layout */
+/* ========================
+   CONTACT PAGE (Unified hero + form in same panel)
+   ======================== */
+
+.contact-page {
+  background: var(--beige);
+}
+
+.contact-hero {
+  position: relative;
+  background: var(--bg-image) center/cover no-repeat;
+  padding: 5.5rem 1rem 5rem; /* room for sticky nav + breathing */
+  min-height: calc(100vh - 72px); /* helps short pages feel “full” */
+  display: grid;
+  align-items: start;
+}
+
+/* Dark overlay on the background image */
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.32) 45%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.contact-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+/* Frosted panel (same as Home/Team/Treatments) */
+.contact-hero__panel {
+  background: rgba(15, 17, 15, 0.68);
+  color: #fff;
+  border-radius: 24px;
+  padding: 2.25rem 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.contact-hero__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-serif);
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.contact-hero__blurb,
+.contact-hero__note {
+  margin: 0 0 1rem;
+  max-width: 75ch;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Form */
 .contact-form {
   margin-top: 1.5rem;
   display: grid;
@@ -831,7 +866,7 @@ a {
 }
 
 .field label {
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .field span {
@@ -839,12 +874,12 @@ a {
   color: rgba(255, 255, 255, 0.82);
 }
 
-/* Inputs */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form select,
 .contact-form textarea {
   width: 100%;
+  max-width: 100%;
   padding: 0.75rem 0.9rem;
   border-radius: 12px;
   border: 1px solid rgba(191, 196, 189, 0.75);
@@ -881,12 +916,20 @@ a {
 
 /* Mobile */
 @media (max-width: 600px) {
+  .contact-hero {
+    padding: 5rem 1rem 4rem;
+    min-height: auto;
+  }
+
   .contact-hero__panel {
     padding: 1.75rem 1.25rem;
     border-radius: 18px;
   }
-}
 
+  .consent {
+    flex-wrap: wrap;
+  }
+}
 /* ========================
    FOOTER
    ======================== */
