@@ -301,66 +301,6 @@ a {
   margin-right: auto;
 }
 
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.service {
-  border: 1px solid var(--stroke);
-  border-radius: 12px;
-  background: #fff;
-  overflow: hidden;
-  box-shadow: 0 4px 10px var(--elev-1);
-}
-
-.service > summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 1rem 1.1rem;
-  font-size: 1.05rem;
-  position: relative;
-  outline: none;
-}
-
-.service > summary::-webkit-details-marker {
-  display: none;
-}
-
-.service > summary::after {
-  content: "▸";
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%) rotate(0deg);
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  opacity: 0.7;
-}
-
-.service[open] > summary::after {
-  transform: translateY(-50%) rotate(90deg);
-  opacity: 1;
-}
-
-.service > summary:focus-visible {
-  box-shadow: 0 0 0 3px rgba(128, 111, 139, 0.35);
-  border-radius: 10px;
-}
-
-.service-content {
-  padding: 1.75rem 1.5rem 1.75rem;
-  background: linear-gradient(to bottom, #faf9f7, #ffffff);
-}
-
-.service-content h3 {
-  margin: 0.6rem 0 0.35rem;
-  color: var(--green);
-  font-size: 1.05rem;
-}
-
 /* First heading inside content */
 .service-content h3:first-of-type {
   margin-top: 0.25rem;
@@ -1241,4 +1181,180 @@ a {
 
 .home-card--primary p {
   color: rgba(255, 255, 255, 0.92);
+}
+/* ========================
+   Treatments page: Cards grid
+   ======================== */
+
+.treatments-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .treatments-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.treatment-tile {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 1.35rem 1.35rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+}
+
+.treatment-tile h2 {
+  margin: 0 0 0.5rem;
+  color: var(--green);
+  font-size: 1.2rem;
+}
+
+.treatment-tile p {
+  margin: 0 0 1rem;
+  color: var(--text-subtle);
+  line-height: 1.6;
+}
+
+.treatment-tile__actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* optional: visually mark not-yet-detailed ones */
+.treatment-tile--disabled {
+  opacity: 0.95;
+}
+/* ========================
+   TREATMENTS PAGE (new layout)
+   ======================== */
+
+.treatments-page {
+  background: var(--beige);
+}
+
+/* Top area with background image ONLY behind the card region */
+.treatments-hero {
+  background: var(--bg-image) center/cover no-repeat;
+  padding: 7rem 1.25rem 4rem; /* space from sticky nav */
+  position: relative;
+}
+
+.treatments-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.treatments-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+/* Cards grid spacing */
+.treatments-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .treatments-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.treatment-tile {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 1.35rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.treatment-tile h2 {
+  margin: 0 0 0.5rem;
+  color: var(--green);
+  font-size: 1.15rem;
+}
+
+.treatment-tile p {
+  margin: 0 0 1rem;
+  color: var(--text-subtle);
+  line-height: 1.6;
+}
+
+/* BELOW: section blocks (clean separated page sections) */
+.treatments-sections {
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+.treatment-section-block {
+  padding: 3.25rem 0;
+  border-bottom: 1px solid rgba(191, 196, 189, 0.55);
+}
+
+.treatment-section-inner {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+}
+
+.treatment-section-inner h2 {
+  margin: 0 0 0.75rem;
+  color: var(--green);
+  font-size: 2rem;
+  font-family: var(--font-serif);
+}
+
+.treatment-section-inner p {
+  color: var(--text-subtle);
+  line-height: 1.75;
+  max-width: 70ch;
+}
+
+.treatment-split {
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .treatment-split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.treatment-box {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(191, 196, 189, 0.7);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.treatment-box h3 {
+  margin-top: 0;
+  color: var(--green);
+}
+
+.treatment-box ul {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.15rem;
+  color: var(--text);
+}
+
+.treatment-box li {
+  margin: 0.35rem 0;
+}
+
+.treatment-section-block--note {
+  border-bottom: none;
 }
