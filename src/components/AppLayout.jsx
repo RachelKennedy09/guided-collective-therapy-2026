@@ -68,27 +68,64 @@ export default function AppLayout() {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-flags">
-          <img
-            src="/images/EveryChildMatters.png"
-            alt="Every Child Matters flag"
-          />
-          <img src="/images/Pride.png" alt="Pride flag" />
-          <img
-            src="/images/BlackLivesMatter.png"
-            alt="Black Lives Matter flag"
-          />
-        </div>
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <h3>Guided Therapy Collective</h3>
+            <p className="footer-tagline">
+              Prince George, BC • Psychedelic-assisted therapy & psychotherapy
+            </p>
+          </div>
 
-        <div className="footer-treaty">
-          <p>
-            We acknowledge that we live, work, and create on the traditional and
-            unceded territories of the Indigenous peoples of Canada. Guided
-            Therapy Collective Inc. is situated in the traditional territories
-            of the Dakelh(Carrier) people of the Lheidli T&apos;enneh First
-            Nation. We honour and commit to reconciliation, respect, and the
-            Land Back movement
-          </p>
+          <div className="footer-contact">
+            <p>
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+12505551234">(250) 555-1234</a>
+            </p>
+            <p>
+              <strong>Clinic After Hours:</strong>{" "}
+              <a href="tel:+12505559876">(250) 555-9876</a>
+            </p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:hello@guidedtherapycollective.ca">
+                hello@guidedtherapycollective.ca
+              </a>
+            </p>
+            <p>
+              <strong>Address:</strong> 123 Example St, Prince George, BC
+            </p>
+
+            <p className="footer-hours">
+              <strong>Clinic Hours:</strong> Mon–Fri 9:00am–5:00pm
+            </p>
+          </div>
+
+          <div className="footer-treaty">
+            <p>
+              We acknowledge that we live, work, and create on the traditional
+              and unceded territories of the Indigenous peoples of Canada.
+              Guided Therapy Collective Inc. is situated in the traditional
+              territories of the Dakelh(Carrier) people of the Lheidli
+              T&apos;enneh First Nation. We honour and commit to reconciliation,
+              respect, and the Land Back movement.
+            </p>
+          </div>
+
+          <div className="footer-bottom">
+            <p className="footer-copy">© 2026 Guided Therapy Collective</p>
+
+            <div className="footer-flags">
+              <img
+                src="/images/EveryChildMatters.png"
+                alt="Every Child Matters flag"
+              />
+              <img src="/images/Pride.png" alt="Pride flag" />
+              <img
+                src="/images/BlackLivesMatter.png"
+                alt="Black Lives Matter flag"
+              />
+            </div>
+          </div>
         </div>
       </footer>
     </>

@@ -150,7 +150,7 @@ a {
    ======================== */
 
 .site-header {
-  position: fixed; /* keep your “fixed transparent header” */
+  position: absolute; /* keep your “fixed transparent header” */
   top: 0;
   left: 0;
   right: 0;
@@ -917,38 +917,117 @@ a {
     flex-wrap: wrap;
   }
 }
+
 /* ========================
-   FOOTER
+   FOOTER (Centered + Compact)
    ======================== */
 
 .site-footer {
   background-color: #dce1db;
-  padding: 24px 16px;
+  padding: 2rem 1rem 1.5rem;
   text-align: center;
 }
 
-.footer-links a {
-  margin: 0 16px;
+.footer-inner {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
 }
 
+.footer-brand h3 {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--green);
+  letter-spacing: 0.03em;
+}
+
+.footer-tagline {
+  margin: 0;
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.footer-contact {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: #444;
+  line-height: 1.35;
+}
+
+.footer-contact strong {
+  font-weight: 700;
+}
+
+.footer-contact a {
+  color: var(--violet-dark);
+  font-weight: 650;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-hours {
+  margin-top: 0.25rem;
+}
+
+/* Treaty: smaller + tighter */
+.footer-treaty {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* Bottom row */
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding-top: 0.85rem;
+  display: grid;
+  gap: 0.65rem;
+  justify-items: center;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+/* Flags: smaller + BELOW copyright */
 .footer-flags {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
 .footer-flags img {
-  width: 6rem;
-  height: 3rem;
-  margin-top: 0.5rem;
+  width: 3.1rem;
+  height: auto;
+  opacity: 0.95;
 }
 
-.footer-treaty {
-  margin-top: 15px;
-  font-size: 0.95rem;
-  color: #444;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+/* Mobile: keep it comfy */
+@media (max-width: 520px) {
+  .site-footer {
+    padding: 1.75rem 1rem 1.25rem;
+  }
+
+  .footer-contact {
+    font-size: 0.9rem;
+  }
+
+  .footer-flags img {
+    width: 2.75rem;
+  }
 }
