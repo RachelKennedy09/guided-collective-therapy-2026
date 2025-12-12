@@ -7,7 +7,7 @@ export default function Treatments() {
       {/* TOP: background image ONLY for the cards area */}
       <div
         className="treatments-hero"
-        style={{ "--bg-image": "url('/images/hero_background_web.jpg')" }}
+        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
       >
         <div className="treatments-hero__inner">
           <div className="treatments-hero__panel">

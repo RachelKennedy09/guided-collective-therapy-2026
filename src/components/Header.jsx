@@ -66,9 +66,10 @@ export default function Header() {
               Team
             </NavLink>
           </li>
+
           <li>
-            <NavLink to="/contact" onClick={closeMenu}>
-              Contact
+            <NavLink to="/referrals" onClick={closeMenu}>
+              Referrals
             </NavLink>
           </li>
         </ul>

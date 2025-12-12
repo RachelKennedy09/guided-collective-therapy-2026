@@ -54,6 +54,9 @@ export default function AppLayout() {
                 Team
               </NavLink>
             </li>
+            <NavLink to="/referrals" onClick={closeMenu}>
+              Referrals
+            </NavLink>
             <li>
               <NavLink to="/contact" onClick={closeMenu}>
                 Contact

@@ -15,17 +15,15 @@ export default function Team() {
         <div className="team-hero__inner">
           <div className="team-hero__panel">
             <h1>Our Team</h1>
-
             <p className="team-hero__blurb">
               Guided Therapy Collective is led by a medical director and a
               collaborative care team. We work with care, curiosity, and a
-              grounded relational approach.
+              grounded relational approach. Click on a team member to learn more
             </p>
-
-            <a href="#team-members" className="btn btn-outline team-hero__cta">
+            Click on a team member to learn more
+            {/* <a href="#team-members" className="btn btn-outline team-hero__cta">
               Click on a team member’s photo to learn more ↓
-            </a>
-
+            </a> */}
             {/* Mini bubbles */}
             <div className="team-bubbles" id="team-members">
               <a href="#christine" className="team-bubble">
@@ -75,25 +73,26 @@ export default function Team() {
             </p>
             <p>
               I am grateful to live and work on the unceded traditional
-              territory of the Lheidli T&apos;enneh Nation. I was raised in the
-              North and am honored to continue to serve and work with people in
-              Northern BC.
-            </p>
-            <p>
-              In my general practice I offer psychodynamic therapy with a
-              relational approach, focusing on attachment and emotional
+              territory of the Lheidli T'enneh Nation. I was raised in the North
+              and am honored to continue to serve and work with people in
+              Northern BC. In my general practice I offer psychodynamic therapy
+              with a relational approach, focusing on attachment and emotional
               processing.
             </p>
             <p>
               I am passionate about the use of psychedelics as a way of opening
-              one&apos;s heart and mind to what lies beyond defenses formed
-              through suffering. With supportive integration, there can be
-              healing and growth in life and relationships.
+              one's heart and mind to what lies beyond their defenses that have
+              evolved from years of suffering. Psychedelic healing can be a
+              spiritual, deeply connected experience and I strive to create an
+              environment that offers the opportunity for people to explore
+              these depths. With supportive integration of these experiences,
+              there can be healing and growth within their lives and
+              relationships.
             </p>
-
-            <a href="#team-top" className="text-link">
-              Back to top ↑
-            </a>
+            <p>
+              I look forward to seeing if working together in this realm is the
+              right fit at the right time.
+            </p>
           </div>
         </section>
 
@@ -113,26 +112,24 @@ export default function Team() {
 
             <p>Welcome to a space that supports community and connection.</p>
             <p>
-              I&apos;m a registered nurse who began my career on
-              Vancouver&apos;s Downtown Eastside, working in addictions and
-              mental health. Four years ago, I moved to Prince George to be
-              closer to nature and community.
-            </p>
-            <p>
-              For the past two years I&apos;ve specialized as a
-              Ketamine-Assisted Therapist, with additional training in
-              psilocybin and MDMA therapy through Therapsil. I am currently
-              working toward my Masters in Counselling at UNBC.
+              I’m a registered nurse who began my career on Vancouver’s Downtown
+              Eastside, working in addictions and mental health. Four years ago,
+              I moved to Prince George to be closer to nature and community. For
+              the past two years I’ve specialized as a Ketamine-Assisted
+              Therapist, with additional training in psilocybin and MDMA therapy
+              through Therapsil. I am currently working toward my Masters in
+              Counselling at UNBC.
             </p>
             <p>
               I believe clients are the experts of their own healing. My role is
               to create conditions where people feel safe and at ease, and to
               collaborate in ways that allow their own innate wisdom to arise.
+              My passion for psychedelic therapy comes from witnessing firsthand
+              the profound changes it can generate, and from the dedication and
+              resilience of my clients. I take a collaborative, relational,
+              psychodynamic approach, drawing on ACT, Motivational Interviewing,
+              and strengths-based methods
             </p>
-
-            <a href="#team-top" className="text-link">
-              Back to top ↑
-            </a>
           </div>
         </section>
       </div>

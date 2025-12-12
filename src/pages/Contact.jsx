@@ -6,7 +6,7 @@ export default function Contact() {
     <section className="contact-page">
       <div
         className="contact-hero"
-        style={{ "--bg-image": "url('/images/ForestOfTheWorlds.jpg')" }}
+        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
       >
         <div className="contact-hero__inner">
           <div className="contact-hero__panel">

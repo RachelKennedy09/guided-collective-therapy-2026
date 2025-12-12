@@ -162,7 +162,14 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: transparent;
+
+  /* ⬇️ NEW: very subtle glass background */
+  background: rgba(10, 12, 10, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* ⬇️ optional but helpful on bright videos */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo a {
@@ -221,14 +228,15 @@ a {
     top: 100%;
     right: 0;
     left: auto;
-
+    max-height: calc(100vh - 90px);
+    overflow: auto;
     display: none;
     flex-direction: column;
     gap: 1rem;
 
     padding: 1rem 1.25rem;
     margin: 0;
-
+    padding-bottom: 1.25rem; /* ✅ add this */
     text-align: right;
     z-index: 2000;
 
@@ -291,53 +299,63 @@ a {
 }
 
 .home-hero__overlay {
-  position: absolute;
-  inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.38) 0%,
-    rgba(0, 0, 0, 0.28) 45%,
-    rgba(0, 0, 0, 0.5) 100%
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 45%,
+    rgba(0, 0, 0, 0.14) 100%
   );
 }
-
 .home-hero__content {
   position: relative;
   z-index: 1;
   width: min(980px, 92vw);
 }
-
+.home-hero__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr; /* mobile stack */
+}
 .home-hero__panel {
-  background: rgba(15, 17, 15, 0.68);
+  background: rgba(15, 17, 15, 0.38); /* lighter */
   color: #fff;
-  border-radius: 24px;
-  padding: 2.25rem 2rem;
+  border-radius: 22px;
+
+  /* ✅ smaller “box” */
+  padding: 1.15rem 1.1rem; /* was 1.35/1.25-ish */
+  max-width: 560px; /* ✅ stops huge boxes */
+
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+  text-align: center;
+
+  /* ✅ makes the box hug content better */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-hero__title {
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.35rem;
   font-family: var(--font-serif);
   letter-spacing: 0.08em;
   font-weight: 500;
 }
 
 .home-hero__subtitle {
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.85rem;
   opacity: 0.92;
   font-size: 1.15rem;
 }
 
 .home-hero__about h2 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.55rem;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
 .home-hero__about p {
-  margin: 0 0 1.25rem;
+  margin: 0;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.92);
 }
@@ -347,6 +365,14 @@ a {
   max-width: 85ch;
 }
 
+/* Keep text readable and compact */
+.home-hero__title,
+.home-hero__subtitle,
+.home-hero__about {
+  max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media (max-width: 600px) {
   .home-hero {
     padding-top: 6rem;
@@ -354,6 +380,16 @@ a {
   .home-hero__panel {
     padding: 1.75rem 1.25rem;
     border-radius: 18px;
+  }
+}
+
+@media (min-width: 900px) {
+  .home-hero__about p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .home-hero__content {
+    width: min(860px, 92vw);
   }
 }
 
@@ -456,7 +492,12 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 45%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
 }
 
 .treatments-hero__inner {
@@ -585,13 +626,20 @@ a {
 
 /* Treatments hero panel (match Home/Team frosted look) */
 .treatments-hero__panel {
-  background: rgba(15, 17, 15, 0.68);
+  background: rgba(80, 87, 80, 0.4); /* lighter + more transparent */
   color: #fff;
-  border-radius: 24px;
-  padding: 2.25rem 2rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  border-radius: 22px;
+
+  /* slightly tighter so it feels lighter */
+  padding: 1.6rem 1.5rem;
+
+  /* less blur = more photo texture shows */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* softer shadow */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+
   text-align: center;
 }
 
@@ -639,15 +687,14 @@ a {
   background: var(--bg-image) center/cover no-repeat;
 }
 
-/* keep the overlay exactly as-is */
 .team-hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.48) 0%,
-    rgba(0, 0, 0, 0.32) 40%,
-    rgba(0, 0, 0, 0.56) 100%
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 45%,
+    rgba(0, 0, 0, 0.14) 100%
   );
 }
 
@@ -659,13 +706,20 @@ a {
 }
 
 .team-hero__panel {
-  background: rgba(15, 17, 15, 0.68);
+  background: rgba(15, 17, 15, 0.4); /* lighter */
   color: #fff;
-  border-radius: 24px;
-  padding: 2.25rem 2rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  border-radius: 22px;
+
+  /* tighter so it feels less bulky */
+  padding: 1.6rem 1.5rem;
+
+  /* less blur = more photo texture */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* softer shadow */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+
   text-align: center;
 }
 
@@ -798,6 +852,145 @@ a {
 }
 
 /* ========================
+   REFERRALS PAGE
+   ======================== */
+
+.referrals-page {
+  background: var(--beige);
+}
+
+.referrals-hero {
+  position: relative;
+  background: var(--bg-image) center/cover no-repeat;
+  padding: 7rem 1.25rem 4rem;
+}
+
+.referrals-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 45%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
+}
+
+.referrals-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+.referrals-hero__panel {
+  background: rgba(15, 17, 15, 0.4); /* lighter + more photo */
+  color: #fff;
+  border-radius: 22px;
+
+  /* tighter, less bulky */
+  padding: 1.6rem 1.5rem;
+
+  /* reduce blur so image texture shows */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* softer shadow */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+}
+
+.referrals-hero__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-serif);
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.referrals-hero__blurb {
+  margin: 0 auto 1.5rem;
+  max-width: 75ch;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.referrals-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+@media (min-width: 760px) {
+  .referrals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.referrals-tile {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(191, 196, 189, 0.7);
+  border-radius: 18px;
+  padding: 1.35rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.referrals-tile h2 {
+  margin: 0 0 0.5rem;
+  color: var(--green);
+  font-size: 1.15rem;
+}
+
+.referrals-tile p {
+  margin: 0 0 1rem;
+  color: var(--text-subtle);
+  line-height: 1.6;
+}
+
+.referrals-sections {
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+.referrals-section-block {
+  padding: 3.25rem 0;
+  border-bottom: 1px solid rgba(191, 196, 189, 0.55);
+}
+
+.referrals-section-inner {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+}
+
+.referrals-section-inner h2 {
+  margin: 0 0 0.75rem;
+  color: var(--green);
+  font-size: 2rem;
+  font-family: var(--font-serif);
+}
+
+.referrals-section-inner p {
+  color: var(--text-subtle);
+  line-height: 1.75;
+  max-width: 75ch;
+}
+
+.referrals-list {
+  margin: 0.75rem auto 0;
+  padding-left: 1.15rem;
+  max-width: 75ch;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .referrals-hero__panel {
+    padding: 1.75rem 1.25rem;
+    border-radius: 18px;
+  }
+}
+/* ========================
    CONTACT PAGE (Unified hero + form in same panel)
    ======================== */
 
@@ -819,9 +1012,9 @@ a {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.32) 45%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 45%,
+    rgba(0, 0, 0, 0.14) 100%
   );
 }
 
@@ -833,13 +1026,19 @@ a {
 }
 
 .contact-hero__panel {
-  background: rgba(15, 17, 15, 0.68);
+  background: rgba(15, 17, 15, 0.4); /* lighter, more photo shows */
   color: #fff;
-  border-radius: 24px;
-  padding: 2.25rem 2rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  border-radius: 22px;
+
+  /* tighter so it feels less bulky */
+  padding: 1.6rem 1.5rem;
+
+  /* less blur = more background texture */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* softer shadow */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
 }
 
 .contact-hero__blurb,
@@ -854,16 +1053,16 @@ a {
   gap: 0.95rem;
 }
 
-.field {
+.contact-field {
   display: grid;
   gap: 0.35rem;
 }
 
-.field label {
+.contact-field label {
   font-weight: 650;
 }
 
-.field span {
+.contact-field span {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.82);
 }
@@ -888,7 +1087,7 @@ a {
   min-height: 110px;
 }
 
-.consent {
+.contact-consent {
   display: flex;
   gap: 0.65rem;
   align-items: flex-start;
@@ -897,7 +1096,7 @@ a {
   line-height: 1.45;
 }
 
-.consent input {
+.contact-consent input {
   margin-top: 0.25rem;
 }
 
@@ -913,7 +1112,7 @@ a {
     border-radius: 18px;
   }
 
-  .consent {
+  .contact-consent {
     flex-wrap: wrap;
   }
 }

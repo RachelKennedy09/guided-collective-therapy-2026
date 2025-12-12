@@ -8,7 +8,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="home-hero__bg">
           <img
-            src="/images/hero_background_web.jpg"
+            src="/images/PgVideoStill.png"
             alt=""
             className="home-hero__still"
             aria-hidden="true"
@@ -19,7 +19,7 @@ export default function Home() {
             muted
             loop
             playsInline
-            poster="/images/here_video_still.jpg"
+            poster="/images/PgVideoStill.png"
           >
             <source src="/images/videos/Pgvideo_h264.mp4" type="video/mp4" />
           </video>
@@ -27,30 +27,35 @@ export default function Home() {
         </div>
 
         <div className="home-hero__content">
-          <div className="home-hero__panel">
-            <h1 className="home-hero__title">Guided Therapy Collective</h1>
-            <p className="home-hero__subtitle">We’re glad you’re here.</p>
+          <div className="home-hero__grid">
+            <div className="home-hero__panel">
+              <h1 className="home-hero__title">Guided Therapy Collective</h1>
+              <p className="home-hero__subtitle">We’re glad you’re here.</p>
+            </div>
 
-            <div className="home-hero__about">
-              <h2>About Guided</h2>
-              <p>
-                We strive to offer a safe space in which, together, we can seek
-                a deeper connection with the self. Here, you can explore what
-                you may be seeking, be that reduced suffering, growth,
-                understanding, or healing.
-                <br />
-                <br />
-                Through an emotionally and attachment focused lens, along with
-                utilizing acceptance and commitment and psychodynamic therapy
-                tools, we can work with you through a traditional psychotherapy
-                framework or with the assistance of psychedelic medicines.
-                <br />
-                <br />
-                We have dedicated our time to this healing experience with
-                psychedelics and are grateful these medicines are now becoming
-                more accessible as one avenue to help with mental health
-                conditions.
-              </p>
+            <div className="home-hero__panel">
+              <div className="home-hero__about">
+                <h2>About Guided</h2>
+                <p>
+                  We strive to offer a safe space in which, together, we can
+                  seek a deeper connection with the self. Here, you can explore
+                  what you may be seeking, be that reduced suffering, growth,
+                  understanding, or healing.
+                  <br />
+                  <br />
+                  Through an emotionally and attachment focused lens, along with
+                  utilizing acceptance and commitment and psychodynamic therapy
+                  tools, we can work with you through a traditional
+                  psychotherapy framework or with the assistance of psychedelic
+                  medicines.
+                  <br />
+                  <br />
+                  We have dedicated our time to this healing experience with
+                  psychedelics and are grateful these medicines are now becoming
+                  more accessible as one avenue to help with mental health
+                  conditions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
