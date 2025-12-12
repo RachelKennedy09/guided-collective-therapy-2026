@@ -41,7 +41,7 @@ export default function Contact() {
                 </label>
               </p>
 
-              <div className="field">
+              <div className="contact-field">
                 <label htmlFor="name">Name</label>
                 <span>
                   How would you like us to address you? What are your pronouns?
@@ -49,13 +49,13 @@ export default function Contact() {
                 <input id="name" name="name" type="text" required />
               </div>
 
-              <div className="field">
+              <div className="contact-field">
                 <label htmlFor="email">Email</label>
                 <span>We’ll only use this to respond to your inquiry.</span>
                 <input id="email" name="email" type="email" required />
               </div>
 
-              <div className="field">
+              <div className="contact-field">
                 <label htmlFor="reason">Reason for reaching out</label>
                 <select id="reason" name="reason" required>
                   <option value="">Select an option</option>
@@ -72,14 +72,14 @@ export default function Contact() {
                 </select>
               </div>
 
-              <div className="field">
+              <div className="contact-field">
                 <label htmlFor="message">
                   Anything else you’d like us to know
                 </label>
                 <textarea id="message" name="message" rows="4" />
               </div>
 
-              <div className="consent">
+              <div className="contact-consent">
                 <input id="consent" name="consent" type="checkbox" required />
                 <label htmlFor="consent">
                   I understand this form is not for emergencies and does not
@@ -91,7 +91,7 @@ export default function Contact() {
                 Submit
               </button>
 
-              <p className="form-status">
+              <p className="contact-status">
                 We aim to respond within a few business days.
               </p>
             </form>

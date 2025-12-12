@@ -798,17 +798,13 @@ a {
   background: var(--beige);
 }
 
-.contact-hero {
+.contact-page .contact-hero {
   position: relative;
   background: var(--bg-image) center/cover no-repeat;
-  padding: 5.5rem 1rem 5rem; /* room for sticky nav + breathing */
-  min-height: calc(100vh - 72px); /* helps short pages feel “full” */
-  display: grid;
-  align-items: start;
+  padding: 5.5rem 1rem 5rem;
 }
 
-/* Dark overlay on the background image */
-.contact-hero::before {
+.contact-page .contact-hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -820,15 +816,14 @@ a {
   );
 }
 
-.contact-hero__inner {
+.contact-page .contact-hero__inner {
   position: relative;
   z-index: 1;
   width: min(980px, 92vw);
   margin: 0 auto;
 }
 
-/* Frosted panel (same as Home/Team/Treatments) */
-.contact-hero__panel {
+.contact-page .contact-hero__panel {
   background: rgba(15, 17, 15, 0.68);
   color: #fff;
   border-radius: 24px;
@@ -838,15 +833,15 @@ a {
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
 }
 
-.contact-hero__title {
+.contact-page .contact-hero__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-serif);
   letter-spacing: 0.06em;
   font-weight: 500;
 }
 
-.contact-hero__blurb,
-.contact-hero__note {
+.contact-page .contact-hero__blurb,
+.contact-page .contact-hero__note {
   margin: 0 0 1rem;
   max-width: 75ch;
   line-height: 1.65;
@@ -854,30 +849,30 @@ a {
 }
 
 /* Form */
-.contact-form {
+.contact-page .contact-form {
   margin-top: 1.5rem;
   display: grid;
   gap: 0.95rem;
 }
 
-.field {
+.contact-page .contact-field {
   display: grid;
   gap: 0.35rem;
 }
 
-.field label {
+.contact-page .contact-field label {
   font-weight: 650;
 }
 
-.field span {
+.contact-page .contact-field span {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.82);
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form select,
-.contact-form textarea {
+.contact-page .contact-form input[type="text"],
+.contact-page .contact-form input[type="email"],
+.contact-page .contact-form select,
+.contact-page .contact-form textarea {
   width: 100%;
   max-width: 100%;
   padding: 0.75rem 0.9rem;
@@ -889,13 +884,13 @@ a {
   outline: none;
 }
 
-.contact-form textarea {
+.contact-page .contact-form textarea {
   resize: vertical;
   min-height: 110px;
 }
 
 /* Consent row */
-.consent {
+.contact-page .contact-consent {
   display: flex;
   gap: 0.65rem;
   align-items: flex-start;
@@ -904,11 +899,11 @@ a {
   line-height: 1.45;
 }
 
-.consent input {
+.contact-page .contact-consent input {
   margin-top: 0.25rem;
 }
 
-.form-status {
+.contact-page .contact-status {
   margin: 0.25rem 0 0;
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
@@ -916,17 +911,16 @@ a {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .contact-hero {
+  .contact-page .contact-hero {
     padding: 5rem 1rem 4rem;
-    min-height: auto;
   }
 
-  .contact-hero__panel {
+  .contact-page .contact-hero__panel {
     padding: 1.75rem 1.25rem;
     border-radius: 18px;
   }
 
-  .consent {
+  .contact-page .contact-consent {
     flex-wrap: wrap;
   }
 }
