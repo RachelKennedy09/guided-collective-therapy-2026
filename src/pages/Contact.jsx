@@ -10,7 +10,7 @@ export default function Contact() {
       >
         <div className="contact-hero__inner">
           <div className="contact-hero__panel">
-            <h1 className="contact-hero__title">Contact & referrals</h1>
+            <h1 className="contact-hero__title">Contact & Referrals</h1>
 
             <p className="contact-hero__blurb">
               If you’re curious about ketamine-assisted psychotherapy, wondering
