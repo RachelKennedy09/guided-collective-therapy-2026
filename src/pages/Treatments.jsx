@@ -10,9 +10,10 @@ export default function Treatments() {
         style={{ "--bg-image": "url('/images/hero_background_web.jpg')" }}
       >
         <div className="treatments-hero__inner">
-          <div className="section-card">
-            <h1>Guided Services</h1>
-            <p>
+          <div className="treatments-hero__panel">
+            <h1 className="treatments-hero__title">Guided Services</h1>
+
+            <p className="treatments-hero__blurb">
               We offer psychedelic assisted therapy for a variety of mental
               health diagnoses. However currently only Ketamine is available
               without requiring special access from Health Canada. Psilocybin
@@ -95,7 +96,6 @@ export default function Treatments() {
 
       {/* BELOW: clean sections (NO dropdowns) */}
       <div className="treatments-sections">
-        {/* KETAMINE */}
         <section id="ketamine" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Ketamine-Assisted Therapy</h2>
@@ -125,7 +125,9 @@ export default function Treatments() {
               </div>
 
               <div className="treatment-box">
-                <h3>Group Ketamine Therapy <small>(when available)</small></h3>
+                <h3>
+                  Group Ketamine Therapy <small>(when available)</small>
+                </h3>
                 <ul>
                   <li>Individual Consultation</li>
                   <li>2× Group Preparation Sessions</li>
@@ -141,14 +143,9 @@ export default function Treatments() {
                 </p>
               </div>
             </div>
-
-            <a href="#top" className="text-link">
-              Back to top ↑
-            </a>
           </div>
         </section>
 
-        {/* PSILOCYBIN */}
         <section id="psilocybin" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Psilocybin-Assisted Therapy</h2>
@@ -159,7 +156,6 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* MDMA */}
         <section id="mdma" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>MDMA-Assisted Therapy</h2>
@@ -170,15 +166,14 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* PSYCHOTHERAPY */}
         <section id="psychotherapy" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Psychotherapy & Groups</h2>
 
             <h3>Couples Therapy</h3>
             <p>
-              Attachment-focused, emotionally-oriented psychotherapy for couples.
-              Custom treatment plans available.
+              Attachment-focused, emotionally-oriented psychotherapy for
+              couples. Custom treatment plans available.
             </p>
 
             <h3>Group Psychodynamic Therapy</h3>
@@ -207,7 +202,6 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* NOTE */}
         <section className="treatment-section-block treatment-section-block--note">
           <div className="treatment-section-inner">
             <p>
@@ -215,7 +209,8 @@ export default function Treatments() {
               you have a doctor’s referral. Private health insurance companies
               may cover parts of your treatment. As we practice under the
               supervision of a psychiatrist we are able to offer the medicine
-              sessions at a lower cost if a family doctor has sent us a referral.
+              sessions at a lower cost if a family doctor has sent us a
+              referral.
             </p>
           </div>
         </section>
