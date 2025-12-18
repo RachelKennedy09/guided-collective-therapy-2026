@@ -32,53 +32,108 @@ export default function Contact() {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              action="/contact-success"
+              noValidate
             >
-              {/* Netlify config */}
               <input type="hidden" name="form-name" value="guided-contact" />
+
               <p hidden>
                 <label>
                   Don’t fill this out: <input name="bot-field" />
                 </label>
               </p>
 
+              {/* Name */}
               <div className="contact-field">
                 <label htmlFor="name">Name</label>
-                <span>
-                  How would you like us to address you? What are your pronouns?
-                </span>
-                <input id="name" name="name" type="text" required />
+                <span>How would you like us to greet you?</span>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="e.g. Jordan Smith"
+                  autoComplete="name"
+                  required
+                />
               </div>
 
+              {/* Pronouns (blank by default + can return to blank) */}
               <div className="contact-field">
-                <label htmlFor="email">Email</label>
-                <span>We’ll only use this to respond to your inquiry.</span>
-                <input id="email" name="email" type="email" required />
-              </div>
-
-              <div className="contact-field">
-                <label htmlFor="reason">Reason for reaching out</label>
-                <select id="reason" name="reason" required>
-                  <option value="">Select an option</option>
-                  <option value="personal-care">
-                    I'm seeking care for myself
+                <label htmlFor="pronouns">Pronouns</label>
+                <span>Optional</span>
+                <select id="pronouns" name="pronouns" defaultValue="">
+                  <option value="" aria-label="No pronouns selected">
+                    —
                   </option>
-                  <option value="loved-one">
-                    I'm reaching out for a loved one
-                  </option>
-                  <option value="professional">
-                    I'm a clinician / provider
-                  </option>
-                  <option value="other">Something else</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                  <option value="She / Her">She / Her</option>
+                  <option value="He / Him">He / Him</option>
+                  <option value="They / Them">They / Them</option>
+                  <option value="She / They">She / They</option>
+                  <option value="He / They">He / They</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
+              {/* Email */}
               <div className="contact-field">
-                <label htmlFor="message">
-                  Anything else you’d like us to know
-                </label>
-                <textarea id="message" name="message" rows="4" />
+                <label htmlFor="email">Email</label>
+                <span>We’ll only use this to respond to your inquiry.</span>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="e.g. yourname@email.com"
+                  autoComplete="email"
+                  required
+                />
               </div>
 
+              {/* Phone */}
+              <div className="contact-field">
+                <label htmlFor="phone">Phone number</label>
+                <span>Optional — if you’d prefer a phone call.</span>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="tel"
+                  placeholder="e.g. (403) 555-1234"
+                  autoComplete="tel"
+                />
+              </div>
+
+              {/* Subject */}
+              <div className="contact-field">
+                <label htmlFor="subject">Subject</label>
+                <span>
+                  Optional — a short note to help us understand your question.
+                </span>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="e.g. Booking inquiry, referral question, availability"
+                  autoComplete="off"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="contact-field">
+                <label htmlFor="message">Message</label>
+                <span>
+                  Share whatever feels helpful. Please avoid sensitive medical
+                  details here.
+                </span>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Write your message here…"
+                />
+              </div>
+
+              {/* Consent */}
               <div className="contact-consent">
                 <input id="consent" name="consent" type="checkbox" required />
                 <label htmlFor="consent">
@@ -92,7 +147,8 @@ export default function Contact() {
               </button>
 
               <p className="contact-status">
-                We aim to respond within a few business days.
+                This form is for general inquiries only and is not monitored for
+                urgent or crisis situations.
               </p>
             </form>
           </div>

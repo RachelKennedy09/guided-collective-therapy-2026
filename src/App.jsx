@@ -6,6 +6,7 @@ import Treatments from "./pages/Treatments.jsx";
 import Team from "./pages/Team.jsx";
 import Referrals from "./pages/Referrals.jsx";
 import Contact from "./pages/Contact.jsx";
+import ContactSuccess from "./pages/ContactSuccess.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/referrals" element={<Referrals />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/contact-success" element={<ContactSuccess />} />
       </Route>
     </Routes>
   );
