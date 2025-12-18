@@ -15,8 +15,16 @@ export default function Contact() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // ✅ Local dev: Netlify Forms won’t receive submissions from localhost
+    if (import.meta.env.DEV) {
+      console.info("[DEV] Skipping Netlify Forms POST (localhost).");
+      form.reset();
+      navigate("/contact-success");
+      return;
+    }
+
     try {
-      // Netlify expects URL-encoded form data.
+      // ✅ Production (Netlify): submit to Netlify Forms
       const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -66,10 +74,8 @@ export default function Contact() {
               onSubmit={handleSubmit}
               noValidate
             >
-              {/* Required for Netlify Forms */}
               <input type="hidden" name="form-name" value="guided-contact" />
 
-              {/* Honeypot */}
               <p hidden>
                 <label>
                   Don’t fill this out: <input name="bot-field" />
@@ -90,7 +96,7 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Pronouns (blank by default + can return to blank) */}
+              {/* Pronouns */}
               <div className="contact-field">
                 <label htmlFor="pronouns">Pronouns</label>
                 <span>Optional</span>
@@ -139,9 +145,7 @@ export default function Contact() {
               {/* Subject */}
               <div className="contact-field">
                 <label htmlFor="subject">Subject</label>
-                <span>
-                  Optional — a short note to help us understand your question.
-                </span>
+                <span>Optional — a short note to help us understand.</span>
                 <input
                   id="subject"
                   name="subject"
