@@ -292,10 +292,12 @@ a {
 .home-hero__still,
 .home-hero__video {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* THIS is critical */
+  object-position: center;
 }
 
 .home-hero__overlay {
