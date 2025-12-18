@@ -1,7 +1,38 @@
 // src/pages/Contact.jsx
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
+  const navigate = useNavigate();
+  const [isSending, setIsSending] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setIsSending(true);
+    setErrorMsg("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      // Netlify expects URL-encoded form data.
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (!res.ok) throw new Error("Something went wrong. Please try again.");
+
+      form.reset();
+      navigate("/contact-success");
+    } catch (err) {
+      setErrorMsg(err.message || "Failed to send. Please try again.");
+      setIsSending(false);
+    }
+  }
+
   return (
     <section className="contact-page">
       <div
@@ -32,11 +63,13 @@ export default function Contact() {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
-              action="/contact-success"
+              onSubmit={handleSubmit}
               noValidate
             >
+              {/* Required for Netlify Forms */}
               <input type="hidden" name="form-name" value="guided-contact" />
 
+              {/* Honeypot */}
               <p hidden>
                 <label>
                   Don’t fill this out: <input name="bot-field" />
@@ -142,9 +175,15 @@ export default function Contact() {
                 </label>
               </div>
 
-              <button type="submit" className="btn">
-                Submit
+              <button type="submit" className="btn" disabled={isSending}>
+                {isSending ? "Sending..." : "Submit"}
               </button>
+
+              {errorMsg && (
+                <p className="contact-status" role="status">
+                  {errorMsg}
+                </p>
+              )}
 
               <p className="contact-status">
                 This form is for general inquiries only and is not monitored for
