@@ -70,8 +70,8 @@ export default function Contact() {
               name="guided-contact"
               method="POST"
               data-netlify="true"
+              data-netlify-recaptcha="true"
               netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
               noValidate
             >
               <input type="hidden" name="form-name" value="guided-contact" />
@@ -178,6 +178,8 @@ export default function Contact() {
                   establish an immediate treatment relationship.
                 </label>
               </div>
+
+              <div data-netlify-recaptcha="true"></div>
 
               <button type="submit" className="btn" disabled={isSending}>
                 {isSending ? "Sending..." : "Submit"}
