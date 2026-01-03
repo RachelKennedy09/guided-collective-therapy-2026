@@ -57,7 +57,7 @@ export default function Treatments() {
 
               {/* ✅ NEW CARD */}
               <article className="treatment-tile">
-                <h2>Non-Medicinal Therapies</h2>
+                <h2>Traditional Therapies</h2>
                 <p>
                   Psychiatry services, perinatal care, individual and group
                   therapy, couples therapy, and structured parenting programs.
@@ -94,7 +94,7 @@ export default function Treatments() {
                   <li>2× Integration Sessions</li>
                   <li>Closing Session</li>
                 </ul>
-                <p className="price">Investment of *$2,975 </p>
+                <p className="price">Investment of $2,975 </p>
               </div>
 
               <div className="treatment-box">
@@ -108,7 +108,7 @@ export default function Treatments() {
                   <li>2× Group Integration Sessions</li>
                   <li>Group Closing Session</li>
                 </ul>
-                <p className="price">Investment of *$1,575 </p>
+                <p className="price">Investment of $1,575 </p>
               </div>
             </div>
           </div>
