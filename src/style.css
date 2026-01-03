@@ -477,6 +477,86 @@ a {
 }
 
 /* ========================
+   ABOUT PAGE (generic hero)
+   ======================== */
+.about-page {
+  background: var(--beige);
+}
+
+.page-hero {
+  position: relative;
+  background: var(--bg-image) center/cover no-repeat;
+  padding: 7rem 1.25rem 4rem;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 45%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+.page-hero__panel {
+  background: rgba(15, 17, 15, 0.4);
+  color: #fff;
+  border-radius: 22px;
+  padding: 1.6rem 1.5rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+.page-hero__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-serif);
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.page-hero__blurb {
+  margin: 0 0 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.page-hero__content h2 {
+  margin: 1.25rem 0 0.5rem;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.page-hero__content p,
+.page-hero__content li {
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.65;
+}
+
+.page-hero__content ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+}
+
+@media (max-width: 600px) {
+  .page-hero__panel {
+    padding: 1.75rem 1.25rem;
+    border-radius: 18px;
+  }
+}
+
+/* ========================
    TREATMENTS PAGE (new layout)
    ======================== */
 
@@ -772,8 +852,8 @@ a {
 }
 
 .team-bubble img {
-  width: 74px;
-  height: 74px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -1282,4 +1362,102 @@ a {
 
 .floating-back:active {
   transform: translateY(0px);
+}
+/* Give breathing room between the clickable bubbles and the bios */
+.team-sections {
+  padding-top: 5rem; /* was 3.5rem */
+}
+
+.team-bubbles {
+  margin-bottom: 2.25rem; /* adds space before the next section starts */
+}
+
+@media (min-width: 760px) {
+  .team-bubble img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* ========================
+   ABOUT PAGE – content below hero
+   ======================== */
+
+.about-content {
+  background: var(--beige);
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+.about-content__inner {
+  width: min(800px, 92vw);
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  margin: 2rem 0 0.5rem;
+  color: var(--green);
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+}
+
+.about-content p {
+  color: var(--text-subtle);
+  line-height: 1.75;
+  max-width: 70ch;
+}
+
+.about-content ul {
+  margin: 0.75rem 0 1.5rem;
+  padding-left: 1.15rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+.page-hero {
+  position: relative;
+  background: var(--bg-image) center/cover no-repeat;
+
+  /* ✅ make it a BIG hero */
+  min-height: 92vh; /* try 90–100vh */
+  display: grid;
+  align-items: center;
+
+  /* keep room for the navbar */
+  padding: 7.5rem 1.25rem 4rem;
+
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .page-hero {
+    min-height: 88vh;
+    padding-top: 6.5rem;
+  }
+}
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 92vw);
+  margin: 0 auto;
+
+  /* ✅ centers the panel nicely */
+  display: grid;
+  place-items: center;
+}
+.page-hero__panel {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 620px; /* optional, keeps it elegant */
+}
+.team-hero {
+  position: relative;
+
+  /* ✅ make the photo take up the first screen */
+  min-height: 92vh;
+  display: grid;
+  align-items: center;
+
+  /* keep room for navbar */
+  padding: 7.5rem 1.25rem 4rem;
+
+  overflow: hidden;
+  background: var(--bg-image) center/cover no-repeat;
 }

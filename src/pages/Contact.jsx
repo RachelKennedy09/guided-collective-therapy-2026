@@ -45,11 +45,11 @@ export default function Contact() {
     <section className="contact-page">
       <div
         className="contact-hero"
-        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
+        style={{ "--bg-image": "url('/images/ConnaughtHillRoadPG.jpg')" }}
       >
         <div className="contact-hero__inner">
           <div className="contact-hero__panel">
-            <h1 className="contact-hero__title">Contact & Referrals</h1>
+            <h1 className="contact-hero__title">Contact</h1>
 
             <p className="contact-hero__blurb">
               If you’re curious about ketamine-assisted psychotherapy, wondering

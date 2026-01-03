@@ -8,7 +8,7 @@ export default function Team() {
       <div
         className="team-hero"
         id="team-top"
-        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
+        style={{ "--bg-image": "url('/images/FrozenPGUniversityHill.jpg')" }}
       >
         <div className="team-hero__overlay" />
 
@@ -18,13 +18,13 @@ export default function Team() {
             <p className="team-hero__blurb">
               Guided Therapy Collective is led by a medical director and a
               collaborative care team. We work with care, curiosity, and a
-              grounded relational approach. Click on a team member to learn more
+              grounded relational approach.
             </p>
-            Click on a team member to learn more
+
             {/* <a href="#team-members" className="btn btn-outline team-hero__cta">
               Click on a team member’s photo to learn more ↓
             </a> */}
-            {/* Mini bubbles */}
+            {/* Mini bubbles
             <div className="team-bubbles" id="team-members">
               <a href="#christine" className="team-bubble">
                 <img
@@ -44,7 +44,7 @@ export default function Team() {
                   <p>RN • Ketamine-Assisted Therapist</p>
                 </div>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default function Team() {
               evolved from years of suffering. Psychedelic healing can be a
               spiritual, deeply connected experience and I strive to create an
               environment that offers the opportunity for people to explore
-              these depths. With supportive integration of these experiences,
+              these depths. With supportive integration of these experiences
               there can be healing and growth within their lives and
               relationships.
             </p>

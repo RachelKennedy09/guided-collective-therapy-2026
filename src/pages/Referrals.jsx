@@ -7,7 +7,7 @@ export default function Referrals() {
       {/* HERO (photo background + frosted panel) */}
       <div
         className="referrals-hero"
-        style={{ "--bg-image": "url('/images/FraserRiver.jpg')" }}
+        style={{ "--bg-image": "url('/images/DJI_0267.jpg')" }}
       >
         <div className="referrals-hero__overlay" />
 

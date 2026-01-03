@@ -46,6 +46,11 @@ export default function AppLayout() {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/About" onClick={closeMenu}>
+                About
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/treatments" onClick={closeMenu}>
                 Treatments
               </NavLink>

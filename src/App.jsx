@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import AppLayout from "./components/AppLayout.jsx";
 
 import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
 import Treatments from "./pages/Treatments.jsx";
 import Team from "./pages/Team.jsx";
 import Referrals from "./pages/Referrals.jsx";
@@ -13,6 +14,7 @@ export default function App() {
     <Routes>
       <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/treatments" element={<Treatments />} />
         <Route path="/team" element={<Team />} />
         <Route path="/referrals" element={<Referrals />} />
