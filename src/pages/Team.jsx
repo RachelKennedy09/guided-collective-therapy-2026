@@ -101,7 +101,7 @@ export default function Team() {
             <div className="team-section-header">
               <img
                 className="team-section-avatar"
-                src="/images/LauraProfile.JPG"
+                src="/images/LauraProfile3.JPG"
                 alt="Laura Fisher"
               />
               <div>
