@@ -53,16 +53,16 @@ export default function Contact() {
             </p>
 
             <form
-              className="contact-form"
-              name="guided-contact"
-              method="POST"
-              action="/contact-success"
-              data-netlify="true"
-              data-netlify-recaptcha="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-              noValidate
-            >
+  className="contact-form"
+  name="guided-contact"
+  method="POST"
+  action="/contact-success"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  onSubmit={handleSubmit}
+  noValidate
+>
+
               {/* ✅ Required Netlify hidden field */}
               <input type="hidden" name="form-name" value="guided-contact" />
 

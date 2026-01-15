@@ -11,24 +11,23 @@
     <div id="root"></div>
 
     <!-- Netlify Forms detection (hidden shadow form) -->
-    <form
-      name="guided-contact"
-      method="POST"
-      data-netlify="true"
-      data-netlify-recaptcha="true"
-      data-netlify-honeypot="bot-field"
-      hidden
-    >
-      <input type="hidden" name="form-name" value="guided-contact" />
-      <input name="name" />
-      <input name="pronouns" />
-      <input name="email" />
-      <input name="phone" />
-      <input name="subject" />
-      <textarea name="message"></textarea>
-      <input type="checkbox" name="consent" />
-      <div data-netlify-recaptcha="true"></div>
-    </form>
+ <form
+  name="guided-contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  hidden
+>
+  <input type="hidden" name="form-name" value="guided-contact" />
+  <input name="name" />
+  <input name="pronouns" />
+  <input name="email" />
+  <input name="phone" />
+  <input name="subject" />
+  <textarea name="message"></textarea>
+  <input type="checkbox" name="consent" />
+</form>
+
   </body>
 </html>
 
