@@ -7,37 +7,25 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    setIsSending(true);
-    setErrorMsg("");
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    // Local dev: Netlify Forms won't receive localhost submissions
+  function handleSubmit(e) {
+    // ✅ Only intercept in local dev (localhost)
+    // Netlify Forms doesn't capture submissions from localhost anyway
     if (import.meta.env.DEV) {
-      console.info("[DEV] Skipping Netlify Forms POST");
+      e.preventDefault();
+      setIsSending(true);
+      setErrorMsg("");
+
+      const form = e.currentTarget;
       form.reset();
+
+      // mimic success flow
       navigate("/contact-success");
       return;
     }
 
-    try {
-      const res = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      });
-
-      if (!res.ok) throw new Error("Something went wrong. Please try again.");
-
-      form.reset();
-      navigate("/contact-success");
-    } catch (err) {
-      setErrorMsg(err?.message || "Failed to send. Please try again.");
-      setIsSending(false);
-    }
+    // ✅ In production: do NOT preventDefault.
+    // Let the browser submit the POST normally so Netlify captures it (especially with reCAPTCHA).
+    // You’ll be redirected by the form’s action="/contact-success"
   }
 
   return (
@@ -75,10 +63,10 @@ export default function Contact() {
               onSubmit={handleSubmit}
               noValidate
             >
-              {/* Required Netlify hidden field */}
+              {/* ✅ Required Netlify hidden field */}
               <input type="hidden" name="form-name" value="guided-contact" />
 
-              {/* Honeypot */}
+              {/* ✅ Honeypot */}
               <p hidden>
                 <label>
                   Don’t fill this out: <input name="bot-field" />
@@ -131,12 +119,7 @@ export default function Contact() {
               <div className="contact-field">
                 <label htmlFor="phone">Phone number</label>
                 <span>Optional — if you’d prefer a phone call.</span>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                />
+                <input id="phone" name="phone" type="tel" autoComplete="tel" />
               </div>
 
               {/* Subject */}
@@ -149,9 +132,7 @@ export default function Contact() {
               {/* Message */}
               <div className="contact-field">
                 <label htmlFor="message">Message</label>
-                <span>
-                  Please avoid sharing sensitive medical details here.
-                </span>
+                <span>Please avoid sharing sensitive medical details here.</span>
                 <textarea id="message" name="message" rows="4" />
               </div>
 
