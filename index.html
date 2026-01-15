@@ -1,19 +1,34 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Guided Therapy Collective</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.jsx"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Guided Therapy Collective</title>
+  <body>
+    <div id="root"></div>
 
-  <!-- ✅ This is exactly what makes mobile work -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ✅ This is correct for Vite dev + build -->
-  <script type="module" src="/src/main.jsx"></script>
-</head>
-
-<body>
-  <div id="root"></div>
-</body>
-
+    <!-- Netlify Forms detection (hidden shadow form) -->
+    <form
+      name="guided-contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-recaptcha="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="guided-contact" />
+      <input name="name" />
+      <input name="pronouns" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="subject" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" />
+      <div data-netlify-recaptcha="true"></div>
+    </form>
+  </body>
 </html>
+
