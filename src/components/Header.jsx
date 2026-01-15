@@ -2,6 +2,12 @@
 import React, { useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 
+// Simple image preloader
+function preloadImage(src) {
+  const img = new Image();
+  img.src = src;
+}
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -11,14 +17,13 @@ export default function Header() {
     setIsOpen(false);
   }
 
-  // ✅ “About” should navigate to Home, then jump to #about
+  // About = Home → scroll
   function goToAbout(e) {
     e.preventDefault();
     closeMenu();
 
     if (location.pathname !== "/") {
       navigate("/");
-      // wait for Home to mount, then scroll
       setTimeout(() => {
         document
           .getElementById("about")
@@ -56,19 +61,48 @@ export default function Header() {
               About
             </a>
           </li>
+
           <li>
-            <NavLink to="/treatments" onClick={closeMenu}>
+            <NavLink
+              to="/treatments"
+              onMouseEnter={() =>
+                preloadImage("/images/DJI_0265-2.webp")
+              }
+              onFocus={() =>
+                preloadImage("/images/DJI_0265-2.webp")
+              }
+              onClick={closeMenu}
+            >
               Treatments
             </NavLink>
           </li>
+
           <li>
-            <NavLink to="/team" onClick={closeMenu}>
+            <NavLink
+              to="/team"
+              onMouseEnter={() =>
+                preloadImage("/images/FrozenPGUniversityHill.webp")
+              }
+              onFocus={() =>
+                preloadImage("/images/FrozenPGUniversityHill.webp")
+              }
+              onClick={closeMenu}
+            >
               Team
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/referrals" onClick={closeMenu}>
+            <NavLink
+              to="/referrals"
+              onMouseEnter={() =>
+                preloadImage("/images/WarFalls.webp")
+              }
+              onFocus={() =>
+                preloadImage("/images/WarFalls.webp")
+              }
+              onClick={closeMenu}
+            >
               Referrals
             </NavLink>
           </li>

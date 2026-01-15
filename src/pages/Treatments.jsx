@@ -75,7 +75,7 @@ export default function Treatments() {
 
       {/* BELOW: clean sections */}
       <div className="treatments-sections">
-        {/* ✅ Keep Ketamine section exactly as you had it */}
+       
         <section id="ketamine" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Ketamine-Assisted Therapy</h2>
@@ -114,7 +114,7 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* ✅ NEW: Other Medicine Assisted Therapies */}
+        {/*  Other Medicine Assisted Therapies */}
         <section id="other-medicine" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Other Medicine Assisted Therapies</h2>
@@ -146,7 +146,7 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* ✅ NEW: Other Therapies & Groups */}
+        {/* Other Therapies & Groups */}
         <section id="other-therapies" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Other Therapies &amp; Groups</h2>
@@ -228,7 +228,7 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* Keep your note section */}
+        {/* note section */}
         <section className="treatment-section-block treatment-section-block--note">
           <div className="treatment-section-inner">
             <p>

@@ -8,8 +8,8 @@ export default function Contact() {
   const [errorMsg, setErrorMsg] = useState("");
 
   function handleSubmit(e) {
-    // ✅ Only intercept in local dev (localhost)
-    // Netlify Forms doesn't capture submissions from localhost anyway
+    // Only intercept in local dev (localhost)
+    // Netlify Forms doesn't capture submissions from localhost 
     if (import.meta.env.DEV) {
       e.preventDefault();
       setIsSending(true);
@@ -23,7 +23,7 @@ export default function Contact() {
       return;
     }
 
-    // ✅ In production: do NOT preventDefault.
+    // In production: do NOT preventDefault.
     // Let the browser submit the POST normally so Netlify captures it (especially with reCAPTCHA).
     // You’ll be redirected by the form’s action="/contact-success"
   }
