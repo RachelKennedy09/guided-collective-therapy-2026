@@ -32,7 +32,7 @@ export default function Contact() {
     <section className="contact-page">
       <div
         className="contact-hero"
-        style={{ "--bg-image": "url('/images/ConnaughtHillRoadPG.jpg')" }}
+        style={{ "--bg-image": "url('/images/ConnaughtHillRoadPG.webp')" }}
       >
         <div className="contact-hero__inner">
           <div className="contact-hero__panel">

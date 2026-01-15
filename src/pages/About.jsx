@@ -7,7 +7,7 @@ export default function About() {
       {/* HERO */}
       <section
         className="page-hero"
-        style={{ "--bg-image": "url('/images/DSC03726.jpg')" }}
+        style={{ "--bg-image": "url('/images/DSC03726.webp')" }}
       >
         <div className="page-hero__inner">
           <div className="page-hero__panel">

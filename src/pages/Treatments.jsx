@@ -8,7 +8,7 @@ export default function Treatments() {
       {/* TOP: background image ONLY for the cards area */}
       <div
         className="treatments-hero"
-        style={{ "--bg-image": "url('/images/LTMPPGTree.jpg')" }}
+        style={{ "--bg-image": "url('/images/LTMPPGTree.webp')" }}
       >
         <div className="treatments-hero__inner">
           <BackToHome />

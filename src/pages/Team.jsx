@@ -8,7 +8,7 @@ export default function Team() {
       <div
         className="team-hero"
         id="team-top"
-        style={{ "--bg-image": "url('/images/FrozenPGUniversityHill.jpg')" }}
+        style={{ "--bg-image": "url('/images/FrozenPGUniversityHill.webp')" }}
       >
         <div className="team-hero__overlay" />
 
