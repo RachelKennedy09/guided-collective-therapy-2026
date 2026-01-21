@@ -7,9 +7,12 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  // NEW: contact type toggle
+  const [contactAs, setContactAs] = useState("patient"); // "patient" | "physician"
+
   function handleSubmit(e) {
     // Only intercept in local dev (localhost)
-    // Netlify Forms doesn't capture submissions from localhost 
+    // Netlify Forms doesn't capture submissions from localhost
     if (import.meta.env.DEV) {
       e.preventDefault();
       setIsSending(true);
@@ -18,14 +21,16 @@ export default function Contact() {
       const form = e.currentTarget;
       form.reset();
 
+      // reset contactAs too (since we manually reset)
+      setContactAs("patient");
+
       // mimic success flow
       navigate("/contact-success");
       return;
     }
 
     // In production: do NOT preventDefault.
-    // Let the browser submit the POST normally so Netlify captures it (especially with reCAPTCHA).
-    // You’ll be redirected by the form’s action="/contact-success"
+    // Let the browser submit the POST normally so Netlify captures it.
   }
 
   return (
@@ -39,10 +44,8 @@ export default function Contact() {
             <h1 className="contact-hero__title">Contact</h1>
 
             <p className="contact-hero__blurb">
-              If you’re curious about ketamine-assisted psychotherapy, wondering
-              whether you might qualify for psychedelic-assisted treatments
-              through Canada’s Special Access Program, or seeking support for a
-              loved one, we’d be happy to connect.
+              If you’re reaching out about Guided’s services, referrals, or
+              general questions, we’d be happy to connect.
             </p>
 
             <p className="contact-hero__note">
@@ -53,16 +56,15 @@ export default function Contact() {
             </p>
 
             <form
-  className="contact-form"
-  name="guided-contact"
-  method="POST"
-  action="/contact-success"
-  data-netlify="true"
-  data-netlify-honeypot="bot-field"
-  onSubmit={handleSubmit}
-  noValidate
->
-
+              className="contact-form"
+              name="guided-contact"
+              method="POST"
+              action="/contact-success"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              noValidate
+            >
               {/* ✅ Required Netlify hidden field */}
               <input type="hidden" name="form-name" value="guided-contact" />
 
@@ -72,6 +74,22 @@ export default function Contact() {
                   Don’t fill this out: <input name="bot-field" />
                 </label>
               </p>
+
+              {/* ✅ NEW: Contacting as (required) */}
+              <div className="contact-field">
+                <label htmlFor="contactAs">I am contacting as</label>
+                <span>Select the option that best fits.</span>
+                <select
+                  id="contactAs"
+                  name="contactAs"
+                  value={contactAs}
+                  onChange={(e) => setContactAs(e.target.value)}
+                  required
+                >
+                  <option value="patient">Prospective patient / general inquiry</option>
+                  <option value="physician">Physician / referral</option>
+                </select>
+              </div>
 
               {/* Name */}
               <div className="contact-field">
@@ -115,12 +133,39 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Phone */}
-              <div className="contact-field">
-                <label htmlFor="phone">Phone number</label>
-                <span>Optional — if you’d prefer a phone call.</span>
-                <input id="phone" name="phone" type="tel" autoComplete="tel" />
-              </div>
+
+              {/* Physician-only fields */}
+              {contactAs === "physician" && (
+                <>
+                  <div className="contact-field">
+                    <label htmlFor="clinic">Clinic / Practice name</label>
+                    <span>Optional</span>
+                    <input id="clinic" name="clinic" type="text" />
+                  </div>
+
+                  <div className="contact-field">
+                    <label htmlFor="physicianPhone">Best callback number</label>
+                    <span>Optional</span>
+                    <input
+                      id="physicianPhone"
+                      name="physicianPhone"
+                      type="tel"
+                      autoComplete="tel"
+                    />
+                  </div>
+
+                  <div className="contact-field">
+                    <label htmlFor="referralSent">Referral being sent by</label>
+                    <span>Optional — fax is preferred for referrals.</span>
+                    <select id="referralSent" name="referralSent" defaultValue="">
+                      <option value="">—</option>
+                      <option value="Fax">Fax</option>
+                      <option value="Email (no identifying info)">Email (no identifying info)</option>
+                      <option value="Not yet sent">Not yet sent</option>
+                    </select>
+                  </div>
+                </>
+              )}
 
               {/* Subject */}
               <div className="contact-field">
@@ -132,7 +177,12 @@ export default function Contact() {
               {/* Message */}
               <div className="contact-field">
                 <label htmlFor="message">Message</label>
-                <span>Please avoid sharing sensitive medical details here.</span>
+                <span>
+                  Please avoid sharing sensitive medical details here.{" "}
+                  {contactAs === "physician"
+                    ? "Do not include patient-identifying information."
+                    : ""}
+                </span>
                 <textarea id="message" name="message" rows="4" />
               </div>
 

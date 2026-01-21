@@ -16,64 +16,84 @@ export default function Referrals() {
             <h1 className="referrals-hero__title">Referrals</h1>
 
             <p className="referrals-hero__blurb">
-              If you’re looking to start ketamine-assisted psychotherapy or
-              explore options through Canada’s Special Access Program, we’ll
-              help you understand the next steps and what you’ll need.
+              Whether you’re exploring ketamine-assisted psychotherapy or
+              looking for information about referrals, we’ll help guide you
+              through the next steps.
             </p>
 
             <div className="referrals-grid">
+              {/* 1) Prospective Patients */}
               <article className="referrals-tile">
-                <h2>1) Reach out</h2>
+  <h2>For Prospective Patients</h2>
+  <p>
+    Guided offers a range of mental health services including
+    ketamine-assisted psychotherapy, other medicine-assisted therapies
+    (when available), traditional psychotherapy and psychiatry services,
+    and perinatal and parenting-focused care.
+  </p>
+  <p>
+    If you’re exploring treatment options or unsure which service may be
+    the right fit, we invite you to reach out and we’ll help guide you
+    through next steps.
+  </p>
+  <Link to="/contact" className="btn btn-outline">
+    Contact →
+  </Link>
+</article>
+
+
+              {/* 2) Physicians */}
+              <article className="referrals-tile">
+                <h2>Physicians</h2>
                 <p>
-                  Send us a message to share what you’re looking for. We’ll
-                  reply with next steps and what information is helpful to
-                  include.
+                  We offer ketamine-assisted therapy for a variety of mental
+                  health conditions, including (but not limited to)
+                  Treatment-Resistant Depression, anxiety, and trauma-related
+                  disorders.
                 </p>
+                <p>
+                  If you are a physician and have a patient in mind for
+                  psychedelic-assisted therapy, please fax your referral to
+                  Dr. Kennedy at Guided:
+                </p>
+
+                <p className="referrals-contact-lines">
+                  <strong>Fax:</strong> 1-888-897-6501
+                </p>
+
+                <p>
+                  If you have any questions, please reach out to us via email{" "}
+                  <strong>(without any patient-identifying information)</strong>.
+                </p>
+
                 <Link to="/contact" className="btn btn-outline">
-                  Contact →{" "}
+                  Email us →
                 </Link>
               </article>
 
+              {/* 3) Join our team */}
               <article className="referrals-tile">
-                <h2>2) Referral (recommended)</h2>
+                <h2>Interested in joining our team?</h2>
                 <p>
-                  A referral from your primary care provider can support access
-                  and may help with partial coverage.
+                  We’re always interested in connecting with health
+                  professionals and counsellors who may want to get involved in
+                  our psychedelic-assisted or traditional psychotherapy services.
                 </p>
-              </article>
-
-              <article className="referrals-tile">
-                <h2>3) Intake + consult</h2>
                 <p>
-                  We’ll book an intake/consultation to review intentions, history,
-                  and eligibility, and answer questions about what to expect.
+                  Please feel free to reach out and share a bit about you and
+                  your professional background.
                 </p>
-              </article>
-
-              <article className="referrals-tile">
-                <h2>4) Special Access Program</h2>
-                <p>
-                  Psilocybin and MDMA may be possible for eligible clients
-                  through Health Canada’s Special Access Program.
-                </p>
-                <a
-                  className="sap-link"
-                  href="https://www.canada.ca/en/health-canada/services/drugs-health-products/special-access/drugs.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Special Access Program
-                </a>
+                <Link to="/contact" className="btn btn-outline">
+                  Get in touch →
+                </Link>
               </article>
             </div>
           </div>
         </div>
       </div>
 
-      {/* BELOW: clean sections like Treatments */}
+      {/* BELOW: keep your clean sections */}
       <div className="referrals-sections">
-      
-
         <section className="referrals-section-block">
           <div className="referrals-section-inner">
             <h2>What to have ready</h2>
