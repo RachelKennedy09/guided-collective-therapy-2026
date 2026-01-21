@@ -52,7 +52,7 @@ export default function AppLayout() {
             </li>
             <li>
               <NavLink to="/treatments" onClick={closeMenu}>
-                Treatments
+                Services
               </NavLink>
             </li>
             <li>

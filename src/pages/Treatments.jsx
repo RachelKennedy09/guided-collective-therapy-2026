@@ -5,7 +5,7 @@ import BackToHome from "../components/FloatingBack";
 export default function Treatments() {
   return (
     <section className="treatments-page">
-      {/* TOP: background image ONLY for the cards area */}
+      {/* TOP: background image behind intro + tiles */}
       <div
         className="treatments-hero"
         style={{ "--bg-image": "url('/images/LTMPPGTree.webp')" }}
@@ -13,69 +13,81 @@ export default function Treatments() {
         <div className="treatments-hero__inner">
           <BackToHome />
 
-          <div className="treatments-hero__panel">
-            <h1 className="treatments-hero__title">Guided Services</h1>
+          {/* Smaller intro card (lets more photo show) */}
+          <header className="treatments-intro">
+            <h1 className="treatments-intro__title">Guided Services</h1>
 
-            <p className="treatments-hero__blurb">
+            <p className="treatments-intro__blurb">
               We at Guided offer medicine-assisted psychotherapy for a variety
               of mental health diagnoses including but not limited to treatment
               resistant depression, PTSD, anxiety disorders and chronic pain.
-              <br />
-              <br />
-              We are happy to help you connect to someone that can support you
-              through the appropriate approval process.
-            </p>
+                          </p>
+          </header>
 
-            {/* CARDS */}
-            <div className="treatments-grid">
-              <article className="treatment-tile">
-                <h2>Ketamine-Assisted Therapy</h2>
-                <p>
-                  Medically supervised ketamine-assisted psychotherapy with
-                  preparation and integration. Individual programs (and group
-                  options when available).
-                </p>
-                <div className="treatment-tile__actions">
-                  <a href="#ketamine" className="btn btn-outline">
-                    More info →
-                  </a>
-                </div>
-              </article>
+          {/* 4 tiles (balanced) */}
+          <div className="treatments-grid">
+            <article className="treatment-tile">
+              <h2>Ketamine-Assisted Therapy</h2>
+              <p>
+                Medically supervised ketamine-assisted psychotherapy with
+                preparation and integration. Individual programs (and group
+                options when available).
+              </p>
+              <div className="treatment-tile__actions">
+                <a href="#ketamine" className="btn btn-outline">
+                  More info →
+                </a>
+              </div>
+            </article>
 
-              <article className="treatment-tile">
-                <h2>Other Medicine Assisted Therapies</h2>
-                <p>
-                  Psilocybin, MDMA, and other substances may be available only
-                  through Health Canada’s Special Access Program (SAP).
-                </p>
-                <div className="treatment-tile__actions">
-                  <a href="#other-medicine" className="btn btn-outline">
-                    More info →
-                  </a>
-                </div>
-              </article>
+            <article className="treatment-tile">
+              <h2>Other Medicine-Assisted Therapies</h2>
+              <p>
+                Psilocybin, MDMA, and other substances may be available only
+                through Health Canada’s Special Access Program (SAP).
+              </p>
+              <div className="treatment-tile__actions">
+                <a href="#other-medicine" className="btn btn-outline">
+                  More info →
+                </a>
+              </div>
+            </article>
 
-              {/* ✅ NEW CARD */}
-              <article className="treatment-tile">
-                <h2>Traditional Therapies</h2>
-                <p>
-                  Psychiatry services, perinatal care, individual and group
-                  therapy, couples therapy, and structured parenting programs.
-                </p>
-                <div className="treatment-tile__actions">
-                  <a href="#other-therapies" className="btn btn-outline">
-                    View services →
-                  </a>
-                </div>
-              </article>
-            </div>
+            {/* Traditional therapies tile */}
+            <article className="treatment-tile">
+              <h2>Traditional Therapies</h2>
+              <p>
+                Psychiatry services, individual and group therapy, and
+                attachment-focused couples therapy. Availability and fit are
+                discussed case-by-case.
+              </p>
+              <div className="treatment-tile__actions">
+                <a href="#traditional" className="btn btn-outline">
+                  View services →
+                </a>
+              </div>
+            </article>
+
+            {/* Combined perinatal + parenting tile */}
+            <article className="treatment-tile">
+              <h2>Perinatal &amp; Parenting Psychiatry</h2>
+              <p>
+                Perinatal psychiatric care (pregnancy to 1 year post-partum) and
+                parenting support including Circle of Security Parenting (COS-P).
+              </p>
+              <div className="treatment-tile__actions">
+                <a href="#perinatal-parenting" className="btn btn-outline">
+                  Learn more →
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
 
       {/* BELOW: clean sections */}
       <div className="treatments-sections">
-       
+        {/* Ketamine */}
         <section id="ketamine" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Ketamine-Assisted Therapy</h2>
@@ -114,7 +126,7 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/*  Other Medicine Assisted Therapies */}
+        {/* Other Medicine Assisted Therapies */}
         <section id="other-medicine" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Other Medicine Assisted Therapies</h2>
@@ -134,33 +146,15 @@ export default function Treatments() {
               </a>
               .
             </p>
-
-            <p>
-              If this is what you are interested in, please{" "}
-              <a href="/contact" className="sap-link">
-                contact us
-              </a>{" "}
-              and we can work to connect you with someone that can help with the
-              application process.
-            </p>
           </div>
         </section>
 
-        {/* Other Therapies & Groups */}
-        <section id="other-therapies" className="treatment-section-block">
+        {/* NEW: Combined perinatal + parenting section */}
+        <section id="perinatal-parenting" className="treatment-section-block">
           <div className="treatment-section-inner">
-            <h2>Other Therapies &amp; Groups</h2>
+            <h2>Perinatal &amp; Parenting Psychiatry</h2>
 
             <div className="treatment-split">
-              <div className="treatment-box">
-                <h3>General Outpatient Psychiatry Services</h3>
-                <p>
-                  Currently Dr. Christine Kennedy’s waitlist is closed to
-                  general outpatient psychiatric care. Please check back in the
-                  future.
-                </p>
-              </div>
-
               <div className="treatment-box">
                 <h3>Perinatal Psychiatry</h3>
                 <p>
@@ -178,15 +172,6 @@ export default function Treatments() {
 
               <div className="treatment-box">
                 <h3>Circle of Security Parenting Course (COS-P)</h3>
-
-                {/* Optional: small logo (add the file and uncomment)
-                <img
-                  src="/images/cos-p-logo.png"
-                  alt="Circle of Security Parenting (COS-P) logo"
-                  style={{ width: "72px", height: "auto", margin: "0.5rem 0 0.75rem" }}
-                />
-                */}
-
                 <p>
                   This is a parenting group program based on theories of
                   attachment and the principles that secure relationships are
@@ -195,8 +180,26 @@ export default function Treatments() {
                 </p>
                 <p>
                   Format is 8 weeks of weekly groups ran by Dr. Christine
-                  Kennedy – contact to see availability or to be put onto a
+                  Kennedy — contact to see availability or to be put onto a
                   waitlist.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Traditional therapies section (your existing “Other Therapies & Groups”) */}
+        <section id="traditional" className="treatment-section-block">
+          <div className="treatment-section-inner">
+            <h2>Traditional Therapies</h2>
+
+            <div className="treatment-split">
+              <div className="treatment-box">
+                <h3>General Outpatient Psychiatry Services</h3>
+                <p>
+                  Currently Dr. Christine Kennedy’s waitlist is closed to
+                  general outpatient psychiatric care. Please check back in the
+                  future.
                 </p>
               </div>
 
@@ -232,11 +235,9 @@ export default function Treatments() {
         <section className="treatment-section-block treatment-section-block--note">
           <div className="treatment-section-inner">
             <p>
-              <b>Please note:</b> treatment with the psychiatrist is covered by
-              MSP if you have a doctor’s referral. Psychedelic Assisted
-              Therapies are only partially covered by MSP. Private health
-              insurance companies may cover parts of your treatment that are not
-              covered and for therapy with non-MD practitioners.
+              <b>Please note:</b> some of the treatment is covered by MSP if you have a doctor's referral. 
+              We encourage those who also have private health insurance to 
+              inquire with their respective health plans to see if they can seek any additional coverage.
             </p>
           </div>
         </section>

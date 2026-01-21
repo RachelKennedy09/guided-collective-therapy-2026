@@ -113,9 +113,9 @@ export default function Team() {
             <p>Welcome to a space that supports community and connection.</p>
             <p>
               I’m a registered nurse who began my career on Vancouver’s Downtown
-              Eastside, working in addictions and mental health. Four years ago,
-              I moved to Prince George to be closer to nature and community. For
-              the past two years I’ve specialized as a Ketamine-Assisted
+              Eastside, working in addictions and mental health. 
+              I now live and work in Prince George, where nature feels close at hand and there is a strong sense of community.
+             For the past three years I’ve specialized as a Ketamine-Assisted
               Therapist, with additional training in psilocybin and MDMA therapy
               through Therapsil. I am currently working toward my Masters in
               Counselling at UNBC.

@@ -38,15 +38,14 @@ export default function Referrals() {
                 <h2>2) Referral (recommended)</h2>
                 <p>
                   A referral from your primary care provider can support access
-                  and may help with partial coverage depending on your
-                  situation.
+                  and may help with partial coverage.
                 </p>
               </article>
 
               <article className="referrals-tile">
                 <h2>3) Intake + consult</h2>
                 <p>
-                  We’ll book an intake/consultation to review goals, history,
+                  We’ll book an intake/consultation to review intentions, history,
                   and eligibility, and answer questions about what to expect.
                 </p>
               </article>
@@ -73,22 +72,7 @@ export default function Referrals() {
 
       {/* BELOW: clean sections like Treatments */}
       <div className="referrals-sections">
-        <section className="referrals-section-block">
-          <div className="referrals-section-inner">
-            <h2>Guided Services</h2>
-            <p>
-              We offer psychedelic assisted therapy for a variety of mental
-              health diagnoses. However currently only Ketamine is available
-              without requiring special access from Health Canada. Psilocybin
-              and MDMA are available for those that qualify for these treatments
-              through Canada's Special Access Program.
-              <br />
-              <br />
-              We are happy to help you connect to someone that will help you
-              apply.
-            </p>
-          </div>
-        </section>
+      
 
         <section className="referrals-section-block">
           <div className="referrals-section-inner">

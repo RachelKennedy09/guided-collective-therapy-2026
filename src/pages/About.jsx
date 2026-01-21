@@ -15,10 +15,8 @@ export default function About() {
 
             <p className="page-hero__blurb">
               We created this clinic with the hope to increase the availability
-              of psychedelic treatment to people living in Northern BC.
-            </p>
-            <p>
-              All aspects of the space — the clinic, team, website, photos and
+              of psychedelic treatment to people living in Northern BC. All
+              aspects of the space — the clinic, team, website, photos and
               artwork — have been created or curated by people living here in
               the North.
             </p>
@@ -29,27 +27,49 @@ export default function About() {
       {/* CONTENT BELOW HERO */}
       <section className="about-content">
         <div className="about-content__inner">
-          <h2>Our approach</h2>
-          <p>
-            We strive to offer a safe space in which, together, we can search
-            inward. Here, you can explore what you may be seeking, be that
-            growth, healing, understanding, or reduced suffering.
-          </p>
+          {/* Little intro block to “fill” the space and guide the eye */}
+          <header className="about-intro">
+            <h2 className="about-intro__title">What we offer</h2>
+            <p className="about-intro__text">
+              Our care is grounded in safety, preparation, and integration — so
+              you feel supported before, during, and after sessions.
+            </p>
+          </header>
 
-          {/* Optional — keep, edit, or delete */}
-          <h2>What to expect</h2>
-          <ul>
-            <li>Consultation and screening</li>
-            <li>Preparation sessions</li>
-            <li>Selected therapy sessions</li>
-            <li>Integration sessions to support long-term change</li>
-          </ul>
+          {/* Cards */}
+          <div className="about-grid">
+            <article className="about-card">
+              <h3 className="about-card__title">Our approach</h3>
+              <p className="about-card__text">
+                We strive to offer a safe, supportive space where we can take
+                time to explore together what matters most to you. Here, you are
+                invited to seek growth, healing, understanding, or relief from
+                suffering.
+              </p>
+            </article>
 
-          <h2>Referrals</h2>
-          <p>
-            If you’re a clinician or a patient looking to refer, please visit
-            the Contact page and we’ll guide you through next steps.
-          </p>
+            <article className="about-card">
+              <h3 className="about-card__title">What to expect from Psychedelic-Assisted Therapy</h3>
+              <ul className="about-list">
+                <li>Consultation and screening</li>
+                <li>Medicine sessions</li>
+                <li>Integration to support long-term change</li>
+              </ul>
+            </article>
+
+            <article className="about-card">
+              <h3 className="about-card__title">Referrals</h3>
+              <p className="about-card__text">
+                If you’re a clinician or a patient looking to refer, please
+                visit the Contact page and we’ll guide you through next steps.
+              </p>
+
+              {/* Optional: small “button” link style */}
+              <a className="about-card__link" href="/contact">
+                Go to Contact →
+              </a>
+            </article>
+          </div>
         </div>
       </section>
     </main>
