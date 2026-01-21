@@ -88,14 +88,7 @@ export default function AppLayout() {
           </div>
 
           <div className="footer-contact">
-            <p>
-              <strong>Phone:</strong>{" "}
-              <a href="tel:+12505551234">(250) 555-1234</a>
-            </p>
-            <p>
-              <strong>Clinic After Hours:</strong>{" "}
-              <a href="tel:+12505559876">(250) 555-9876</a>
-            </p>
+           
             <p>
               <strong>Email:</strong>{" "}
               <a href="mailto:hello@guidedtherapycollective.ca">
