@@ -1,4 +1,16 @@
-<!-- Netlify Forms detection (hidden shadow form) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Guided Therapy Collective</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.jsx"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+   <!-- Netlify Forms detection (hidden shadow form) -->
 <form
   name="guided-contact"
   method="POST"
@@ -11,7 +23,7 @@
   <!-- Honeypot needs to exist in the shadow form too -->
   <input name="bot-field" />
 
-  <!-- Matches your current React form fields -->
+  
   <select name="contactAs">
     <option value="patient">Prospective patient / general inquiry</option>
     <option value="physician">Physician / referral</option>
@@ -49,3 +61,8 @@
 
   <input type="checkbox" name="consent" />
 </form>
+
+
+  </body>
+</html>
+
