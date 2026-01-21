@@ -1,17 +1,5 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Guided Therapy Collective</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/src/main.jsx"></script>
-  </head>
-
-  <body>
-    <div id="root"></div>
-
-    <!-- Netlify Forms detection (hidden shadow form) -->
- <form
+<!-- Netlify Forms detection (hidden shadow form) -->
+<form
   name="guided-contact"
   method="POST"
   data-netlify="true"
@@ -19,15 +7,45 @@
   hidden
 >
   <input type="hidden" name="form-name" value="guided-contact" />
+
+  <!-- Honeypot needs to exist in the shadow form too -->
+  <input name="bot-field" />
+
+  <!-- Matches your current React form fields -->
+  <select name="contactAs">
+    <option value="patient">Prospective patient / general inquiry</option>
+    <option value="physician">Physician / referral</option>
+  </select>
+
   <input name="name" />
-  <input name="pronouns" />
+
+  <!-- In your React form, pronouns is a select, but name is what matters -->
+  <select name="pronouns">
+    <option value="">—</option>
+    <option value="Prefer not to say">Prefer not to say</option>
+    <option value="She / Her">She / Her</option>
+    <option value="He / Him">He / Him</option>
+    <option value="They / Them">They / Them</option>
+    <option value="She / They">She / They</option>
+    <option value="He / They">He / They</option>
+    <option value="Other">Other</option>
+  </select>
+
   <input name="email" />
-  <input name="phone" />
+
   <input name="subject" />
+
+  <!-- New physician-related fields -->
+  <input name="clinic" />
+
+  <select name="referralSent">
+    <option value="">—</option>
+    <option value="Fax">Fax</option>
+    <option value="Email (no identifying information)">Email (no identifying information)</option>
+    <option value="Not yet sent">Not yet sent</option>
+  </select>
+
   <textarea name="message"></textarea>
+
   <input type="checkbox" name="consent" />
 </form>
-
-  </body>
-</html>
-
