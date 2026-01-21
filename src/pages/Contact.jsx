@@ -1,32 +1,49 @@
 // src/pages/Contact.jsx
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
   const navigate = useNavigate();
+
   const [isSending, setIsSending] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // Contact type toggle
   const [contactAs, setContactAs] = useState("patient"); // "patient" | "physician"
-
-  // Consent must be checked to submit
   const [hasConsent, setHasConsent] = useState(false);
 
+  // NEW: for showing consent-specific error UI
+  const [showConsentError, setShowConsentError] = useState(false);
+  const consentWrapRef = useRef(null);
+
+  // Optional: when error shows, bring it into view
+  useEffect(() => {
+    if (showConsentError && consentWrapRef.current) {
+      consentWrapRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [showConsentError]);
+
   function handleSubmit(e) {
-    // Enforce consent in BOTH dev + production
+    // If consent isn't checked, block submission + show message
     if (!hasConsent) {
       e.preventDefault();
+      setShowConsentError(true);
       setErrorMsg("Please confirm your consent before submitting this form.");
+
+      // Popup (simple + effective)
+      window.alert("Please check the consent box before submitting.");
+
       return;
     }
+
+    // Clear consent error if they submit properly
+    setShowConsentError(false);
+    setErrorMsg("");
 
     // Only intercept in local dev (localhost)
     // Netlify Forms doesn't capture submissions from localhost
     if (import.meta.env.DEV) {
       e.preventDefault();
       setIsSending(true);
-      setErrorMsg("");
 
       const form = e.currentTarget;
       form.reset();
@@ -34,6 +51,7 @@ export default function Contact() {
       // reset controlled fields too
       setContactAs("patient");
       setHasConsent(false);
+      setShowConsentError(false);
 
       // mimic success flow
       navigate("/contact-success");
@@ -76,10 +94,10 @@ export default function Contact() {
               onSubmit={handleSubmit}
               noValidate
             >
-              {/* Required Netlify hidden field */}
+              {/* ✅ Required Netlify hidden field */}
               <input type="hidden" name="form-name" value="guided-contact" />
 
-              {/* Honeypot */}
+              {/* ✅ Honeypot */}
               <p hidden>
                 <label>
                   Don’t fill this out: <input name="bot-field" />
@@ -108,13 +126,7 @@ export default function Contact() {
               <div className="contact-field">
                 <label htmlFor="name">Name</label>
                 <span>How would you like us to greet you?</span>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                />
+                <input id="name" name="name" type="text" autoComplete="name" required />
               </div>
 
               {/* Pronouns */}
@@ -137,13 +149,7 @@ export default function Contact() {
               <div className="contact-field">
                 <label htmlFor="email">Email</label>
                 <span>We’ll respond to your inquiry by email.</span>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                />
+                <input id="email" name="email" type="email" autoComplete="email" required />
               </div>
 
               {/* Physician-only fields */}
@@ -189,29 +195,40 @@ export default function Contact() {
               </div>
 
               {/* Consent (required) */}
-              <div className="contact-consent">
+              <div
+                ref={consentWrapRef}
+                className={`contact-consent ${
+                  showConsentError ? "contact-consent--error" : ""
+                }`}
+              >
                 <input
                   id="consent"
                   name="consent"
                   type="checkbox"
                   required
                   checked={hasConsent}
-                  onChange={(e) => setHasConsent(e.target.checked)}
+                  onChange={(e) => {
+                    setHasConsent(e.target.checked);
+                    if (e.target.checked) setShowConsentError(false);
+                  }}
                 />
                 <label htmlFor="consent">
                   I understand this form is not for emergencies and does not
                   establish an immediate treatment relationship.
                 </label>
+
+                {showConsentError && (
+                  <p className="contact-inline-error" role="alert">
+                    Please check the consent box to continue.
+                  </p>
+                )}
               </div>
 
               {/* Netlify reCAPTCHA */}
               <div data-netlify-recaptcha="true"></div>
 
-              <button
-                type="submit"
-                className="btn"
-                disabled={isSending || !hasConsent}
-              >
+              {/* NOTE: Do NOT disable based on consent if you want the error popup on click */}
+              <button type="submit" className="btn" disabled={isSending}>
                 {isSending ? "Sending..." : "Submit"}
               </button>
 

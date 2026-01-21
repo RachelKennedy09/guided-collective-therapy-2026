@@ -1735,3 +1735,15 @@ a {
     padding: 22px 16px;
   }
 }
+
+
+.contact-consent--error {
+  outline: 2px solid rgba(220, 38, 38, 0.6);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.contact-inline-error {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
