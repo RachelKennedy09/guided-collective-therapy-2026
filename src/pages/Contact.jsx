@@ -7,10 +7,20 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // NEW: contact type toggle
+  // Contact type toggle
   const [contactAs, setContactAs] = useState("patient"); // "patient" | "physician"
 
+  // Consent must be checked to submit
+  const [hasConsent, setHasConsent] = useState(false);
+
   function handleSubmit(e) {
+    // Enforce consent in BOTH dev + production
+    if (!hasConsent) {
+      e.preventDefault();
+      setErrorMsg("Please confirm your consent before submitting this form.");
+      return;
+    }
+
     // Only intercept in local dev (localhost)
     // Netlify Forms doesn't capture submissions from localhost
     if (import.meta.env.DEV) {
@@ -21,8 +31,9 @@ export default function Contact() {
       const form = e.currentTarget;
       form.reset();
 
-      // reset contactAs too (since we manually reset)
+      // reset controlled fields too
       setContactAs("patient");
+      setHasConsent(false);
 
       // mimic success flow
       navigate("/contact-success");
@@ -65,17 +76,17 @@ export default function Contact() {
               onSubmit={handleSubmit}
               noValidate
             >
-              {/* ✅ Required Netlify hidden field */}
+              {/* Required Netlify hidden field */}
               <input type="hidden" name="form-name" value="guided-contact" />
 
-              {/* ✅ Honeypot */}
+              {/* Honeypot */}
               <p hidden>
                 <label>
                   Don’t fill this out: <input name="bot-field" />
                 </label>
               </p>
 
-              {/* ✅ NEW: Contacting as (required) */}
+              {/* Contacting as (required) */}
               <div className="contact-field">
                 <label htmlFor="contactAs">I am contacting as</label>
                 <span>Select the option that best fits.</span>
@@ -86,7 +97,9 @@ export default function Contact() {
                   onChange={(e) => setContactAs(e.target.value)}
                   required
                 >
-                  <option value="patient">Prospective patient / general inquiry</option>
+                  <option value="patient">
+                    Prospective patient / general inquiry
+                  </option>
                   <option value="physician">Physician / referral</option>
                 </select>
               </div>
@@ -123,7 +136,7 @@ export default function Contact() {
               {/* Email */}
               <div className="contact-field">
                 <label htmlFor="email">Email</label>
-                <span>We’ll only use this to respond to your inquiry.</span>
+                <span>We’ll respond to your inquiry by email.</span>
                 <input
                   id="email"
                   name="email"
@@ -132,7 +145,6 @@ export default function Contact() {
                   required
                 />
               </div>
-
 
               {/* Physician-only fields */}
               {contactAs === "physician" && (
@@ -144,23 +156,14 @@ export default function Contact() {
                   </div>
 
                   <div className="contact-field">
-                    <label htmlFor="physicianPhone">Best callback number</label>
-                    <span>Optional</span>
-                    <input
-                      id="physicianPhone"
-                      name="physicianPhone"
-                      type="tel"
-                      autoComplete="tel"
-                    />
-                  </div>
-
-                  <div className="contact-field">
                     <label htmlFor="referralSent">Referral being sent by</label>
-                    <span>Optional — fax is preferred for referrals.</span>
+                    <span>Fax is preferred for referrals.</span>
                     <select id="referralSent" name="referralSent" defaultValue="">
                       <option value="">—</option>
                       <option value="Fax">Fax</option>
-                      <option value="Email (no identifying info)">Email (no identifying info)</option>
+                      <option value="Email (no identifying information)">
+                        Email (no identifying information)
+                      </option>
                       <option value="Not yet sent">Not yet sent</option>
                     </select>
                   </div>
@@ -178,17 +181,23 @@ export default function Contact() {
               <div className="contact-field">
                 <label htmlFor="message">Message</label>
                 <span>
-                  Please avoid sharing sensitive medical details here.{" "}
-                  {contactAs === "physician"
-                    ? "Do not include patient-identifying information."
-                    : ""}
+                  Please avoid sharing sensitive medical details here.
+                  {contactAs === "physician" &&
+                    " Do not include patient-identifying information."}
                 </span>
                 <textarea id="message" name="message" rows="4" />
               </div>
 
-              {/* Consent */}
+              {/* Consent (required) */}
               <div className="contact-consent">
-                <input id="consent" name="consent" type="checkbox" required />
+                <input
+                  id="consent"
+                  name="consent"
+                  type="checkbox"
+                  required
+                  checked={hasConsent}
+                  onChange={(e) => setHasConsent(e.target.checked)}
+                />
                 <label htmlFor="consent">
                   I understand this form is not for emergencies and does not
                   establish an immediate treatment relationship.
@@ -198,7 +207,11 @@ export default function Contact() {
               {/* Netlify reCAPTCHA */}
               <div data-netlify-recaptcha="true"></div>
 
-              <button type="submit" className="btn" disabled={isSending}>
+              <button
+                type="submit"
+                className="btn"
+                disabled={isSending || !hasConsent}
+              >
                 {isSending ? "Sending..." : "Submit"}
               </button>
 
