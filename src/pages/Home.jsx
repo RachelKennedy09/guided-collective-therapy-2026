@@ -25,7 +25,10 @@ export default function Home() {
             poster="/images/PgVideoStill.png"
             preload="metadata"
           >
-            <source src="/images/videos/Pgvideo_h264.mp4" type="video/mp4" />
+            <source
+              src="/images/videos/Pgvideo_h264_1280.mp4"
+              type="video/mp4"
+            />
           </video>
           <div className="home-hero__overlay" />
         </div>

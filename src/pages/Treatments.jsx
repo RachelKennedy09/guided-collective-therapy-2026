@@ -8,8 +8,18 @@ export default function Treatments() {
       {/* TOP: background image behind intro */}
       <div
         className="treatments-hero"
-        style={{ "--bg-image": "url('/images/LTMPPGTree.webp')" }}
       >
+        <img
+          className="treatments-hero__image"
+          src="/images/LTMPPGTree-1280.webp"
+          srcSet="/images/LTMPPGTree-640.webp 640w, /images/LTMPPGTree-960.webp 960w, /images/LTMPPGTree-1280.webp 1280w, /images/LTMPPGTree-1600.webp 1600w, /images/LTMPPGTree.webp 1920w"
+          sizes="100vw"
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
         <div className="treatments-hero__inner">
           <BackToHome />
 
