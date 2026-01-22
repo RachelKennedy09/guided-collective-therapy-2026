@@ -69,32 +69,34 @@ export default function Team() {
               </div>
             </div>
 
-            <p>
-              Thank you for your curiosity and seeking an avenue of healing that
-              feels aligned with you.
-            </p>
-            <p>
-              I am grateful to live and work on the unceded traditional
-              territory of the Lheidli T'enneh Nation. I was raised in the North
-              and am honored to continue to serve and work with people in
-              Northern BC. In my general practice I offer psychodynamic therapy
-              with a relational approach, focusing on attachment and emotional
-              processing.
-            </p>
-            <p>
-              I am passionate about the use of psychedelics as a way of opening
-              one's heart and mind to what lies beyond their defenses that have
-              evolved from years of suffering. Psychedelic healing can be a
-              spiritual, deeply connected experience and I strive to create an
-              environment that offers the opportunity for people to explore
-              these depths. With supportive integration of these experiences
-              there can be healing and growth within their lives and
-              relationships.
-            </p>
-            <p>
-              I look forward to seeing if working together in this realm is the
-              right fit at the right time.
-            </p>
+            <div className="team-bio-box">
+              <p>
+                Thank you for your curiosity and seeking an avenue of healing that
+                feels aligned with you.
+              </p>
+              <p>
+                I am grateful to live and work on the unceded traditional
+                territory of the Lheidli T'enneh Nation. I was raised in the North
+                and am honored to continue to serve and work with people in
+                Northern BC. In my general practice I offer psychodynamic therapy
+                with a relational approach, focusing on attachment and emotional
+                processing.
+              </p>
+              <p>
+                I am passionate about the use of psychedelics as a way of opening
+                one's heart and mind to what lies beyond their defenses that have
+                evolved from years of suffering. Psychedelic healing can be a
+                spiritual, deeply connected experience and I strive to create an
+                environment that offers the opportunity for people to explore
+                these depths. With supportive integration of these experiences
+                there can be healing and growth within their lives and
+                relationships.
+              </p>
+              <p>
+                I look forward to seeing if working together in this realm is the
+                right fit at the right time.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -114,26 +116,28 @@ export default function Team() {
               </div>
             </div>
 
-            <p>Welcome to a space that supports community and connection.</p>
-            <p>
-              I’m a registered nurse who began my career on Vancouver’s Downtown
-              Eastside, working in addictions and mental health. 
-              I now live and work in Prince George, where nature feels close at hand and there is a strong sense of community.
-             For the past three years I’ve specialized as a Ketamine-Assisted
-              Therapist, with additional training in psilocybin and MDMA therapy
-              through Therapsil. I am currently working toward my Masters in
-              Counselling at UNBC.
-            </p>
-            <p>
-              I believe clients are the experts of their own healing. My role is
-              to create conditions where people feel safe and at ease, and to
-              collaborate in ways that allow their own innate wisdom to arise.
-              My passion for psychedelic therapy comes from witnessing firsthand
-              the profound changes it can generate, and from the dedication and
-              resilience of my clients. I take a collaborative, relational,
-              psychodynamic approach, drawing on ACT, Motivational Interviewing,
-              and strengths-based methods
-            </p>
+            <div className="team-bio-box">
+              <p>Welcome to a space that supports community and connection.</p>
+              <p>
+                I’m a registered nurse who began my career on Vancouver’s Downtown
+                Eastside, working in addictions and mental health. 
+                I now live and work in Prince George, where nature feels close at hand and there is a strong sense of community.
+               For the past three years I’ve specialized as a Ketamine-Assisted
+                Therapist, with additional training in psilocybin and MDMA therapy
+                through Therapsil. I am currently working toward my Masters in
+                Counselling at UNBC.
+              </p>
+              <p>
+                I believe clients are the experts of their own healing. My role is
+                to create conditions where people feel safe and at ease, and to
+                collaborate in ways that allow their own innate wisdom to arise.
+                My passion for psychedelic therapy comes from witnessing firsthand
+                the profound changes it can generate, and from the dedication and
+                resilience of my clients. I take a collaborative, relational,
+                psychodynamic approach, drawing on ACT, Motivational Interviewing,
+                and strengths-based methods
+              </p>
+            </div>
           </div>
         </section>
       </div>

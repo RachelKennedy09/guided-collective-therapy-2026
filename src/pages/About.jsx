@@ -64,12 +64,12 @@ export default function About() {
               <h3 className="about-card__title">Referrals</h3>
               <p className="about-card__text">
                 If you’re a clinician or a patient looking to refer, please
-                visit the Contact page and we’ll guide you through next steps.
+                visit the Referrals page and we’ll guide you through next steps.
               </p>
 
               {/* Optional: small “button” link style */}
-              <a className="about-card__link" href="/contact">
-                Go to Contact →
+              <a className="about-card__link" href="/referrals">
+                Go to Referrals →
               </a>
             </article>
           </div>

@@ -868,12 +868,9 @@ a {
   max-width: 720px;
   margin-inline: auto;
   box-sizing: border-box;
-  border-radius: 18px;
-  padding: 18px;
-  background: rgba(120, 85, 155, 0.10);
-  border: 1px solid rgba(120, 85, 155, 0.25);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .team-section-header {
@@ -907,6 +904,15 @@ a {
   opacity: 0.85;
 }
 
+.team-bio-box {
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(120, 85, 155, 0.10);
+  border: 1px solid rgba(120, 85, 155, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+}
+
 .team-section-inner p {
   color: var(--text-subtle);
   line-height: 1.75;
@@ -915,7 +921,7 @@ a {
   opacity: 0.95;
 }
 
-.team-section-inner:hover {
+.team-bio-box:hover {
   transform: translateY(-2px);
   transition: transform 200ms ease, box-shadow 200ms ease;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.10);
@@ -926,15 +932,19 @@ a {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
+    align-items: stretch;
   }
 
   .team-section-block {
     padding: 0;
     border-bottom: none;
+    height: 100%;
+    display: flex;
   }
 
   .team-section-inner {
     max-width: 100%;
+    height: 100%;
   }
 }
 
