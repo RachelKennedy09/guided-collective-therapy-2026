@@ -17,8 +17,8 @@ export default function About() {
               We created this clinic with the hope to increase the availability
               of psychedelic treatment to people living in Northern BC. All
               aspects of the space — the clinic, team, website, photos and
-              artwork — have been created or curated by people living here in
-              the North.
+              artwork — have been created or curated by people rooted in this
+              region.
             </p>
           </div>
         </div>
