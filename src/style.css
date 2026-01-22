@@ -55,6 +55,15 @@ body {
   color: var(--text);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -82,8 +91,8 @@ a {
 
 .btn.btn-outline {
   background: transparent;
-  color: var(--violet-dark);
-  border: 1px solid var(--violet-dark);
+  color: #fff;
+  border: 1px solid #fff;
   box-shadow: none;
   padding: 0.55rem 1.2rem;
   border-radius: 999px;
@@ -92,7 +101,20 @@ a {
 }
 
 .btn.btn-outline:hover {
-  background: var(--violet);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.treatments-hero .btn.btn-outline,
+.referrals-nav .btn.btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.treatments-hero .btn.btn-outline:hover,
+.referrals-nav .btn.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
 
@@ -479,6 +501,7 @@ a {
 /* ========================
    ABOUT PAGE (generic hero)
    ======================== */
+
 .about-page {
   background: var(--beige);
 }
@@ -486,7 +509,10 @@ a {
 .page-hero {
   position: relative;
   background: var(--bg-image) center/cover no-repeat;
-  padding: 7rem 1.25rem 4rem;
+  min-height: 92vh;
+  display: grid;
+  align-items: center;
+  padding: 7.5rem 1.25rem 4rem;
   overflow: hidden;
 }
 
@@ -507,6 +533,8 @@ a {
   z-index: 1;
   width: min(980px, 92vw);
   margin: 0 auto;
+  display: grid;
+  place-items: center;
 }
 
 .page-hero__panel {
@@ -517,6 +545,9 @@ a {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 620px;
 }
 
 .page-hero__title {
@@ -532,24 +563,12 @@ a {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.page-hero__content h2 {
-  margin: 1.25rem 0 0.5rem;
-  color: #fff;
-  font-size: 1.15rem;
-}
-
-.page-hero__content p,
-.page-hero__content li {
-  color: rgba(255, 255, 255, 0.92);
-  line-height: 1.65;
-}
-
-.page-hero__content ul {
-  margin: 0.5rem 0 0;
-  padding-left: 1.15rem;
-}
-
 @media (max-width: 600px) {
+  .page-hero {
+    min-height: 88vh;
+    padding-top: 6.5rem;
+  }
+
   .page-hero__panel {
     padding: 1.75rem 1.25rem;
     border-radius: 18px;
@@ -565,69 +584,44 @@ a {
 }
 
 .treatments-hero {
-  background: var(--bg-image) center/cover no-repeat;
-  padding: 7rem 1.25rem 4rem;
   position: relative;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  min-height: 72vh;
+  display: grid;
+  align-items: center;
+  padding: 42px 16px 56px;
 }
 
 .treatments-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.06) 45%,
-    rgba(0, 0, 0, 0.14) 100%
-  );
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .treatments-hero__inner {
   position: relative;
   z-index: 1;
-  width: min(980px, 92vw);
+  width: min(1100px, 92vw);
+  max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.treatments-grid {
-  margin-top: 2rem;
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 1fr;
-}
 
-@media (min-width: 760px) {
+
+@media (min-width: 720px) {
   .treatments-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
-.treatment-tile {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--stroke);
-  border-radius: 18px;
-  padding: 1.35rem;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
-}
 
-.treatment-tile h2 {
-  margin: 0 0 0.5rem;
-  color: var(--green);
-  font-size: 1.15rem;
-}
-
-.treatment-tile p {
-  margin: 0 0 1rem;
-  color: var(--text-subtle);
-  line-height: 1.6;
-}
-
-.treatment-tile__actions {
-  display: flex;
-  justify-content: flex-start;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
 
 /* Below sections */
 .treatments-sections {
@@ -680,12 +674,18 @@ a {
 }
 
 .treatment-box {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(191, 196, 189, 0.7);
   border-radius: 18px;
   padding: 1.5rem;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+
+  /* frosted glass like about-card / team-section-inner */
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
+
+
 .treatment-box small {
   font-weight: 500;
   opacity: 0.85;
@@ -706,52 +706,6 @@ a {
   margin: 0.35rem 0;
 }
 
-/* Treatments hero panel (match Home/Team frosted look) */
-.treatments-hero__panel {
-  background: rgba(80, 87, 80, 0.4); /* lighter + more transparent */
-  color: #fff;
-  border-radius: 22px;
-
-  /* slightly tighter so it feels lighter */
-  padding: 1.6rem 1.5rem;
-
-  /* less blur = more photo texture shows */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  /* softer shadow */
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
-
-  text-align: center;
-}
-
-.treatments-hero__title {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-serif);
-  letter-spacing: 0.06em;
-  font-weight: 500;
-}
-
-.treatments-hero__blurb {
-  margin: 0 auto 1.5rem;
-  max-width: 70ch;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-/* Make the tiles still look nice on the dark panel */
-.treatments-hero .treatment-tile {
-  background: rgba(255, 255, 255, 0.92);
-}
-
-/* Mobile padding */
-@media (max-width: 600px) {
-  .treatments-hero__panel {
-    padding: 1.75rem 1.25rem;
-    border-radius: 18px;
-  }
-}
-
 /* ========================
    TEAM PAGE (new layout)
    ======================== */
@@ -762,7 +716,10 @@ a {
 
 .team-hero {
   position: relative;
-  padding: 7rem 1.25rem 4rem;
+  min-height: 92vh;
+  display: grid;
+  align-items: center;
+  padding: 7.5rem 1.25rem 4rem;
   overflow: hidden;
 
   /* NEW: photo background */
@@ -825,11 +782,17 @@ a {
   gap: 1rem;
   grid-template-columns: 1fr;
   margin-top: 1.25rem;
+  margin-bottom: 2.25rem;
 }
 
 @media (min-width: 760px) {
   .team-bubbles {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-bubble img {
+    width: 110px;
+    height: 110px;
   }
 }
 
@@ -874,52 +837,76 @@ a {
 
 /* Bio sections */
 .team-sections {
-  padding: 3.5rem 1.25rem 5rem;
+  width: 100%;
+  padding: 5rem 1.25rem 5rem;
+  padding-inline: 16px;
+  box-sizing: border-box;
 }
 
 .team-section-block {
-  padding: 3.25rem 0;
+  width: 100%;
+  padding: 56px 16px;
   border-bottom: 1px solid rgba(191, 196, 189, 0.55);
+  box-sizing: border-box;
 }
 
 .team-section-inner {
-  width: min(900px, 92vw);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto;
+  box-sizing: border-box;
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(120, 85, 155, 0.10);
+  border: 1px solid rgba(120, 85, 155, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 .team-section-header {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .team-section-avatar {
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
   object-fit: cover;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
-  border: 2px solid rgba(255, 255, 255, 0.95);
+  flex: 0 0 auto;
+  border: 2px solid rgba(120, 85, 155, 0.35);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
 }
 
 .team-section-inner h2 {
-  margin: 0 0 0.25rem;
+  margin: 0;
   color: var(--green);
   font-size: 2rem;
   font-family: var(--font-serif);
+  letter-spacing: -0.01em;
 }
 
 .team-role {
-  margin: 0;
   color: var(--violet-dark);
   font-weight: 700;
+  margin: 4px 0 0;
+  opacity: 0.85;
 }
 
 .team-section-inner p {
   color: var(--text-subtle);
   line-height: 1.75;
   max-width: 75ch;
+  margin: 10px 0;
+  opacity: 0.95;
+}
+
+.team-section-inner:hover {
+  transform: translateY(-2px);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.10);
 }
 
 @media (max-width: 600px) {
@@ -933,6 +920,14 @@ a {
   }
 }
 
+@media (max-width: 420px) {
+  .team-section-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 /* ========================
    REFERRALS PAGE
    ======================== */
@@ -943,8 +938,12 @@ a {
 
 .referrals-hero {
   position: relative;
-  background: var(--bg-image) center/cover no-repeat;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
   padding: 7rem 1.25rem 4rem;
+  display: grid;
+  align-items: center;
 }
 
 .referrals-hero__overlay {
@@ -952,35 +951,40 @@ a {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.06) 45%,
-    rgba(0, 0, 0, 0.14) 100%
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.55)
   );
 }
 
 .referrals-hero__inner {
   position: relative;
   z-index: 1;
-  width: min(980px, 92vw);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 980px;
+  margin-inline: auto;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .referrals-hero__panel {
-  background: rgba(15, 17, 15, 0.4); /* lighter + more photo */
+  width: min(820px, 92vw);
+  background: rgba(15, 17, 15, 0.4);
   color: #fff;
-  border-radius: 22px;
-
-  /* tighter, less bulky */
-  padding: 1.6rem 1.5rem;
-
-  /* reduce blur so image texture shows */
+  border-radius: 18px;
+  padding: 18px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
-  /* softer shadow */
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
-
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: center;
+}
+
+.referrals-hero__header {
+  text-align: center;
+  max-width: 70ch;
+  margin: 0 auto 18px;
 }
 
 .referrals-hero__title {
@@ -991,44 +995,32 @@ a {
 }
 
 .referrals-hero__blurb {
-  margin: 0 auto 1.5rem;
-  max-width: 75ch;
+  margin: 0;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.92);
 }
 
-.referrals-grid {
-  margin-top: 1.5rem;
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 1fr;
-  text-align: left;
+.referrals-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 18px;
 }
 
-@media (min-width: 760px) {
-  .referrals-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+
+.referrals-hero__cta {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
 }
 
-.referrals-tile {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(191, 196, 189, 0.7);
-  border-radius: 18px;
-  padding: 1.35rem;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
-}
-
-.referrals-tile h2 {
-  margin: 0 0 0.5rem;
-  color: var(--green);
-  font-size: 1.15rem;
-}
-
-.referrals-tile p {
-  margin: 0 0 1rem;
-  color: var(--text-subtle);
-  line-height: 1.6;
+.referrals-hero__cta-note {
+  font-size: 0.9rem;
+  opacity: 0.85;
 }
 
 .referrals-sections {
@@ -1043,6 +1035,11 @@ a {
 .referrals-section-inner {
   width: min(900px, 92vw);
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(191, 196, 189, 0.7);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
 .referrals-section-inner h2 {
@@ -1050,6 +1047,12 @@ a {
   color: var(--green);
   font-size: 2rem;
   font-family: var(--font-serif);
+}
+
+.referrals-section-inner h3 {
+  margin: 1.25rem 0 0.5rem;
+  color: var(--violet-dark);
+  font-size: 1.05rem;
 }
 
 .referrals-section-inner p {
@@ -1065,11 +1068,14 @@ a {
   color: var(--text);
   line-height: 1.7;
 }
-
 @media (max-width: 600px) {
   .referrals-hero__panel {
     padding: 1.75rem 1.25rem;
     border-radius: 18px;
+  }
+
+  .referrals-section-inner {
+    padding: 1.5rem 1.25rem;
   }
 }
 /* ========================
@@ -1363,35 +1369,9 @@ a {
 .floating-back:active {
   transform: translateY(0px);
 }
-/* Give breathing room between the clickable bubbles and the bios */
-.team-sections {
-  padding-top: 5rem; /* was 3.5rem */
-}
-
-.team-bubbles {
-  margin-bottom: 2.25rem; /* adds space before the next section starts */
-}
-
-@media (min-width: 760px) {
-  .team-bubble img {
-    width: 110px;
-    height: 110px;
-  }
-}
-
 /* ========================
    ABOUT PAGE – content below hero
    ======================== */
-
-.about-content {
-  background: var(--beige);
-  padding: 3.5rem 1.25rem 5rem;
-}
-
-.about-content__inner {
-  width: min(800px, 92vw);
-  margin: 0 auto;
-}
 
 .about-content h2 {
   margin: 2rem 0 0.5rem;
@@ -1412,59 +1392,9 @@ a {
   color: var(--text);
   line-height: 1.65;
 }
-.page-hero {
-  position: relative;
-  background: var(--bg-image) center/cover no-repeat;
-
-  /* ✅ make it a BIG hero */
-  min-height: 92vh; /* try 90–100vh */
-  display: grid;
-  align-items: center;
-
-  /* keep room for the navbar */
-  padding: 7.5rem 1.25rem 4rem;
-
-  overflow: hidden;
-}
-@media (max-width: 600px) {
-  .page-hero {
-    min-height: 88vh;
-    padding-top: 6.5rem;
-  }
-}
-.page-hero__inner {
-  position: relative;
-  z-index: 1;
-  width: min(980px, 92vw);
-  margin: 0 auto;
-
-  /* ✅ centers the panel nicely */
-  display: grid;
-  place-items: center;
-}
-.page-hero__panel {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 620px; /* optional, keeps it elegant */
-}
-.team-hero {
-  position: relative;
-
-  /* ✅ make the photo take up the first screen */
-  min-height: 92vh;
-  display: grid;
-  align-items: center;
-
-  /* keep room for navbar */
-  padding: 7.5rem 1.25rem 4rem;
-
-  overflow: hidden;
-  background: var(--bg-image) center/cover no-repeat;
-}
-
-
 /* ABOUT layout helpers */
 .about-content {
+  background: var(--beige);
   padding: 56px 16px;
 }
 
@@ -1554,47 +1484,25 @@ a {
 }
 
 
-/* HERO background: taller, more visible image */
-.treatments-hero {
-  position: relative;
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  min-height: 72vh; /* more photo visible */
-  padding: 42px 16px 56px;
-}
-
-/* If you have an overlay layer already, lighten it.
-   If you don’t, this pseudo-element creates one. */
-.treatments-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* lighter so photo shows */
-}
-
-.treatments-hero__inner {
-  position: relative; /* above overlay */
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 /* NEW smaller intro card */
 .treatments-intro {
   max-width: 820px;
-  margin: 52px auto 18px;
+  margin: 0 auto 18px;
   padding: 18px 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 17, 15, 0.4);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
 .treatments-intro__title {
   margin: 0 0 8px;
-  letter-spacing: -0.02em;
+  font-family: var(--font-serif);
+  letter-spacing: 0.06em;
+  font-weight: 500;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
 }
 
@@ -1602,140 +1510,8 @@ a {
   margin: 0 auto;
   max-width: 70ch;
   line-height: 1.6;
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.92);
 }
-
-/* 4-tile grid (balanced) */
-.treatments-grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: 1fr;
-  margin-top: 16px;
-}
-
-@media (min-width: 720px) {
-  .treatments-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 */
-    gap: 16px;
-  }
-}
-
-/* Tiles: slightly transparent so photo still reads */
-.treatment-tile {
-  border-radius: 18px;
-  padding: 18px 18px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.treatment-tile h2 {
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-}
-
-.treatment-tile p {
-  margin: 0;
-  line-height: 1.6;
-  opacity: 0.95;
-}
-
-.treatment-tile__actions {
-  margin-top: 14px;
-}
-
-
-/* TEAM: make the hero vibe carry into bios (soft purple tint + outline) */
-
-.team-section-block {
-  /* keep your spacing if you already have it */
-  padding: 56px 16px;
-}
-
-.team-section-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-
-  /* NEW card styling */
-  border-radius: 20px;
-  padding: 28px 22px;
-
-  /* subtle purple wash so it matches the hero */
-  background: rgba(120, 85, 155, 0.10);
-
-  /* outline */
-  border: 1px solid rgba(120, 85, 155, 0.25);
-
-  /* gentle depth */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-
-  /* optional: makes it feel “glassy” like the hero overlay */
-  backdrop-filter: blur(8px);
-}
-
-/* slight “hover lift” (optional but looks premium) */
-.team-section-inner:hover {
-  transform: translateY(-2px);
-  transition: transform 200ms ease, box-shadow 200ms ease;
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.10);
-}
-
-/* Header row spacing */
-.team-section-header {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
-/* Avatar ring that matches the purple tint */
-.team-section-avatar {
-  width: 92px;          /* adjust if yours is different */
-  height: 92px;
-  border-radius: 18px;  /* soft squared corners fits your style */
-  object-fit: cover;
-
-  border: 2px solid rgba(120, 85, 155, 0.35);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
-}
-
-/* Typography tweaks inside the cards */
-.team-section-inner h2 {
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-
-.team-role {
-  margin: 4px 0 0;
-  opacity: 0.85;
-}
-
-/* Bio paragraphs spacing so it feels “full” and clean */
-.team-section-inner p {
-  line-height: 1.75;
-  margin: 10px 0;
-  opacity: 0.95;
-}
-
-/* Mobile: stack header nicely */
-@media (max-width: 520px) {
-  .team-section-header {
-    align-items: flex-start;
-  }
-
-  .team-section-avatar {
-    width: 78px;
-    height: 78px;
-    border-radius: 16px;
-  }
-
-  .team-section-inner {
-    padding: 22px 16px;
-  }
-}
-
 
 .contact-consent--error {
   outline: 2px solid rgba(220, 38, 38, 0.6);
@@ -1748,54 +1524,114 @@ a {
   font-size: 0.9rem;
 }
 
-
-/* 1) Make sections not overflow + keep consistent page padding */
-.team-sections {
-  width: 100%;
-  padding-inline: 16px; /* mobile side padding */
-  box-sizing: border-box;
-}
-
-/* 2) Center the bio card and prevent it stretching weirdly */
-.team-section-inner {
-  width: 100%;
-  max-width: 720px;      /* adjust if you want narrower/wider */
-  margin-inline: auto;   /* centers it */
-  box-sizing: border-box;
-}
-
-/* 3) If your bio "card" has its own background/padding, keep it inside */
-.team-section-block {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Optional: give the inner a card feel + prevent edge-to-edge */
-.team-section-inner {
-  padding: 18px;
-  border-radius: 18px;
-}
-
-/* 4) Ensure images don’t force layout overflow on small screens */
-.team-section-avatar {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  flex: 0 0 auto;
-}
-
-/* 5) Mobile header alignment (prevents awkward side push) */
-.team-section-header {
+.treatments-directory {
+  margin-top: 14px;
   display: flex;
-  gap: 14px;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
 }
 
-/* Optional: stack header on very small screens */
-@media (max-width: 420px) {
-  .team-section-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.treatments-directory__label {
+  font-weight: 600;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.treatments-directory__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.treatments-directory__link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.treatments-directory__link:hover {
+  transform: translateY(-1px);
+}
+
+/* Center the whole directory block */
+.treatments-directory {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 centers label + buttons */
+  gap: 10px;
+}
+
+/* Center the buttons themselves */
+.treatments-directory__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 👈 centers buttons */
+  gap: 10px;
+}
+
+
+.treatments-directory {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.treatments-directory__label {
+  font-weight: 600;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.treatments-directory__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.treatments-directory__link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-weight: 600;
+}
+
+.treatments-directory__label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.treatments-directory__link {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.treatments-directory__link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+.treatment-box {
+  border-radius: 18px;
+  padding: 1.5rem;
+
+  /* frosted glass like about-card / team-section-inner */
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }

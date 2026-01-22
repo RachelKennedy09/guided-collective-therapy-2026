@@ -5,7 +5,7 @@ import BackToHome from "../components/FloatingBack";
 export default function Treatments() {
   return (
     <section className="treatments-page">
-      {/* TOP: background image behind intro + tiles */}
+      {/* TOP: background image behind intro */}
       <div
         className="treatments-hero"
         style={{ "--bg-image": "url('/images/LTMPPGTree.webp')" }}
@@ -13,7 +13,7 @@ export default function Treatments() {
         <div className="treatments-hero__inner">
           <BackToHome />
 
-          {/* Smaller intro card (lets more photo show) */}
+          {/* Intro (lets more photo show) */}
           <header className="treatments-intro">
             <h1 className="treatments-intro__title">Guided Services</h1>
 
@@ -21,67 +21,32 @@ export default function Treatments() {
               We at Guided offer medicine-assisted psychotherapy for a variety
               of mental health diagnoses including but not limited to treatment
               resistant depression, PTSD, anxiety disorders and chronic pain.
-                          </p>
+            </p>
+
+            {/* ✅ Directory / On this page */}
+            <nav className="treatments-directory" aria-label="On this page">
+              <div className="treatments-directory__links">
+                <a href="#ketamine" className="treatments-directory__link">
+                  Ketamine-Assisted Therapy
+                </a>
+                <a href="#other-medicine" className="treatments-directory__link">
+                  Other Medicine-Assisted Therapies
+                </a>
+                <a
+                  href="#perinatal-parenting"
+                  className="treatments-directory__link"
+                >
+                  Perinatal &amp; Parenting Psychiatry
+                </a>
+                <a href="#traditional" className="treatments-directory__link">
+                  Traditional Therapies
+                </a>
+                <a href="#coverage-note" className="treatments-directory__link">
+                  Coverage &amp; Notes
+                </a>
+              </div>
+            </nav>
           </header>
-
-          {/* 4 tiles (balanced) */}
-          <div className="treatments-grid">
-            <article className="treatment-tile">
-              <h2>Ketamine-Assisted Therapy</h2>
-              <p>
-                Medically supervised ketamine-assisted psychotherapy with
-                preparation and integration. Individual programs (and group
-                options when available).
-              </p>
-              <div className="treatment-tile__actions">
-                <a href="#ketamine" className="btn btn-outline">
-                  More info →
-                </a>
-              </div>
-            </article>
-
-            <article className="treatment-tile">
-              <h2>Other Medicine-Assisted Therapies</h2>
-              <p>
-                Psilocybin, MDMA, and other substances may be available only
-                through Health Canada’s Special Access Program (SAP).
-              </p>
-              <div className="treatment-tile__actions">
-                <a href="#other-medicine" className="btn btn-outline">
-                  More info →
-                </a>
-              </div>
-            </article>
-
-            {/* Traditional therapies tile */}
-            <article className="treatment-tile">
-              <h2>Traditional Therapies</h2>
-              <p>
-                Psychiatry services, individual and group therapy, and
-                attachment-focused couples therapy. Availability and fit are
-                discussed case-by-case.
-              </p>
-              <div className="treatment-tile__actions">
-                <a href="#traditional" className="btn btn-outline">
-                  View services →
-                </a>
-              </div>
-            </article>
-
-            {/* Combined perinatal + parenting tile */}
-            <article className="treatment-tile">
-              <h2>Perinatal &amp; Parenting Psychiatry</h2>
-              <p>
-                Perinatal psychiatric care (pregnancy to 1 year post-partum) and
-                parenting support including Circle of Security Parenting (COS-P).
-              </p>
-              <div className="treatment-tile__actions">
-                <a href="#perinatal-parenting" className="btn btn-outline">
-                  Learn more →
-                </a>
-              </div>
-            </article>
-          </div>
         </div>
       </div>
 
@@ -149,7 +114,7 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* NEW: Combined perinatal + parenting section */}
+        {/* Perinatal + parenting */}
         <section id="perinatal-parenting" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Perinatal &amp; Parenting Psychiatry</h2>
@@ -188,7 +153,7 @@ export default function Treatments() {
           </div>
         </section>
 
-        {/* Traditional therapies section (your existing “Other Therapies & Groups”) */}
+        {/* Traditional therapies */}
         <section id="traditional" className="treatment-section-block">
           <div className="treatment-section-inner">
             <h2>Traditional Therapies</h2>
@@ -232,12 +197,16 @@ export default function Treatments() {
         </section>
 
         {/* note section */}
-        <section className="treatment-section-block treatment-section-block--note">
+        <section
+          id="coverage-note"
+          className="treatment-section-block treatment-section-block--note"
+        >
           <div className="treatment-section-inner">
             <p>
-              <b>Please note:</b> some of the treatment is covered by MSP if you have a doctor's referral. 
-              We encourage those who also have private health insurance to 
-              inquire with their respective health plans to see if they can seek any additional coverage.
+              <b>Please note:</b> some of the treatment is covered by MSP if you
+              have a doctor's referral. We encourage those who also have private
+              health insurance to inquire with their respective health plans to
+              see if they can seek any additional coverage.
             </p>
           </div>
         </section>
