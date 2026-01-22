@@ -58,6 +58,8 @@ export default function Team() {
                 className="team-section-avatar"
                 src="/images/AboutChristine.jpg"
                 alt="Dr. Christine Kennedy"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <h2>Dr. Christine Kennedy</h2>
@@ -103,6 +105,8 @@ export default function Team() {
                 className="team-section-avatar"
                 src="/images/LauraProfile3.JPG"
                 alt="Laura Fisher"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <h2>Laura Fisher</h2>

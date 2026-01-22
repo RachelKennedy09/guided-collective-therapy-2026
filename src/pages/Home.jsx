@@ -12,6 +12,9 @@ export default function Home() {
             alt=""
             className="home-hero__still"
             aria-hidden="true"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
           />
           <video
             className="home-hero__video"
@@ -20,6 +23,7 @@ export default function Home() {
             loop
             playsInline
             poster="/images/PgVideoStill.png"
+            preload="metadata"
           >
             <source src="/images/videos/Pgvideo_h264.mp4" type="video/mp4" />
           </video>

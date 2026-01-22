@@ -122,11 +122,20 @@ export default function AppLayout() {
               <img
                 src="/images/EveryChildMatters.png"
                 alt="Every Child Matters flag"
+                loading="lazy"
+                decoding="async"
               />
-              <img src="/images/Pride.png" alt="Pride flag" />
+              <img
+                src="/images/Pride.png"
+                alt="Pride flag"
+                loading="lazy"
+                decoding="async"
+              />
               <img
                 src="/images/BlackLivesMatter.png"
                 alt="Black Lives Matter flag"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
