@@ -1106,6 +1106,8 @@ a {
   min-height: 100vh;
   padding: 7rem 1.25rem 4rem;
   overflow: hidden;
+  display: grid;
+  align-items: center;
 }
 
 .contact-hero::before {
@@ -1125,6 +1127,8 @@ a {
   z-index: 1;
   width: min(980px, 92vw);
   margin: 0 auto;
+  display: grid;
+  place-items: center;
 }
 
 .contact-hero__panel {
@@ -1141,6 +1145,9 @@ a {
 
   /* softer shadow */
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 760px;
+  margin-inline: auto;
 }
 
 .contact-hero__blurb,
@@ -1214,6 +1221,11 @@ a {
   line-height: 1.45;
 }
 
+.contact-form-section .contact-field span,
+.contact-form-section .contact-consent {
+  color: var(--text-subtle);
+}
+
 .contact-consent input {
   margin-top: 0.25rem;
 }
@@ -1224,6 +1236,27 @@ a {
   font-size: 0.95rem;
 }
 
+.contact-status {
+  margin: 0.35rem 0 0;
+  color: var(--text-subtle);
+  font-size: 0.95rem;
+}
+
+.contact-form-section {
+  background: var(--beige);
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+.contact-form-panel {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(191, 196, 189, 0.7);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 600px) {
   .contact-hero__panel {
     padding: 1.75rem 1.25rem;
@@ -1232,6 +1265,10 @@ a {
 
   .contact-consent {
     flex-wrap: wrap;
+  }
+
+  .contact-form-panel {
+    padding: 1.5rem 1.25rem;
   }
 }
 
@@ -1381,6 +1418,41 @@ a {
 }
 
 .floating-back:active {
+  transform: translateY(0px);
+}
+
+/* Floating contact button (bottom-left) */
+.floating-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  background: rgba(10, 12, 10, 0.24);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+
+  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-contact:hover {
+  background: rgba(10, 12, 10, 0.34);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+}
+
+.floating-contact:active {
   transform: translateY(0px);
 }
 /* ========================

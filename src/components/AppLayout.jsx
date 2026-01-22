@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
-import FloatingBack from "./FloatingBack";
+import FloatingContact from "./FloatingContact";
 
 export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,7 +73,7 @@ export default function AppLayout() {
           </ul>
         </nav>
       </header>
-      {!isHome && <FloatingBack />}
+      <FloatingContact />
       <main>
         <Outlet />
       </main>

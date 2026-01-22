@@ -33,15 +33,6 @@ export default function Referrals() {
               </a>
             </div>
 
-            <div className="referrals-hero__cta">
-              <Link to="/contact" className="btn">
-                Contact ->
-              </Link>
-              <p className="referrals-hero__cta-note">
-                For general inquiries only. Please do not include urgent or
-                sensitive medical details.
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -95,9 +86,6 @@ export default function Referrals() {
               psychedelic-assisted or traditional psychotherapy services.
             </p>
             <p>Please reach out and share a bit about your background.</p>
-            <Link to="/contact" className="btn">
-              Message us ->
-            </Link>
           </div>
         </section>
       </div>
