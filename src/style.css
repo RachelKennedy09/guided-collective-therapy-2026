@@ -1215,6 +1215,10 @@ a {
   gap: 0.95rem;
 }
 
+.contact-form-panel .contact-form {
+  margin-top: 0;
+}
+
 .contact-field {
   display: grid;
   gap: 0.35rem;
@@ -1298,6 +1302,25 @@ a {
 .contact-form-section {
   background: var(--beige);
   padding: 3.5rem 1.25rem 5rem;
+}
+
+.contact-help {
+  width: min(900px, 92vw);
+  margin: 0 auto 2rem;
+}
+
+.contact-help__title {
+  margin: 0 0 1.25rem;
+  color: var(--section-title-color);
+  font-size: var(--section-title-size);
+  letter-spacing: var(--section-title-spacing);
+}
+
+.contact-help__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text);
+  line-height: 1.7;
 }
 
 .contact-form-panel {

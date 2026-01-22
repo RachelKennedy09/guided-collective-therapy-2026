@@ -141,7 +141,6 @@ export default function Contact() {
 
       {/* FORM */}
       <div className="contact-form-section">
-        <div className="contact-form-panel">
           <div className="contact-help">
             <h2 className="contact-help__title">How to use this form</h2>
             <ul className="contact-help__list">
@@ -151,7 +150,8 @@ export default function Contact() {
             </ul>
           </div>
 
-          <form
+          
+        <div className="contact-form-panel"><form
             className="contact-form"
             name="guided-contact"
             method="POST"
