@@ -104,7 +104,7 @@ export default function Treatments() {
         {/* Other Medicine Assisted Therapies */}
         <section id="other-medicine" className="treatment-section-block">
           <div className="treatment-section-inner">
-            <h2>Other Medicine Assisted Therapies</h2>
+            <h2>Other Medicine-Assisted Therapies</h2>
 
             <p>
               Currently only <b>Ketamine-Assisted Therapy</b> is approved for
@@ -113,7 +113,7 @@ export default function Treatments() {
               are approved only through Canada’s{" "}
               <a
                 className="sap-link-inline"
-                href="https://www.canada.ca/en/health-canada/services/drugs-health-products/special-access/drugs.html"
+                href="https://www.canada.ca/en/health-canada/services/drugs-health-products/special-access/information-patients.html"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -146,7 +146,9 @@ export default function Treatments() {
               </div>
 
               <div className="treatment-box">
-                <h3>Circle of Security Parenting Course (COS-P)</h3>
+                <h3>Circle of Security Parenting Course 
+                  <br></br>(COS-P)
+                  </h3>
                 <p>
                   This is a parenting group program based on theories of
                   attachment and the principles that secure relationships are

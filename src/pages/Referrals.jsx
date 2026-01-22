@@ -23,36 +23,49 @@ export default function Referrals() {
 
             <div className="referrals-nav">
               <a className="btn btn-outline" href="#prospective-patients">
-                Prospective patients
+                Prospective Patients
               </a>
               <a className="btn btn-outline" href="#physicians">
                 Physicians
               </a>
               <a className="btn btn-outline" href="#join-team">
-                Join the team
+                Join The Team
               </a>
             </div>
-
           </div>
         </div>
       </div>
 
       <div className="referrals-sections">
         <section id="prospective-patients" className="referrals-section-block">
-          <div className="referrals-section-inner">
-            <h2>Prospective patients</h2>
+          <h2 className="referrals-section-title">Prospective Patients</h2>
+          <div className="referrals-section-inner treatment-box">
             <p>
-              Guided offers ketamine-assisted psychotherapy, other
-              medicine-assisted therapies (when available), traditional
-              psychotherapy and psychiatry services, and perinatal and
-              parenting-focused care. If you're unsure which service is the
-              right fit, we're happy to help guide next steps.
+              Guided Therapy Collective offers a range of mental health services,
+              including ketamine-assisted therapy, other medicine-assisted therapies
+              (when available), traditional psychotherapy and psychiatry services,
+              and perinatal and parenting-focused care.
+            </p>
+
+            <p>
+              If you are exploring care or unsure which service may be the right fit,
+              we invite you to reach out using our{" "}
+              <Link to="/contact" className="text-link">
+                contact form
+              </Link>{" "}
+              as a general outpatient inquiry.
+            </p>
+
+            <p>
+              Please keep messages brief and avoid sharing detailed or urgent medical
+              information. Our team will follow up with next steps and guidance on how
+              to share information securely if appropriate.
             </p>
 
             <h3>What to have ready</h3>
             <ul className="referrals-list">
               <li>Your main goals for treatment and any questions you have</li>
-              <li>Relevant medical/mental health history (brief is okay)</li>
+              <li>Relevant medical or mental health history (brief is okay)</li>
               <li>Current medications</li>
               <li>Any referral paperwork (if you have it)</li>
             </ul>
@@ -60,32 +73,61 @@ export default function Referrals() {
         </section>
 
         <section id="physicians" className="referrals-section-block">
-          <div className="referrals-section-inner">
-            <h2>Physicians</h2>
+          <h2 className="referrals-section-title">Physicians</h2>
+          <div className="referrals-section-inner treatment-box">
             <p>
-              We offer ketamine-assisted therapy for a variety of mental health
-              conditions including treatment-resistant depression, anxiety, and
-              trauma-related disorders.
+              Guided Therapy Collective offers a range of mental health services,
+              including ketamine-assisted therapy, psychiatry, and psychotherapy.
+              Clinical care is led by Dr. Christine Kennedy.
             </p>
-            <p>Please fax referrals to Dr. Kennedy at Guided:</p>
+
+            <p>
+              For select patients, other medicine-assisted therapies may be considered
+              through Health Canada's{" "}
+              <a
+                href="https://www.canada.ca/en/health-canada/services/drugs-health-products/special-access.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sap-link-inline"
+              >
+                Special Access Program
+              </a>{" "}
+              when clinically appropriate.
+            </p>
+
+            <p>
+              Physicians who wish to refer a patient are invited to fax a referral to
+              Dr. Kennedy at Guided Therapy Collective.
+            </p>
+
             <p>
               <strong>Fax:</strong> 1-888-897-6501
             </p>
+
             <p>
-              Email inquiries are welcome (without patient-identifying
-              information).
+              For general inquiries, please{" "}
+              <Link to="/contact" className="text-link">
+                contact us
+              </Link>{" "}
+              by email <strong>(without patient-identifying information)</strong>.
             </p>
           </div>
         </section>
 
         <section id="join-team" className="referrals-section-block">
-          <div className="referrals-section-inner">
-            <h2>Join the team</h2>
+          <h2 className="referrals-section-title">Join the team</h2>
+          <div className="referrals-section-inner treatment-box">
             <p>
               We welcome health professionals and counsellors interested in
               psychedelic-assisted or traditional psychotherapy services.
             </p>
-            <p>Please reach out and share a bit about your background.</p>
+            <p>
+              Please{" "}
+              <Link to="/contact" className="text-link">
+                contact us
+              </Link>{" "}
+              and share a bit about your background.
+            </p>
           </div>
         </section>
       </div>

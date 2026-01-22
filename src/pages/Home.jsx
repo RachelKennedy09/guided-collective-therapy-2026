@@ -26,7 +26,7 @@ export default function Home() {
             preload="metadata"
           >
             <source
-              src="/images/videos/Pgvideo_h264_1280.mp4"
+              src="/images/videos/Pgvideo_h264_1280_hq.mp4"
               type="video/mp4"
             />
           </video>

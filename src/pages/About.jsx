@@ -14,18 +14,20 @@ export default function About() {
             <h1 className="page-hero__title">About</h1>
 
             <p className="page-hero__blurb">
-              We created this clinic with the hope to increase the availability
-              of psychedelic treatment to people living in Northern BC. All
-              aspects of the space — the clinic, team, website, photos and
-              artwork — have been created or curated by people rooted in this
-              region.
+              We created this clinic with the intention of making psychedelic treatment accessible to people living in Northern BC 
+              and warmly welcome those who choose to travel to this beautiful region. 
+               
             </p>
+
+            <a className="btn btn-outline" href="#what-we-offer">
+              What we offer
+            </a>
           </div>
         </div>
       </section>
 
       {/* CONTENT BELOW HERO */}
-      <section className="about-content">
+      <section id="what-we-offer" className="about-content">
         <div className="about-content__inner">
           {/* Little intro block to “fill” the space and guide the eye */}
           <header className="about-intro">
@@ -52,6 +54,7 @@ export default function About() {
               <h3 className="about-card__title">What to expect from Psychedelic-Assisted Therapy</h3>
               <ul className="about-list">
                 <li>Consultation and screening</li>
+                <li>Preparation</li>
                 <li>Medicine sessions</li>
                 <li>Integration to support long-term change</li>
               </ul>
