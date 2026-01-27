@@ -38,8 +38,15 @@ export default function Header() {
     <header className="site-header">
       <nav className="navbar">
         <div className="logo">
-          <Link to="/" onClick={closeMenu}>
-            guided
+          <Link to="/" onClick={closeMenu} aria-label="Guided home">
+            <img
+              src="/images/logo.png"
+              alt="Guided logo"
+              className="logo__mark"
+              loading="lazy"
+              decoding="async"
+            />
+            <span className="sr-only">Guided</span>
           </Link>
         </div>
 

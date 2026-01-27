@@ -20,8 +20,15 @@ export default function AppLayout() {
         <nav className="navbar">
           {/* Logo */}
           <div className="logo">
-            <NavLink to="/" onClick={closeMenu}>
-              guided
+            <NavLink to="/" onClick={closeMenu} aria-label="Guided home">
+              <img
+                src="/images/logo.png"
+                alt="Guided logo"
+                className="logo__mark"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="sr-only">Guided</span>
             </NavLink>
           </div>
 
