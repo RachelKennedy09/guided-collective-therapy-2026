@@ -219,7 +219,8 @@ a {
 
 .nav-links a {
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: var(--font-serif);
 }
 
 /* HAMBURGER BUTTON */
@@ -291,7 +292,7 @@ a {
 
   .nav-links a {
     color: #fff !important;
-    font-weight: 800;
+    font-weight: 600;
     text-shadow: none; /* not needed now */
   }
 }
@@ -1512,6 +1513,7 @@ a {
   color: #fff;
   font-weight: 800;
   letter-spacing: 0.02em;
+  font-family: var(--font-serif);
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);

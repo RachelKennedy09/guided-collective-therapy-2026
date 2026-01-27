@@ -168,7 +168,7 @@ export default function Contact() {
             {/* Honeypot */}
             <p hidden>
               <label>
-                Don&apos;t fill this out: <input name="bot-field" />
+                Don't fill this out: <input name="bot-field" />
               </label>
             </p>
 
