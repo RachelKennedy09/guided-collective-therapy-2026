@@ -208,6 +208,12 @@ a {
   color: #fff;
 }
 
+.logo {
+  margin-left: -3rem; /* offset navbar left padding so logo hits screen edge */
+  display: flex;
+  align-items: center;
+}
+
 .logo__mark {
   width: 320px;
   height: 200px;
