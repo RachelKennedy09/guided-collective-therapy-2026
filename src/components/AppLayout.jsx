@@ -22,7 +22,7 @@ export default function AppLayout() {
           <div className="logo">
             <NavLink to="/" onClick={closeMenu} aria-label="Guided home">
               <img
-                src="/images/logo.png"
+                src="/logo-1-navbar.png"
                 alt="Guided logo"
                 className="logo__mark"
                 loading="lazy"
@@ -88,26 +88,22 @@ export default function AppLayout() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-brand">
-            <h3>Guided Therapy Collective</h3>
-            <p className="footer-tagline">
-              Prince George, BC • Psychedelic-assisted therapy & psychotherapy
-            </p>
+            <img
+              src="/logo-2.png"
+              alt="Guided Therapy Collective logo"
+              className="footer-logo"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           <div className="footer-contact">
-           
             <p>
               <strong>Email:</strong>{" "}
-              <a href="mailto:hello@guidedtherapycollective.ca">
-                hello@guidedtherapycollective.ca
-              </a>
+              <a href="mailto:guidedtc@gmail.com">guidedtc@gmail.com</a>
             </p>
-            <p>
-              <strong>Address:</strong> 123 Example St, Prince George, BC
-            </p>
-
             <p className="footer-hours">
-              <strong>Clinic Hours:</strong> Mon–Fri 9:00am–5:00pm
+              <strong>Clinic Hours:</strong> Mon-Fri 9:00am-5:00pm
             </p>
           </div>
 
@@ -123,7 +119,7 @@ export default function AppLayout() {
           </div>
 
           <div className="footer-bottom">
-            <p className="footer-copy">© 2026 Guided Therapy Collective</p>
+            <p className="footer-copy">&copy; 2026 Guided Therapy Collective</p>
 
             <div className="footer-flags">
               <img
@@ -151,3 +147,16 @@ export default function AppLayout() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
