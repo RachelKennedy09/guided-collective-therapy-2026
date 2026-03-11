@@ -734,6 +734,17 @@ a {
   align-items: center;
 }
 
+@media (max-width: 600px) {
+  .treatments-hero {
+    padding: 104px 16px 72px;
+  }
+
+  .treatments-hero__inner {
+    min-height: calc(100vh - 176px);
+    justify-content: center;
+  }
+}
+
 
 
 @media (min-width: 720px) {
