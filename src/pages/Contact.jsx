@@ -123,6 +123,13 @@ export default function Contact() {
       >
         <div className="contact-hero__inner">
           <div className="contact-hero__panel">
+            <img
+              src="/guided-footer-icon.png"
+              alt=""
+              className="hero-panel__icon"
+              loading="lazy"
+              decoding="async"
+            />
             <h1 className="contact-hero__title">Contact</h1>
 
             <p className="contact-hero__blurb">

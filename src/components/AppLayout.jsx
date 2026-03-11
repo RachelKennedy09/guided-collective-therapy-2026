@@ -133,13 +133,20 @@ export default function AppLayout() {
                 decoding="async"
               />
             </div>
+
+            <img
+              src="/guided-footer-icon.png"
+              alt="Guided Therapy Collective icon"
+              className="footer-mark"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </footer>
     </>
   );
 }
-
 
 
 

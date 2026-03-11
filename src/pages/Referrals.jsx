@@ -13,6 +13,13 @@ export default function Referrals() {
         <div className="referrals-hero__inner">
           <div className="referrals-hero__panel">
             <header className="referrals-hero__header">
+              <img
+                src="/guided-footer-icon.png"
+                alt=""
+                className="hero-panel__icon"
+                loading="lazy"
+                decoding="async"
+              />
               <h1 className="referrals-hero__title">Referrals</h1>
               <p className="referrals-hero__blurb">
                 Whether you're exploring Guided's services or looking for

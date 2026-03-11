@@ -14,6 +14,13 @@ export default function Team() {
 
         <div className="team-hero__inner">
           <div className="team-hero__panel">
+            <img
+              src="/guided-footer-icon.png"
+              alt=""
+              className="hero-panel__icon"
+              loading="lazy"
+              decoding="async"
+            />
             <h1>Our Team</h1>
             <p className="team-hero__blurb">
               Guided Therapy Collective is led by a medical director and a

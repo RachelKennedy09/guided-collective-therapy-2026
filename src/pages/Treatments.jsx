@@ -25,6 +25,13 @@ export default function Treatments() {
 
           {/* Intro (lets more photo show) */}
           <header className="treatments-intro">
+            <img
+              src="/guided-footer-icon.png"
+              alt=""
+              className="hero-panel__icon"
+              loading="lazy"
+              decoding="async"
+            />
             <h1 className="treatments-intro__title">Guided Services</h1>
 
             <p className="treatments-intro__blurb">

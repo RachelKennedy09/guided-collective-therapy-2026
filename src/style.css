@@ -615,6 +615,14 @@ a {
   max-width: 620px;
 }
 
+.hero-panel__icon {
+  width: clamp(8rem, 14vw, 11rem);
+  height: auto;
+  display: block;
+  margin: 0 auto 0.7rem;
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
+}
+
 .page-hero__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-serif);
@@ -629,6 +637,11 @@ a {
 }
 
 @media (max-width: 600px) {
+  .hero-panel__icon {
+    width: 7.5rem;
+    margin-bottom: 0.55rem;
+  }
+
   .logo__mark {
     height: 54px;
     width: auto;
@@ -1517,6 +1530,13 @@ a {
   opacity: 0.95;
 }
 
+.footer-mark {
+  width: clamp(5.5rem, 10vw, 7.5rem);
+  height: auto;
+  display: block;
+  opacity: 0.96;
+}
+
 @media (min-width: 1000px) {
   .site-footer {
     padding: 2.55rem 1.8rem 1.95rem;
@@ -1544,6 +1564,10 @@ a {
 
   .footer-flags img {
     width: 2.8rem;
+  }
+
+  .footer-mark {
+    width: 5.5rem;
   }
 }
 /* Floating back button (bottom-right) */

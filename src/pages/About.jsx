@@ -11,6 +11,13 @@ export default function About() {
       >
         <div className="page-hero__inner">
           <div className="page-hero__panel">
+            <img
+              src="/guided-footer-icon.png"
+              alt=""
+              className="hero-panel__icon"
+              loading="lazy"
+              decoding="async"
+            />
             <h1 className="page-hero__title">About</h1>
 
             <p className="page-hero__blurb">
