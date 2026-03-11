@@ -421,6 +421,20 @@ a {
   font-size: 1.15rem;
 }
 
+.home-hero__panel {
+  padding: 0.95rem 0.95rem;
+  max-width: 470px;
+}
+
+.home-hero__logo {
+  width: min(62vw, 350px);
+  margin-bottom: 0.55rem;
+}
+
+.home-hero__subtitle {
+  font-size: 1.05rem;
+}
+
 .home-hero__about h2 {
   margin: 0 0 0.55rem;
   font-size: 1.25rem;
@@ -448,13 +462,13 @@ a {
 
 @media (max-width: 600px) {
   .home-hero__logo {
-    width: min(62vw, 260px);
-    margin-bottom: 0.55rem;
+    width: min(50vw, 200px);
+    margin-bottom: 0.4rem;
   }
 
   .home-hero__panel {
-    padding: 1.1rem 0.95rem;
-    border-radius: 16px;
+    padding: 0.75rem 0.7rem;
+    border-radius: 14px;
   }
 }
 

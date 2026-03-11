@@ -95,7 +95,7 @@ export default function AppLayout() {
               <a href="mailto:guidedtc@gmail.com">guidedtc@gmail.com</a>
             </p>
             <p className="footer-hours">
-              <strong>Clinic Hours:</strong> Mon-Fri 9:00am-5:00pm
+              <strong>Clinic Hours:</strong> Mon - Fri 9:00am - 5:00pm
             </p>
           </div>
 
