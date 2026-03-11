@@ -76,7 +76,7 @@ a {
 /* ---------- Buttons / Links ---------- */
 .btn {
   background-color: var(--violet);
-  color: #fff;
+  color: #123f6b;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
   font-weight: 700;
@@ -291,7 +291,7 @@ a {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #123f6b;
   font-weight: 500;
   font-family: var(--font-serif);
 }
@@ -316,7 +316,7 @@ a {
   width: 26px;
   height: 2px;
   margin: 4px 0;
-  background: #fff; /* ✅ visible on dark + video */
+  background: #123f6b;
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
@@ -358,7 +358,7 @@ a {
     width: 26px;
     height: 2px;
     margin: 4px 0;
-    background: #fff; /* ✅ visible on dark + video */
+    background: #123f6b;
     border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.2s ease;
   }
@@ -367,7 +367,7 @@ a {
   }
 
   .nav-links a {
-    color: #fff !important;
+    color: #123f6b !important;
     font-weight: 600;
     text-shadow: none; /* not needed now */
   }
@@ -659,49 +659,6 @@ a {
   filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
 }
 
-.hero-quote {
-  margin: 0.95rem auto 1.1rem;
-  max-width: 34ch;
-  padding: 0.8rem 0.95rem 0.7rem;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  animation: hero-quote-fade 420ms ease;
-}
-
-.hero-quote__text {
-  margin: 0;
-}
-
-.hero-quote__text p {
-  margin: 0;
-  font-style: italic;
-  font-size: 0.98rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.94);
-}
-
-.hero-quote__author {
-  margin-top: 0.45rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-@keyframes hero-quote-fade {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .page-hero__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-serif);
@@ -719,16 +676,6 @@ a {
   .hero-panel__icon {
     width: 7.5rem;
     margin-bottom: 0.55rem;
-  }
-
-  .hero-quote {
-    margin: 0.8rem auto 0.95rem;
-    padding: 0.7rem 0.8rem 0.65rem;
-    max-width: 30ch;
-  }
-
-  .hero-quote__text p {
-    font-size: 0.92rem;
   }
 
   .logo__mark {

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeroQuote from "../components/HeroQuote";
 
 export default function Referrals() {
   return (
@@ -27,7 +26,6 @@ export default function Referrals() {
                 referral information, we'll help guide you through the next
                 steps.
               </p>
-              <HeroQuote page="referrals" />
             </header>
 
             <div className="referrals-nav">

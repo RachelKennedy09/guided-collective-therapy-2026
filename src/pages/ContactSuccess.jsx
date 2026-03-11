@@ -1,7 +1,6 @@
 // src/pages/ContactSuccess.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
-import HeroQuote from "../components/HeroQuote";
 
 export default function ContactSuccess() {
   return (
@@ -25,8 +24,6 @@ export default function ContactSuccess() {
               Thanks — we’ve received your message. We aim to respond within a
               few business days.
             </p>
-
-            <HeroQuote page="contactSuccess" />
 
             <div style={{ marginTop: "1rem" }}>
               <NavLink className="btn" to="/">

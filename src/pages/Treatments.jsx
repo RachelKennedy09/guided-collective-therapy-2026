@@ -1,7 +1,6 @@
 // src/pages/Treatments.jsx
 import React from "react";
 import BackToHome from "../components/FloatingBack";
-import HeroQuote from "../components/HeroQuote";
 
 export default function Treatments() {
   return (
@@ -42,8 +41,6 @@ export default function Treatments() {
             </p>
 
             {/* ✅ Directory / On this page */}
-            <HeroQuote page="treatments" />
-
             <nav className="treatments-directory" aria-label="On this page">
               <div className="treatments-directory__links">
                 <a href="#ketamine" className="treatments-directory__link">

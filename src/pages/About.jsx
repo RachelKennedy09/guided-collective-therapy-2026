@@ -1,6 +1,5 @@
 // src/pages/About.jsx
 import React from "react";
-import HeroQuote from "../components/HeroQuote";
 
 export default function About() {
   return (
@@ -27,8 +26,6 @@ export default function About() {
                            </p>
                            <p>While we also work in traditional therapy realms we feel that psychedlics offer an avenue for some individuals to reach and heal aspects of themselves that can be difficult to access.</p>
                            <p>We chose the name "guided" in relation to "accompanying (one) to an unfamiliar place." We would love the opportunity to accompany you on your healing journey.</p>
-
-            <HeroQuote page="about" />
 
             <a className="btn btn-outline" href="#what-we-offer">
               What we offer
