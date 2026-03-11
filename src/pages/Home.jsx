@@ -1,7 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
 
 export default function Home() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.7;
+    }
+  }, []);
+
   return (
     <>
       {/* HERO */}
@@ -17,6 +24,7 @@ export default function Home() {
             fetchpriority="high"
           />
           <video
+            ref={videoRef}
             className="home-hero__video"
             autoPlay
             muted
