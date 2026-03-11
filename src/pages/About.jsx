@@ -25,8 +25,8 @@ export default function About() {
               We created this clinic with the intention of making psychedelic treatment accessible to people living in Northern BC 
               and warmly welcome those who choose to travel to this beautiful region. 
                            </p>
-                           <p>While we also work in traditional therapy realms we feel that psychedlics offer an avenue for some individuals to reach and heal aspects of themselves that can be difficult to access</p>
-                           <p>We chose the name "guided" in relation to "accompanying (one) to an unfamiliar place". We would love the opportunity to accompany you on your healing journey</p>
+                           <p>While we also work in traditional therapy realms we feel that psychedlics offer an avenue for some individuals to reach and heal aspects of themselves that can be difficult to access.</p>
+                           <p>We chose the name "guided" in relation to "accompanying (one) to an unfamiliar place." We would love the opportunity to accompany you on your healing journey.</p>
 
             <HeroQuote page="about" />
 
