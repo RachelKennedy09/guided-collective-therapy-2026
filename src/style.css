@@ -1579,9 +1579,9 @@ a {
 
   padding: 0.6rem 0.95rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(143, 219, 196, 0.4);
 
-  background: rgba(10, 12, 10, 0.24);
+  background: rgba(44, 177, 188, 0.22);
   color: #fff;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -1589,7 +1589,7 @@ a {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 12px 30px rgba(10, 76, 95, 0.26);
   cursor: pointer;
 
   transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease;
@@ -1614,9 +1614,10 @@ a {
 
   padding: 0.6rem 0.95rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(166, 224, 181, 0.38);
 
-  background: rgba(10, 12, 10, 0.24);
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.36), rgba(146, 206, 144, 0.28));
   color: #fff;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -1625,16 +1626,22 @@ a {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  box-shadow:
+    0 12px 30px rgba(9, 73, 92, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
   cursor: pointer;
 
-  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .floating-contact:hover {
-  background: rgba(10, 12, 10, 0.34);
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.46), rgba(146, 206, 144, 0.36));
+  border-color: rgba(185, 233, 193, 0.5);
   transform: translateY(-1px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+  box-shadow:
+    0 16px 40px rgba(9, 73, 92, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .floating-contact:active {
