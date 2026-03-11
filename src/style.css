@@ -455,17 +455,19 @@ a {
 }
 
 .home-hero__panel {
-  padding: 0.95rem 0.95rem;
-  max-width: 470px;
+  background: rgba(18, 28, 24, 0.2);
+  padding: 1.15rem 1.15rem;
+  max-width: 560px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
 }
 
 .home-hero__logo {
-  width: min(62vw, 350px);
-  margin-bottom: 0.55rem;
+  width: min(70vw, 410px);
+  margin-bottom: 0.7rem;
 }
 
 .home-hero__subtitle {
-  font-size: 1.05rem;
+  font-size: 1.12rem;
 }
 
 .home-hero__about h2 {
@@ -495,12 +497,13 @@ a {
 
 @media (max-width: 600px) {
   .home-hero__logo {
-    width: min(50vw, 200px);
-    margin-bottom: 0.4rem;
+    width: min(58vw, 240px);
+    margin-bottom: 0.5rem;
   }
 
   .home-hero__panel {
-    padding: 0.75rem 0.7rem;
+    background: rgba(18, 28, 24, 0.17);
+    padding: 0.95rem 0.9rem;
     border-radius: 14px;
   }
 }

@@ -9,6 +9,7 @@ export default function AppLayout() {
   const closeMenu = () => setMenuOpen(false);
 
   const isHome = location.pathname === "/";
+  const showFloatingContact = location.pathname !== "/contact";
 
   return (
     <>
@@ -80,7 +81,7 @@ export default function AppLayout() {
           </ul>
         </nav>
       </header>
-      <FloatingContact />
+      {showFloatingContact ? <FloatingContact /> : null}
       <main>
         <Outlet />
       </main>
@@ -147,7 +148,6 @@ export default function AppLayout() {
     </>
   );
 }
-
 
 
 
