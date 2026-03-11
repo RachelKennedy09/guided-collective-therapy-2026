@@ -1,6 +1,7 @@
 // src/pages/Contact.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import HeroQuote from "../components/HeroQuote";
 
 export default function Contact() {
   const navigate = useNavigate();
@@ -142,6 +143,7 @@ export default function Contact() {
               or detailed medical information here. If needed, we will provide guidance on
               how to share information securely.
             </p>
+            <HeroQuote page="contact" />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 // src/pages/Team.jsx
 import React from "react";
+import HeroQuote from "../components/HeroQuote";
 
 export default function Team() {
   return (
@@ -27,6 +28,8 @@ export default function Team() {
               collaborative care team. We work with care, curiosity, and a
               grounded relational approach.
             </p>
+
+            <HeroQuote page="team" />
 
             {/* <a href="#team-members" className="btn btn-outline team-hero__cta">
               Click on a team member’s photo to learn more ↓

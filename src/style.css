@@ -659,6 +659,49 @@ a {
   filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.18));
 }
 
+.hero-quote {
+  margin: 0.95rem auto 1.1rem;
+  max-width: 34ch;
+  padding: 0.8rem 0.95rem 0.7rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: hero-quote-fade 420ms ease;
+}
+
+.hero-quote__text {
+  margin: 0;
+}
+
+.hero-quote__text p {
+  margin: 0;
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.hero-quote__author {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@keyframes hero-quote-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .page-hero__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-serif);
@@ -678,6 +721,16 @@ a {
     margin-bottom: 0.55rem;
   }
 
+  .hero-quote {
+    margin: 0.8rem auto 0.95rem;
+    padding: 0.7rem 0.8rem 0.65rem;
+    max-width: 30ch;
+  }
+
+  .hero-quote__text p {
+    font-size: 0.92rem;
+  }
+
   .logo__mark {
     height: 54px;
     width: auto;
@@ -685,12 +738,12 @@ a {
   }
 }
 
+@media (max-width: 600px) {
   .page-hero__panel {
     padding: 1.75rem 1.25rem;
     border-radius: 18px;
   }
 }
-
 /* ========================
    TREATMENTS PAGE (new layout)
    ======================== */
@@ -1079,11 +1132,11 @@ a {
   }
 }
 
+@media (max-width: 600px) {
   .team-section-header {
     align-items: flex-start;
   }
 }
-
 @media (max-width: 420px) {
   .team-section-header {
     flex-direction: column;
@@ -1260,6 +1313,7 @@ a {
   }
 }
 
+@media (max-width: 600px) {
   .referrals-section-inner {
     padding: 1.5rem 1.25rem;
   }
@@ -1468,6 +1522,7 @@ a {
   }
 }
 
+@media (max-width: 600px) {
   .contact-consent {
     flex-wrap: wrap;
   }
@@ -1476,7 +1531,6 @@ a {
     padding: 1.5rem 1.25rem;
   }
 }
-
 /* ========================
    FOOTER (Centered + Comfortable)
    ======================== */
