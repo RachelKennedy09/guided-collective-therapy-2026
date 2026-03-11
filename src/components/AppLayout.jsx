@@ -22,8 +22,8 @@ export default function AppLayout() {
           <div className="logo">
             <NavLink to="/" onClick={closeMenu} aria-label="Guided home">
               <img
-                src="/logo-1-navbar.png"
-                alt="Guided logo"
+                src="/guided-navbar-logo.png"
+                alt="Guided Therapy Collective"
                 className="logo__mark"
                 loading="lazy"
                 decoding="async"
@@ -87,15 +87,7 @@ export default function AppLayout() {
 
       <footer className="site-footer">
         <div className="footer-inner">
-          <div className="footer-brand">
-            <img
-              src="/logo-2.png"
-              alt="Guided Therapy Collective logo"
-              className="footer-logo"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
+          <h2 className="footer-title">Guided Therapy Collective</h2>
 
           <div className="footer-contact">
             <p>

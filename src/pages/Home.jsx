@@ -36,7 +36,15 @@ export default function Home() {
         <div className="home-hero__content">
           <div className="home-hero__grid">
             <div className="home-hero__panel">
-              <h1 className="home-hero__title">Guided Therapy Collective</h1>
+              <h1 className="sr-only">Guided Therapy Collective</h1>
+              <img
+                src="/guided-home-hero-logo.png"
+                alt=""
+                className="home-hero__logo"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
               <p className="home-hero__subtitle">We’re glad you’re here.</p>
             </div>
           </div>
