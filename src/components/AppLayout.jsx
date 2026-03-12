@@ -112,7 +112,13 @@ export default function AppLayout() {
           </div>
 
           <div className="footer-bottom">
-            <p className="footer-copy">&copy; 2026 Guided Therapy Collective</p>
+            <img
+              src="/guided-footer-icon.png"
+              alt="Guided Therapy Collective icon"
+              className="footer-mark"
+              loading="lazy"
+              decoding="async"
+            />
 
             <div className="footer-flags">
               <img
@@ -135,22 +141,13 @@ export default function AppLayout() {
               />
             </div>
 
-            <img
-              src="/guided-footer-icon.png"
-              alt="Guided Therapy Collective icon"
-              className="footer-mark"
-              loading="lazy"
-              decoding="async"
-            />
+            <p className="footer-copy">&copy; 2026 Guided Therapy Collective</p>
           </div>
         </div>
       </footer>
     </>
   );
 }
-
-
-
 
 
 
