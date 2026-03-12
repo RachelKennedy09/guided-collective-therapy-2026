@@ -138,16 +138,16 @@ export default function Contact() {
             </p>
 
             <p className="contact-hero__note">
-              This form is for general inquiries only. Please avoid sending urgent messages
-              or detailed medical information here. If needed, we will provide guidance on
-              how to share information securely.
-            </p>
-
-            <p className="contact-hero__note">
               Prospective patients can use this form for general questions, physicians can use
               it for referral-related inquiries, and healthcare practitioners or counsellors
               interested in joining the team can use it to introduce themselves and share their
               area of interest.
+            </p>
+
+            <p className="contact-hero__note">
+              This form is for general inquiries only. Please avoid sending urgent messages
+              or detailed medical information here. If needed, we will provide guidance on
+              how to share information securely.
             </p>
           </div>
         </div>
