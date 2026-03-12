@@ -96,7 +96,7 @@ export default function AppLayout() {
               <a href="mailto:guidedtc@gmail.com">guidedtc@gmail.com</a>
             </p>
             <p className="footer-hours">
-              <strong>Clinic Hours:</strong> Mon - Fri 9:00am - 5:00pm
+              <strong>Clinic Hours:</strong> Mon-Fri 9:00am-5:00pm
             </p>
           </div>
 
@@ -105,7 +105,7 @@ export default function AppLayout() {
               We acknowledge that we live, work, and create on the traditional
               and unceded territories of the Indigenous peoples of Canada.
               Guided Therapy Collective Inc. is situated in the traditional
-              territories of the Dakelh(Carrier) people of the Lheidli
+              territories of the Dakelh (Carrier) people of the Lheidli
               T&apos;enneh First Nation. We honour and commit to reconciliation,
               respect, and the Land Back movement.
             </p>

@@ -133,15 +133,9 @@ export default function Contact() {
             <h1 className="contact-hero__title">Contact</h1>
 
             <p className="contact-hero__blurb">
-              For general questions about Guided’s services, referrals, or joining our team,
-              please use the form below and we’ll respond by email.
-            </p>
-
-            <p className="contact-hero__note">
-              Prospective patients can use this form for general questions, physicians can use
-              it for referral-related inquiries, and healthcare practitioners or counsellors
-              interested in joining the team can use it to introduce themselves and share their
-              area of interest.
+              For general questions about guided’s services, physician or nurse practitioner
+              referrals, or joining our team, please use the form below and we’ll respond by
+              email.
             </p>
 
             <p className="contact-hero__note">

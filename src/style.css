@@ -316,7 +316,7 @@ a {
   width: 26px;
   height: 2px;
   margin: 4px 0;
-  background: #123f6b;
+  background: #fff;
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
@@ -358,7 +358,7 @@ a {
     width: 26px;
     height: 2px;
     margin: 4px 0;
-    background: #123f6b;
+    background: #fff;
     border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.2s ease;
   }
@@ -367,7 +367,7 @@ a {
   }
 
   .nav-links a {
-    color: #123f6b !important;
+    color: #fff !important;
     font-weight: 600;
     text-shadow: none; /* not needed now */
   }
