@@ -1,15 +1,58 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import FloatingContact from "./FloatingContact";
 
+const navItems = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/treatments", label: "Services" },
+  { to: "/team", label: "Team" },
+  { to: "/referrals", label: "Referrals" },
+  { to: "/contact", label: "Contact" },
+];
+
 export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const location = useLocation();
+  const desktopMenuRef = useRef(null);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setDesktopMenuOpen(false);
+  };
 
   const isHome = location.pathname === "/";
   const showFloatingContact = location.pathname !== "/contact";
+
+  useEffect(() => {
+    setDesktopMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    function handlePointerDown(event) {
+      if (
+        desktopMenuRef.current &&
+        !desktopMenuRef.current.contains(event.target)
+      ) {
+        setDesktopMenuOpen(false);
+      }
+    }
+
+    function handleKeyDown(event) {
+      if (event.key === "Escape") {
+        setDesktopMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <>
@@ -33,6 +76,44 @@ export default function AppLayout() {
             </NavLink>
           </div>
 
+          <div className="desktop-nav" ref={desktopMenuRef}>
+            <button
+              className="desktop-nav__toggle"
+              type="button"
+              aria-expanded={desktopMenuOpen}
+              aria-controls="desktop-nav-panel"
+              onClick={() => setDesktopMenuOpen((open) => !open)}
+            >
+              <span>Menu</span>
+              <span
+                className={`desktop-nav__chevron ${
+                  desktopMenuOpen ? "is-open" : ""
+                }`}
+                aria-hidden="true"
+              />
+            </button>
+
+            <div
+              id="desktop-nav-panel"
+              className={`desktop-nav__panel ${
+                desktopMenuOpen ? "is-open" : ""
+              }`}
+            >
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `desktop-nav__link ${isActive ? "is-active" : ""}`
+                  }
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+
           {/* Hamburger button (mobile) */}
           <button
             className="menu-toggle"
@@ -48,36 +129,13 @@ export default function AppLayout() {
 
           {/* Nav links */}
           <ul className={`nav-links ${menuOpen ? "is-open" : ""}`}>
-            <li>
-              <NavLink to="/" onClick={closeMenu}>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/About" onClick={closeMenu}>
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/treatments" onClick={closeMenu}>
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/team" onClick={closeMenu}>
-                Team
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/referrals" onClick={closeMenu}>
-                Referrals
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" onClick={closeMenu}>
-                Contact
-              </NavLink>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.to}>
+                <NavLink to={item.to} onClick={closeMenu}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
@@ -148,8 +206,6 @@ export default function AppLayout() {
     </>
   );
 }
-
-
 
 
 

@@ -10,24 +10,48 @@ export default function About() {
         style={{ "--bg-image": "url('/images/DSC03726.webp')" }}
       >
         <div className="page-hero__inner">
-          <div className="page-hero__panel">
-            <img
-              src="/guided-footer-icon.png"
-              alt=""
-              className="hero-panel__icon"
-              loading="lazy"
-              decoding="async"
-            />
-            <h1 className="page-hero__title">About</h1>
+          <div className="page-hero__panel about-hero">
+            <div className="about-hero__icon-wrap">
+              <img
+                src="/guided-footer-icon.png"
+                alt=""
+                className="hero-panel__icon"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
 
-            <p className="page-hero__blurb">
-              We created this clinic with the intention of making psychedelic treatment accessible to people living in Northern BC 
-              and warmly welcome those who choose to travel to this beautiful region. 
-                           </p>
-                           <p>While we also work in traditional therapy realms we feel that psychedlics offer an avenue for some individuals to reach and heal aspects of themselves that can be difficult to access.</p>
-                           <p>We chose the name "guided" in relation to "accompanying (one) to an unfamiliar place." We would love the opportunity to accompany you on your healing journey.</p>
+            <div className="about-hero__title-wrap">
+              <h1 className="page-hero__title about-hero__title">About</h1>
+            </div>
 
-            <a className="btn btn-outline" href="#what-we-offer">
+            <div className="about-hero__copy">
+              <div className="about-hero__blurb-wrap about-hero__blurb-wrap--one">
+                <p className="page-hero__blurb">
+                  We created this clinic with the intention of making
+                  psychedelic treatment accessible to people living in Northern
+                  BC and warmly welcome those who choose to travel to this
+                  beautiful region.
+                </p>
+              </div>
+              <div className="about-hero__blurb-wrap about-hero__blurb-wrap--two">
+                <p className="page-hero__blurb">
+                  In addition to traditional therapeutic methods, we utilize
+                  psychedelics to help individuals connect with deep-seated
+                  patterns that may be difficult to access through standard talk
+                  therapy.
+                </p>
+              </div>
+              <div className="about-hero__blurb-wrap about-hero__blurb-wrap--three">
+                <p className="page-hero__blurb">
+                  We chose the name Guided to embody the act of walking beside
+                  someone to an unfamiliar place. We would love the opportunity
+                  to accompany you on your healing journey.
+                </p>
+              </div>
+            </div>
+
+            <a className="btn btn-outline about-hero__cta" href="#what-we-offer">
               What we offer
             </a>
           </div>

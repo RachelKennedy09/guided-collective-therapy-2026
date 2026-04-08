@@ -36,11 +36,11 @@ export default function Treatments() {
 
             <p className="treatments-intro__blurb">
               We at Guided offer medicine-assisted psychotherapy for a variety
-              of mental health diagnoses including but not limited to treatment
-              resistant depression, PTSD, anxiety disorders and chronic pain.
+              of mental health diagnoses, including, but not limited to,
+              treatment-resistant depression, PTSD, anxiety disorders and chronic pain.
             </p>
 
-            {/* ✅ Directory / On this page */}
+            {/*  Directory / On this page */}
             <nav className="treatments-directory" aria-label="On this page">
               <div className="treatments-directory__links">
                 <a href="#ketamine" className="treatments-directory__link">
@@ -83,9 +83,9 @@ export default function Treatments() {
                 <h3>Individual Ketamine Therapy</h3>
                 <ul>
                   <li>Consultation</li>
-                  <li>2× Preparation Sessions (Group or Individual)</li>
-                  <li>3× Ketamine Treatment Sessions</li>
-                  <li>2× Integration Sessions</li>
+                  <li>2Ã— Preparation Sessions (Group or Individual)</li>
+                  <li>3Ã— Ketamine Treatment Sessions</li>
+                  <li>2Ã— Integration Sessions</li>
                   <li>Closing Session</li>
                 </ul>
                 <p className="price">Investment of $2,975 </p>
@@ -97,9 +97,9 @@ export default function Treatments() {
                 </h3>
                 <ul>
                   <li>Individual Consultation</li>
-                  <li>2× Group Preparation Sessions</li>
-                  <li>3× Group Ketamine Treatment Sessions</li>
-                  <li>2× Group Integration Sessions</li>
+                  <li>2Ã— Group Preparation Sessions</li>
+                  <li>3Ã— Group Ketamine Treatment Sessions</li>
+                  <li>2Ã— Group Integration Sessions</li>
                   <li>Group Closing Session</li>
                 </ul>
                 <p className="price">Investment of $1,575 </p>
@@ -114,10 +114,9 @@ export default function Treatments() {
             <h2>Other Medicine-Assisted Therapies</h2>
 
             <p>
-              Currently only <b>Ketamine-Assisted Therapy</b> is approved for
-              prescribed use in a medical setting without special approval.
-              Psilocybin, MDMA, and in some cases other psychedelic substances,
-              are approved only through Canada’s{" "}
+              Currently, ketamine is the only legally approved medication available for prescription 
+              in a medical setting.  While psilocybin and MDMA are not yet approved, they may be accessed for eligable
+              patients through the{" "}
               <a
                 className="sap-link-inline"
                 href="https://www.canada.ca/en/health-canada/services/drugs-health-products/special-access/information-patients.html"
@@ -159,12 +158,12 @@ export default function Treatments() {
                 <p>
                   This is a parenting group program based on theories of
                   attachment and the principles that secure relationships are
-                  important for children’s well-being, and these attachments are
+                  important for childrenâ€™s well-being, and these attachments are
                   amendable to positive change.
                 </p>
                 <p>
                   Format is 8 weeks of weekly groups ran by Dr. Christine
-                  Kennedy — contact to see availability or to be put onto a
+                  Kennedy â€” contact to see availability or to be put onto a
                   waitlist.
                 </p>
               </div>
@@ -181,7 +180,7 @@ export default function Treatments() {
               <div className="treatment-box">
                 <h3>General Outpatient Psychiatry Services</h3>
                 <p>
-                  Currently Dr. Christine Kennedy’s waitlist is closed to
+                  Currently Dr. Christine Kennedyâ€™s waitlist is closed to
                   general outpatient psychiatric care. Please check back in the
                   future.
                 </p>
@@ -204,11 +203,26 @@ export default function Treatments() {
               </div>
 
               <div className="treatment-box">
-                <h3>Couple’s Therapy</h3>
+                <h3>Coupleâ€™s Therapy</h3>
                 <p>
                   Attachment-focused, emotionally oriented psychotherapy for
                   couples. Custom treatment plans available, please reach out if
                   interested.
+                </p>
+              </div>
+
+              <div className="treatment-box">
+                <h3>Private Counselling Services with an RCC</h3>
+                <p>
+                  Individual counselling with a Registered Clinical Counsellor
+                  is available for clients seeking private-pay therapeutic
+                  support outside of psychiatry services.
+                </p>
+                <p>
+                  This can include relational, emotionally focused, and
+                  trauma-informed support depending on your needs and fit with
+                  the counsellor. Please contact us to ask about availability
+                  and next steps.
                 </p>
               </div>
             </div>

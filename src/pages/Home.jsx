@@ -45,15 +45,21 @@ export default function Home() {
           <div className="home-hero__grid">
             <div className="home-hero__panel">
               <h1 className="sr-only">Guided Therapy Collective</h1>
-              <img
-                src="/guided-home-hero-logo.png"
-                alt=""
-                className="home-hero__logo"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-              <p className="home-hero__subtitle">We’re glad you’re here.</p>
+              <div className="home-hero__logo-wrap">
+                <div className="home-hero__logo-mask" aria-hidden="true" />
+                <img
+                  src="/guided-home-hero-logo-tight.png"
+                  alt=""
+                  className="home-hero__logo"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+              </div>
+              <div className="home-hero__subtitle-wrap">
+                <div className="home-hero__subtitle-mask" aria-hidden="true" />
+                <p className="home-hero__subtitle">We're glad you're here.</p>
+              </div>
             </div>
           </div>
         </div>
