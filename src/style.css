@@ -556,6 +556,9 @@ a {
   display: inline-block;
   padding: 0;
   isolation: isolate;
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  animation: homeLogoReveal 1.2s ease-out 0.12s forwards;
 }
 
 .home-hero__logo-mask {
@@ -656,7 +659,25 @@ a {
   }
 }
 
+@keyframes homeLogoReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .home-hero__logo-wrap {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
   .home-hero__subtitle {
     opacity: 1;
     transform: none;
@@ -1498,8 +1519,8 @@ a {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.35),
-    rgba(0, 0, 0, 0.55)
+    rgba(0, 0, 0, 0.14),
+    rgba(0, 0, 0, 0.28)
   );
 }
 
@@ -1520,7 +1541,7 @@ a {
   max-width: 820px;
   border-radius: 18px;
   padding: 18px 18px;
-  background: rgba(15, 17, 15, 0.4);
+  background: rgba(15, 17, 15, 0.24);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(6px);
