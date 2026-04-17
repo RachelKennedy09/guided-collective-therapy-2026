@@ -136,13 +136,11 @@ export default function Team() {
               </p>
               <p>
                 I believe clients are the experts of their own healing. My role is
-                to create conditions where people feel safe and at ease, and to
-                collaborate in ways that allow their own innate wisdom to arise.
-                My passion for psychedelic therapy comes from witnessing firsthand
+                to establish a foundation of safety and trust, partnering with clients in ways that allow
+                their innate wisdom to surface. My passion for psychedelic therapy comes from witnessing firsthand
                 the profound changes it can generate, and from the dedication and
-                resilience of my clients. I take a collaborative, relational,
-                psychodynamic approach, drawing on ACT, Motivational Interviewing,
-                and strengths-based methods
+                resilience of my clients. I take a collaborative, relational, psychodynamic approach, drawing
+                on Acceptance and Commitment Therapy(ACT), motivational interviewing, and strengths-based methods.
               </p>
             </div>
           </div>
