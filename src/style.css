@@ -936,11 +936,36 @@ a {
   margin-top: 1.2rem;
   animation: aboutHeroRise 0.95s ease-out 1.95s forwards;
   opacity: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 9px 16px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.36), rgba(146, 206, 144, 0.28));
+  color: #fff;
+  border: 1px solid rgba(166, 224, 181, 0.38);
   box-shadow:
-    0 16px 34px rgba(9, 73, 92, 0.28),
-    0 6px 16px rgba(0, 0, 0, 0.22),
+    0 12px 30px rgba(9, 73, 92, 0.24),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  outline: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.about-hero__cta:hover {
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.46), rgba(146, 206, 144, 0.36));
+  border-color: rgba(185, 233, 193, 0.5);
+  transform: translateY(-1px);
+}
+
+.about-hero__cta:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
 }
 
 @keyframes aboutHeroPanelIn {
@@ -1107,7 +1132,7 @@ a {
   min-height: 100vh;
   display: grid;
   align-items: center;
-  padding: 42px 16px 56px;
+  padding: clamp(112px, 14vh, 148px) 16px clamp(56px, 8vh, 88px);
   overflow: hidden;
   background: #0f1110;
 }
@@ -1138,16 +1163,17 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - clamp(168px, 22vh, 236px));
 }
 
 @media (max-width: 600px) {
   .treatments-hero {
-    padding: 104px 16px 72px;
+    padding: 118px 16px 72px;
   }
 
   .treatments-hero__inner {
-    min-height: calc(100vh - 176px);
-    justify-content: center;
+    min-height: calc(100vh - 190px);
   }
 }
 
@@ -1299,6 +1325,19 @@ a {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
 
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .team-hero__panel {
+    max-width: min(88vw, 520px);
+    padding: 1.25rem 1.1rem;
+    border-radius: 18px;
+  }
+
+  .team-hero__blurb {
+    max-width: 34ch;
+    margin-bottom: 1rem;
+  }
 }
 
 .team-hero__panel h1 {
@@ -2215,7 +2254,7 @@ a {
 
 /* NEW smaller intro card */
 .treatments-intro {
-  max-width: 820px;
+  max-width: 700px;
   margin: 0 auto 18px;
   padding: 18px 18px;
   border-radius: 18px;
@@ -2225,6 +2264,39 @@ a {
   backdrop-filter: blur(6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   text-align: center;
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  animation: treatmentsIntroPanelIn 1s ease-out 0.3s forwards;
+}
+
+@media (max-width: 900px) {
+  .treatments-intro {
+    max-width: min(82vw, 500px);
+    padding: 0.95rem 0.9rem;
+    border-radius: 16px;
+  }
+
+  .treatments-intro__blurb {
+    max-width: 32ch;
+  }
+
+  .treatments-directory__links {
+    width: min(100%, 460px);
+    gap: 8px 9px;
+  }
+
+  .treatments-directory__link {
+    min-height: 44px;
+    padding: 8px 11px;
+    border-radius: 16px;
+    font-size: 0.92rem;
+  }
+}
+
+.treatments-intro__icon {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: treatmentsIntroRise 0.9s ease-out 0.8s forwards;
 }
 
 .treatments-intro__title {
@@ -2233,13 +2305,19 @@ a {
   letter-spacing: 0.06em;
   font-weight: 500;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: treatmentsIntroRise 0.9s ease-out 1s forwards;
 }
 
 .treatments-intro__blurb {
   margin: 0 auto;
-  max-width: 70ch;
+  max-width: 46ch;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.92);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: treatmentsIntroRise 0.9s ease-out 1.2s forwards;
 }
 
 .contact-consent--error {
@@ -2257,59 +2335,11 @@ a {
   margin-top: 14px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.treatments-directory__label {
-  font-weight: 600;
-  opacity: 0.9;
-  margin: 0;
-}
-
-.treatments-directory__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.treatments-directory__link {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.treatments-directory__link:hover {
-  transform: translateY(-1px);
-}
-
-/* Center the whole directory block */
-.treatments-directory {
-  margin-top: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 👈 centers label + buttons */
-  gap: 10px;
-}
-
-/* Center the buttons themselves */
-.treatments-directory__links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* 👈 centers buttons */
-  gap: 10px;
-}
-
-
-.treatments-directory {
-  margin-top: 16px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 10px;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: treatmentsIntroRise 0.95s ease-out 1.4s forwards;
 }
 
 .treatments-directory__label {
@@ -2319,21 +2349,37 @@ a {
 }
 
 .treatments-directory__links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  width: min(560px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+  grid-auto-rows: 1fr;
+}
+
+.treatments-directory__label {
+  font-weight: 600;
+  opacity: 0.9;
+  margin: 0;
 }
 
 .treatments-directory__link {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  padding: 9px 12px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  font-family: var(--font-serif);
   font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.35;
 }
 
 .treatments-directory__label {
@@ -2352,10 +2398,74 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
+@media (min-width: 901px) {
+  .treatments-directory__links {
+    width: min(640px, 100%);
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .treatments-directory__link {
+    min-height: 56px;
+    padding: 10px 16px;
+    border-radius: 18px;
+    font-size: 0.98rem;
+  }
+}
+
 .treatments-directory__link:hover {
   background:
     linear-gradient(135deg, rgba(29, 164, 188, 0.46), rgba(146, 206, 144, 0.36));
   border-color: rgba(185, 233, 193, 0.5);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  .treatments-directory__links {
+    grid-template-columns: 1fr;
+    width: min(420px, 100%);
+  }
+
+  .treatments-directory__link {
+    min-height: 48px;
+  }
+}
+
+@keyframes treatmentsIntroPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes treatmentsIntroRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .treatments-intro,
+  .treatments-intro__icon,
+  .treatments-intro__title,
+  .treatments-intro__blurb,
+  .treatments-directory {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 

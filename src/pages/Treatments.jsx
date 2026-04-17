@@ -6,9 +6,7 @@ export default function Treatments() {
   return (
     <section className="treatments-page">
       {/* TOP: background image behind intro */}
-      <div
-        className="treatments-hero"
-      >
+      <div className="treatments-hero">
         <img
           className="treatments-hero__image"
           src="/images/LTMPPGTree-1280.webp"
@@ -28,7 +26,7 @@ export default function Treatments() {
             <img
               src="/guided-footer-icon.png"
               alt=""
-              className="hero-panel__icon"
+              className="hero-panel__icon treatments-intro__icon"
               loading="lazy"
               decoding="async"
             />
@@ -37,16 +35,20 @@ export default function Treatments() {
             <p className="treatments-intro__blurb">
               We at Guided offer medicine-assisted psychotherapy for a variety
               of mental health diagnoses, including, but not limited to,
-              treatment-resistant depression, PTSD, anxiety disorders and chronic pain.
+              treatment-resistant depression, PTSD, anxiety disorders and
+              chronic pain.
             </p>
 
-            {/*  Directory / On this page */}
+            {/* Directory / On this page */}
             <nav className="treatments-directory" aria-label="On this page">
               <div className="treatments-directory__links">
                 <a href="#ketamine" className="treatments-directory__link">
                   Ketamine-Assisted Therapy
                 </a>
-                <a href="#other-medicine" className="treatments-directory__link">
+                <a
+                  href="#other-medicine"
+                  className="treatments-directory__link"
+                >
                   Other Medicine-Assisted Therapies
                 </a>
                 <a
@@ -83,12 +85,12 @@ export default function Treatments() {
                 <h3>Individual Ketamine Therapy</h3>
                 <ul>
                   <li>Consultation</li>
-                  <li>2Ã— Preparation Sessions (Group or Individual)</li>
-                  <li>3Ã— Ketamine Treatment Sessions</li>
-                  <li>2Ã— Integration Sessions</li>
+                  <li>2x Preparation Sessions (Group or Individual)</li>
+                  <li>3x Ketamine Treatment Sessions</li>
+                  <li>2x Integration Sessions</li>
                   <li>Closing Session</li>
                 </ul>
-                <p className="price">Investment of $2,975 </p>
+                <p className="price">Investment of $2,975</p>
               </div>
 
               <div className="treatment-box">
@@ -97,12 +99,12 @@ export default function Treatments() {
                 </h3>
                 <ul>
                   <li>Individual Consultation</li>
-                  <li>2Ã— Group Preparation Sessions</li>
-                  <li>3Ã— Group Ketamine Treatment Sessions</li>
-                  <li>2Ã— Group Integration Sessions</li>
+                  <li>2x Group Preparation Sessions</li>
+                  <li>3x Group Ketamine Treatment Sessions</li>
+                  <li>2x Group Integration Sessions</li>
                   <li>Group Closing Session</li>
                 </ul>
-                <p className="price">Investment of $1,575 </p>
+                <p className="price">Investment of $1,575</p>
               </div>
             </div>
           </div>
@@ -114,8 +116,9 @@ export default function Treatments() {
             <h2>Other Medicine-Assisted Therapies</h2>
 
             <p>
-              Currently, ketamine is the only legally approved medication available for prescription 
-              in a medical setting.  While psilocybin and MDMA are not yet approved, they may be accessed for eligable
+              Currently, ketamine is the only legally approved medication
+              available for prescription in a medical setting. While psilocybin
+              and MDMA are not yet approved, they may be accessed for eligible
               patients through the{" "}
               <a
                 className="sap-link-inline"
@@ -152,18 +155,20 @@ export default function Treatments() {
               </div>
 
               <div className="treatment-box">
-                <h3>Circle of Security Parenting Course 
-                  <br></br>(COS-P)
-                  </h3>
+                <h3>
+                  Circle of Security Parenting Course
+                  <br />
+                  (COS-P)
+                </h3>
                 <p>
                   This is a parenting group program based on theories of
                   attachment and the principles that secure relationships are
-                  important for childrenâ€™s well-being, and these attachments are
-                  amendable to positive change.
+                  important for children&apos;s well-being, and these
+                  attachments are amendable to positive change.
                 </p>
                 <p>
-                  Format is 8 weeks of weekly groups ran by Dr. Christine
-                  Kennedy â€” contact to see availability or to be put onto a
+                  Format is 8 weeks of weekly groups run by Dr. Christine
+                  Kennedy - contact to see availability or to be put onto a
                   waitlist.
                 </p>
               </div>
@@ -180,7 +185,7 @@ export default function Treatments() {
               <div className="treatment-box">
                 <h3>General Outpatient Psychiatry Services</h3>
                 <p>
-                  Currently Dr. Christine Kennedyâ€™s waitlist is closed to
+                  Currently Dr. Christine Kennedy&apos;s waitlist is closed to
                   general outpatient psychiatric care. Please check back in the
                   future.
                 </p>
@@ -203,7 +208,7 @@ export default function Treatments() {
               </div>
 
               <div className="treatment-box">
-                <h3>Coupleâ€™s Therapy</h3>
+                <h3>Couple&apos;s Therapy</h3>
                 <p>
                   Attachment-focused, emotionally oriented psychotherapy for
                   couples. Custom treatment plans available, please reach out if
@@ -236,10 +241,10 @@ export default function Treatments() {
         >
           <div className="treatment-section-inner">
             <p>
-              <b>Please note:</b> some of the treatment is covered by MSP if you
-              have a doctor's referral. We encourage those who also have private
-              health insurance to inquire with their respective health plans to
-              see if they can seek any additional coverage.
+              <b>Please note:</b> some of the treatment is covered by MSP if
+              you have a doctor&apos;s referral. We encourage those who also
+              have private health insurance to inquire with their respective
+              health plans to see if they can seek any additional coverage.
             </p>
           </div>
         </section>
