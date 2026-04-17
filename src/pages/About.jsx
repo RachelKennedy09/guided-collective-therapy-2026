@@ -22,7 +22,7 @@ export default function About() {
             </div>
 
             <div className="about-hero__title-wrap">
-              <h1 className="page-hero__title about-hero__title">About</h1>
+              <h1 className="page-hero__title about-hero__title">About Guided</h1>
             </div>
 
             <div className="about-hero__copy">

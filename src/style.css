@@ -35,6 +35,7 @@
   --section-title-color: var(--green);
   --section-title-size: clamp(1.6rem, 2.6vw, 2rem);
   --section-title-spacing: 0.04em;
+  --page-title-size: clamp(2.25rem, 5vw, 3.4rem);
 }
 
 /* ---------- Global ---------- */
@@ -850,7 +851,7 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 24px;
-  max-width: min(720px, 90vw);
+  max-width: 620px;
   opacity: 0;
   transform: translateY(24px) scale(0.98);
   animation: aboutHeroPanelIn 1s ease-out 0.35s forwards;
@@ -885,7 +886,7 @@ a {
   margin: 0;
   padding: 0;
   color: #ffffff;
-  font-size: clamp(2.25rem, 5vw, 3.4rem);
+  font-size: var(--page-title-size);
   font-weight: 500;
   letter-spacing: 0.06em;
   -webkit-text-stroke: 0;
@@ -1047,6 +1048,7 @@ a {
 .page-hero__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-serif);
+  font-size: var(--page-title-size);
   letter-spacing: 0.06em;
   font-weight: 500;
 }
@@ -1313,6 +1315,9 @@ a {
   background: rgba(15, 17, 15, 0.4); /* lighter */
   color: #fff;
   border-radius: 22px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 
   /* tighter so it feels less bulky */
   padding: 1.6rem 1.5rem;
@@ -1325,11 +1330,44 @@ a {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
 
   text-align: center;
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  animation: teamHeroPanelIn 1s ease-out 0.24s forwards;
+}
+
+.team-hero__icon-wrap,
+.team-hero__title-wrap,
+.team-hero__blurb-wrap,
+.team-hero__nav {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: teamHeroRise 0.9s ease-out forwards;
+}
+
+.team-hero__icon-wrap {
+  animation-delay: 0.75s;
+}
+
+.team-hero__title-wrap {
+  animation-delay: 0.98s;
+}
+
+.team-hero__blurb-wrap {
+  animation-delay: 1.18s;
+}
+
+.team-hero__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  animation-delay: 1.38s;
 }
 
 @media (max-width: 800px) {
   .team-hero__panel {
-    max-width: min(88vw, 520px);
+    width: min(88vw, 520px);
+    max-width: 100%;
     padding: 1.25rem 1.1rem;
     border-radius: 18px;
   }
@@ -1345,6 +1383,8 @@ a {
   font-family: var(--font-serif);
   letter-spacing: 0.06em;
   font-weight: 500;
+  font-size: var(--page-title-size);
+  text-shadow: 0 6px 18px rgba(8, 20, 14, 0.32);
 }
 
 .team-hero__blurb {
@@ -1416,16 +1456,26 @@ a {
 /* Bio sections */
 .team-sections {
   width: 100%;
-  padding: 5rem 1.25rem 5rem;
-  padding-inline: 16px;
+  padding: 5rem 1rem;
   box-sizing: border-box;
 }
 
 .team-section-block {
   width: 100%;
-  padding: 56px 16px;
+  padding: 56px 0;
   border-bottom: 1px solid rgba(191, 196, 189, 0.55);
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: teamSectionReveal 0.9s ease-out forwards;
+}
+
+.team-section-block:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.team-section-block:nth-child(2) {
+  animation-delay: 0.35s;
 }
 
 .team-section-inner {
@@ -1481,7 +1531,6 @@ a {
 .team-section-inner p {
   color: var(--text-subtle);
   line-height: 1.75;
-  max-width: 75ch;
   margin: 10px 0;
   opacity: 0.95;
 }
@@ -1490,6 +1539,42 @@ a {
   transform: translateY(-2px);
   transition: transform 200ms ease, box-shadow 200ms ease;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.10);
+}
+
+@keyframes teamHeroPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes teamHeroRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes teamSectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 900px) {
@@ -1531,6 +1616,19 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-hero__panel,
+  .team-hero__icon-wrap,
+  .team-hero__title-wrap,
+  .team-hero__blurb-wrap,
+  .team-hero__nav,
+  .team-section-block {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -1600,6 +1698,7 @@ a {
 .referrals-hero__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-serif);
+  font-size: var(--page-title-size);
   letter-spacing: 0.06em;
   font-weight: 500;
 }
@@ -1769,6 +1868,7 @@ a {
 .contact-hero__title {
   margin: 0 0 0.75rem;
   font-family: var(--font-serif);
+  font-size: var(--page-title-size);
   letter-spacing: 0.06em;
   font-weight: 500;
 }
@@ -2304,7 +2404,7 @@ a {
   font-family: var(--font-serif);
   letter-spacing: 0.06em;
   font-weight: 500;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: var(--page-title-size);
   opacity: 0;
   transform: translateY(18px);
   animation: treatmentsIntroRise 0.9s ease-out 1s forwards;

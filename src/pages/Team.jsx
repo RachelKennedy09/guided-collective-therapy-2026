@@ -14,19 +14,33 @@ export default function Team() {
 
         <div className="team-hero__inner">
           <div className="team-hero__panel">
-            <img
-              src="/guided-footer-icon.png"
-              alt=""
-              className="hero-panel__icon"
-              loading="lazy"
-              decoding="async"
-            />
-            <h1>Our Team</h1>
-            <p className="team-hero__blurb">
-              Guided Therapy Collective is led by a medical director and a
-              collaborative care team. We work with care, curiosity, and a
-              grounded relational approach.
-            </p>
+            <div className="team-hero__icon-wrap">
+              <img
+                src="/guided-footer-icon.png"
+                alt=""
+                className="hero-panel__icon"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="team-hero__title-wrap">
+              <h1>Guided Team</h1>
+            </div>
+            <div className="team-hero__blurb-wrap">
+              <p className="team-hero__blurb">
+                Guided Therapy Collective is led by a medical director and a
+                collaborative care team. We work with care, curiosity, and a
+                grounded relational approach.
+              </p>
+            </div>
+            <div className="team-hero__nav">
+              <a className="btn btn-outline" href="#christine">
+                Medical Director
+              </a>
+              <a className="btn btn-outline" href="#laura">
+                Care Team
+              </a>
+            </div>
 
             {/* <a href="#team-members" className="btn btn-outline team-hero__cta">
               Click on a team member’s photo to learn more ↓
