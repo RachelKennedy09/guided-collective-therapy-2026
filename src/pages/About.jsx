@@ -29,7 +29,7 @@ export default function About() {
               <div className="about-hero__blurb-wrap about-hero__blurb-wrap--one">
                 <p className="page-hero__blurb">
                   We created this clinic with the intention of making
-                  psychedelic treatment accessible to people living in Northern
+                  psychedelic treatment more accessible to people living in Northern
                   BC and warmly welcome those who choose to travel to this
                   beautiful region.
                 </p>

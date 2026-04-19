@@ -123,26 +123,34 @@ export default function Contact() {
       >
         <div className="contact-hero__inner">
           <div className="contact-hero__panel">
-            <img
-              src="/guided-footer-icon.png"
-              alt=""
-              className="hero-panel__icon"
-              loading="lazy"
-              decoding="async"
-            />
-            <h1 className="contact-hero__title">Contact</h1>
+            <div className="contact-hero__icon-wrap">
+              <img
+                src="/guided-footer-icon.png"
+                alt=""
+                className="hero-panel__icon"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="contact-hero__title-wrap">
+              <h1 className="contact-hero__title">Contact</h1>
+            </div>
 
-            <p className="contact-hero__blurb">
-              For general questions about guided’s services, physician or nurse practitioner
-              referrals, or joining our team, please use the form below and we’ll respond by
-              email.
-            </p>
+            <div className="contact-hero__blurb-wrap contact-hero__blurb-wrap--one">
+              <p className="contact-hero__blurb">
+                For general questions about guided’s services, physician or nurse practitioner
+                referrals, or joining our team, please use the form below and we’ll respond by
+                email.
+              </p>
+            </div>
 
-            <p className="contact-hero__note">
-              This form is for general inquiries only. Please avoid sending urgent messages
-              or detailed medical information here. If needed, we will provide guidance on
-              how to share information securely.
-            </p>
+            <div className="contact-hero__blurb-wrap contact-hero__blurb-wrap--two">
+              <p className="contact-hero__note">
+                This form is for general inquiries only. Please avoid sending urgent messages
+                or detailed medical information here. If needed, we will provide guidance on
+                how to share information securely.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -420,3 +428,4 @@ export default function Contact() {
     </section>
   );
 }
+

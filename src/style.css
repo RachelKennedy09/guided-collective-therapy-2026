@@ -1687,12 +1687,36 @@ a {
   text-align: center;
   margin-inline: auto;
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  animation: referralsHeroPanelIn 1s ease-out 0.28s forwards;
 }
 
 .referrals-hero__header {
   text-align: center;
   max-width: 70ch;
   margin: 0 auto 18px;
+}
+
+.referrals-hero__icon-wrap,
+.referrals-hero__title-wrap,
+.referrals-hero__blurb-wrap,
+.referrals-nav {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: referralsHeroRise 0.9s ease-out forwards;
+}
+
+.referrals-hero__icon-wrap {
+  animation-delay: 0.78s;
+}
+
+.referrals-hero__title-wrap {
+  animation-delay: 1s;
+}
+
+.referrals-hero__blurb-wrap {
+  animation-delay: 1.18s;
 }
 
 .referrals-hero__title {
@@ -1715,6 +1739,31 @@ a {
   gap: 0.5rem;
   justify-content: center;
   margin-bottom: 18px;
+  animation-delay: 1.36s;
+}
+
+@keyframes referralsHeroPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes referralsHeroRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -1806,6 +1855,18 @@ a {
     padding: 1.5rem 1.25rem;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .referrals-hero__panel,
+  .referrals-hero__icon-wrap,
+  .referrals-hero__title-wrap,
+  .referrals-hero__blurb-wrap,
+  .referrals-nav {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 /* ========================
    CONTACT PAGE (Unified hero + form in same panel)
    ======================== */
@@ -1863,6 +1924,57 @@ a {
   text-align: center;
   max-width: 760px;
   margin-inline: auto;
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  animation: contactHeroPanelIn 1s ease-out 0.28s forwards;
+}
+
+.contact-hero__icon-wrap,
+.contact-hero__title-wrap,
+.contact-hero__blurb-wrap {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: contactHeroRise 0.9s ease-out forwards;
+}
+
+.contact-hero__icon-wrap {
+  animation-delay: 0.78s;
+}
+
+.contact-hero__title-wrap {
+  animation-delay: 1s;
+}
+
+.contact-hero__blurb-wrap--one {
+  animation-delay: 1.18s;
+}
+
+.contact-hero__blurb-wrap--two {
+  animation-delay: 1.36s;
+}
+
+@keyframes contactHeroPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes contactHeroRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact-hero__title {
@@ -1877,6 +1989,17 @@ a {
 .contact-hero__note {
   color: rgba(255, 255, 255, 0.92);
   line-height: 1.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-hero__panel,
+  .contact-hero__icon-wrap,
+  .contact-hero__title-wrap,
+  .contact-hero__blurb-wrap {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .contact-form {
@@ -2599,6 +2722,8 @@ a {
   padding-left: 18px;
   line-height: 1.55;
 }
+
+
 
 
 
