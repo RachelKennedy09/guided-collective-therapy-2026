@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const videoRef = useRef(null);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -25,13 +26,15 @@ export default function Home() {
           />
           <video
             ref={videoRef}
-            className="home-hero__video"
+            className={`home-hero__video ${isVideoReady ? "is-ready" : ""}`}
             autoPlay
             muted
             loop
             playsInline
             poster="/images/PgVideoStill-home.webp"
             preload="metadata"
+            onLoadedData={() => setIsVideoReady(true)}
+            onCanPlay={() => setIsVideoReady(true)}
           >
             <source
               src="/images/videos/Pgvideo_h264_1280_hq.mp4"

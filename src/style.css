@@ -517,6 +517,19 @@ a {
   object-position: center;
 }
 
+.home-hero__still {
+  opacity: 1;
+}
+
+.home-hero__video {
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.home-hero__video.is-ready {
+  opacity: 1;
+}
+
 .home-hero__overlay {
   background: linear-gradient(
     to bottom,
