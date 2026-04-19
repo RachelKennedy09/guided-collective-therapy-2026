@@ -11,6 +11,14 @@ const navItems = [
   { to: "/contact", label: "Contact" },
 ];
 
+const heroImageUrls = [
+  "/images/DSC03726.webp",
+  "/images/FrozenPGUniversityHill.webp",
+  "/images/DJI_0267.webp",
+  "/images/ConnaughtHillRoadPG.webp",
+  "/images/FraserRiver.jpg",
+];
+
 export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
@@ -51,6 +59,34 @@ export default function AppLayout() {
     return () => {
       document.removeEventListener("mousedown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
+    const preloadedLinks = heroImageUrls.map((href) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = href;
+      document.head.appendChild(link);
+      return link;
+    });
+
+    const warmedImages = heroImageUrls.map((src) => {
+      const image = new Image();
+      image.decoding = "async";
+      image.src = src;
+      return image;
+    });
+
+    return () => {
+      preloadedLinks.forEach((link) => {
+        if (link.parentNode) {
+          link.parentNode.removeChild(link);
+        }
+      });
+
+      void warmedImages;
     };
   }, []);
 
@@ -206,7 +242,6 @@ export default function AppLayout() {
     </>
   );
 }
-
 
 
 
