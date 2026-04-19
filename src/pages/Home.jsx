@@ -15,7 +15,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="home-hero__bg">
           <img
-            src="/images/PgVideoStill.png"
+            src="/images/PgVideoStill-home.webp"
             alt=""
             className="home-hero__still"
             aria-hidden="true"
@@ -30,7 +30,7 @@ export default function Home() {
             muted
             loop
             playsInline
-            poster="/images/PgVideoStill.png"
+            poster="/images/PgVideoStill-home.webp"
             preload="metadata"
           >
             <source
