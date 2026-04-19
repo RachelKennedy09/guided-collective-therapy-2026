@@ -16,8 +16,9 @@ export default function About() {
                 src="/guided-footer-icon.png"
                 alt=""
                 className="hero-panel__icon"
-                loading="lazy"
-                decoding="async"
+                loading="eager"
+                decoding="sync"
+                fetchPriority="high"
               />
             </div>
 
