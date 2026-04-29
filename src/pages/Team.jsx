@@ -35,7 +35,7 @@ export default function Team() {
             </div>
             <div className="team-hero__nav">
               <a className="btn btn-outline" href="#christine">
-                Team
+                Guided Created By
               </a>
             </div>
 
