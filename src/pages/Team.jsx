@@ -28,17 +28,14 @@ export default function Team() {
             </div>
             <div className="team-hero__blurb-wrap">
               <p className="team-hero__blurb">
-                Guided Therapy Collective is led by a medical director and a
-                collaborative care team. We work with care, curiosity, and a
+                Guided Therapy Collective is led by co-owners Dr. Christine
+                Kennedy and Laura Fisher. We work with care, curiosity, and a
                 grounded relational approach.
               </p>
             </div>
             <div className="team-hero__nav">
               <a className="btn btn-outline" href="#christine">
-                Medical Director
-              </a>
-              <a className="btn btn-outline" href="#laura">
-                Care Team
+                Team
               </a>
             </div>
 
@@ -85,7 +82,7 @@ export default function Team() {
               <div>
                 <h2>Dr. Christine Kennedy</h2>
                 <p className="team-role">
-                  MD, FRCPC, Psychiatry • Medical Director
+                  MD, FRCPC, Psychiatry • Medical Director • Co-owner
                 </p>
               </div>
             </div>
@@ -133,7 +130,9 @@ export default function Team() {
               />
               <div>
                 <h2>Laura Fisher</h2>
-                <p className="team-role">RN • Ketamine-Assisted Therapist</p>
+                <p className="team-role">
+                  RN • Ketamine-Assisted Therapist • Co-owner
+                </p>
               </div>
             </div>
 

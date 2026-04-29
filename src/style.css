@@ -2130,6 +2130,38 @@ a {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
+.contact-team-box {
+  width: min(900px, 92vw);
+  margin: 2rem auto 0;
+  background: rgba(83, 122, 93, 0.1);
+  border: 1px solid rgba(83, 122, 93, 0.24);
+  border-radius: 18px;
+  padding: 1.6rem 1.5rem;
+}
+
+.contact-team-box h2 {
+  margin: 0 0 0.6rem;
+  color: var(--green);
+  font-size: 1.35rem;
+}
+
+.contact-team-box p {
+  max-width: 64ch;
+  margin: 0 0 1rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.contact-team-box .btn {
+  color: var(--green);
+  border-color: rgba(83, 122, 93, 0.45);
+}
+
+.contact-team-box .btn:hover {
+  color: #fff;
+  background: var(--green);
+}
+
 @media (max-width: 600px) {
   .logo__mark {
     height: 54px;
@@ -2145,6 +2177,10 @@ a {
 
   .contact-form-panel {
     padding: 1.5rem 1.25rem;
+  }
+
+  .contact-team-box {
+    padding: 1.4rem 1.25rem;
   }
 }
 /* ========================
