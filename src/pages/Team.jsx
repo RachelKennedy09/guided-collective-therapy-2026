@@ -35,12 +35,12 @@ export default function Team() {
             </div>
             <div className="team-hero__nav">
               <a className="btn btn-outline" href="#christine">
-                Guided Created By
+                Meet The Creators
               </a>
             </div>
 
             {/* <a href="#team-members" className="btn btn-outline team-hero__cta">
-              Click on a team member’s photo to learn more ↓
+              Click on a team member's photo to learn more
             </a> */}
             {/* Mini bubbles
             <div className="team-bubbles" id="team-members">
@@ -51,7 +51,7 @@ export default function Team() {
                 />
                 <div className="team-bubble__text">
                   <h3>Dr. Christine Kennedy</h3>
-                  <p>Medical Director • Psychiatrist</p>
+                  <p>Medical Director - Psychiatrist</p>
                 </div>
               </a>
 
@@ -59,7 +59,7 @@ export default function Team() {
                 <img src="/images/LauraProfile.JPG" alt="Laura Fisher" />
                 <div className="team-bubble__text">
                   <h3>Laura Fisher</h3>
-                  <p>RN • Ketamine-Assisted Therapist</p>
+                  <p>RN - Ketamine-Assisted Therapist</p>
                 </div>
               </a>
             </div> */}
@@ -82,7 +82,7 @@ export default function Team() {
               <div>
                 <h2>Dr. Christine Kennedy</h2>
                 <p className="team-role">
-                  MD, FRCPC, Psychiatry • Medical Director • Co-owner
+                  MD, FRCPC, Psychiatry - Medical Director - Co-owner
                 </p>
               </div>
             </div>
@@ -131,29 +131,33 @@ export default function Team() {
               <div>
                 <h2>Laura Fisher</h2>
                 <p className="team-role">
-                  RN • Ketamine-Assisted Therapist • Co-owner
+                  RN - Ketamine-Assisted Therapist - Co-owner
                 </p>
               </div>
             </div>
 
             <div className="team-bio-box">
-              <p>Welcome to a space that supports community and connection.</p>
+              <p>Welcome to our space that supports community and connection.</p>
               <p>
-                I’m a registered nurse who began my career on Vancouver’s Downtown
-                Eastside, working in addictions and mental health. 
-                I now live and work in Prince George, where nature feels close at hand and there is a strong sense of community.
-               For the past three years I’ve specialized as a Ketamine-Assisted
-                Therapist, with additional training in psilocybin and MDMA therapy
-                through Therapsil. I am currently working toward my Masters in
+                I began my career in nursing on Vancouver's Downtown Eastside,
+                working in addictions and mental health before moving on to acute
+                and palliative care. I now live and work in Prince George, where
+                nature and community feels close at hand. For the past three
+                years I've specialized as a Ketamine-Assisted Therapist, with
+                additional training in psilocybin and MDMA therapy through
+                Therapsil. I am currently working toward my Masters in
                 Counselling at UNBC.
               </p>
               <p>
-                I believe clients are the experts of their own healing. My role is
-                to establish a foundation of safety and trust, partnering with clients in ways that allow
-                their innate wisdom to surface. My passion for psychedelic therapy comes from witnessing firsthand
-                the profound changes it can generate, and from the dedication and
-                resilience of my clients. I take a collaborative, relational, psychodynamic approach, drawing
-                on Acceptance and Commitment Therapy(ACT), motivational interviewing, and strengths-based methods.
+                My ongoing interest in psychedelic therapy comes from having
+                witnessed both the subtle and profound shifts it can create in
+                long-standing thought and behavioural patterns. I aim to create a
+                space where every client feels safe, supported and authentically
+                themselves. This is a place where they explore what matters most
+                to them to discover their own path toward healing. My approach is
+                collaborative and relational, informed by a psychodynamic
+                perspective that explores how past experiences and unconcious
+                patterns shape present thoughts, feelings, and behaviours.
               </p>
             </div>
           </div>

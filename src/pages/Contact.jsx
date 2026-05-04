@@ -267,7 +267,7 @@ export default function Contact() {
           </p>
           <a
             className="btn btn-outline"
-            href="mailto:guidedtc@gmail.com?subject=Joining%20the%20Guided%20team"
+            href="mailto:admin@guidedtc.ca?subject=Joining%20the%20Guided%20team"
           >
             Email us
           </a>

@@ -35,7 +35,7 @@ export default function Treatments() {
             <p className="treatments-intro__blurb">
               We at Guided offer medicine-assisted psychotherapy for a variety
               of mental health diagnoses, including, but not limited to,
-              treatment-resistant depression, PTSD, anxiety disorders and
+              treatment-resistant depression, PTSD, C-PTSD, anxiety disorders and
               chronic pain.
             </p>
 

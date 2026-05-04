@@ -187,7 +187,7 @@ export default function AppLayout() {
           <div className="footer-contact">
             <p>
               <strong>Email:</strong>{" "}
-              <a href="mailto:guidedtc@gmail.com">guidedtc@gmail.com</a>
+              <a href="mailto:admin@guidedtc.ca">admin@guidedtc.ca</a>
             </p>
             <p className="footer-hours">
               <strong>Clinic Hours:</strong> Mon-Fri 9:00am-5:00pm
@@ -242,7 +242,6 @@ export default function AppLayout() {
     </>
   );
 }
-
 
 
 

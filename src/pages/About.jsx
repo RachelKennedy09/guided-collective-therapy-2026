@@ -39,15 +39,15 @@ export default function About() {
                 <p className="page-hero__blurb">
                   In addition to traditional therapeutic methods, we utilize
                   psychedelics to help individuals connect with deep-seated
-                  patterns that may be difficult to access through standard talk
-                  therapy.
+                  patterns that may be difficult to access through standard
+                  talk&nbsp;therapy.
                 </p>
               </div>
               <div className="about-hero__blurb-wrap about-hero__blurb-wrap--three">
                 <p className="page-hero__blurb">
                   We chose the name Guided to embody the act of walking beside
                   someone to an unfamiliar place. We would love the opportunity
-                  to accompany you on your healing journey.
+                  to accompany you on your healing&nbsp;journey.
                 </p>
               </div>
             </div>
@@ -77,9 +77,9 @@ export default function About() {
               <h3 className="about-card__title">Our approach</h3>
               <p className="about-card__text">
                 We strive to offer a safe, supportive space where we can take
-                time to explore together what matters most to you. Here, you are
-                invited to seek growth, healing, understanding, or relief from
-                suffering.
+                time to explore together what matters most to you - whether you
+                seek growth, healing, greater acceptance, or a deeper
+                understanding of yourself.
               </p>
             </article>
 
