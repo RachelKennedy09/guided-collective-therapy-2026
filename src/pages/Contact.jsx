@@ -259,7 +259,7 @@ export default function Contact() {
           </form>
         </div>
 
-        <aside className="contact-team-box">
+        <aside id="join-team" className="contact-team-box">
           <h2>Want to join our team?</h2>
           <p>
             Please contact us with a short note about yourself and attach your

@@ -129,19 +129,19 @@ export default function Referrals() {
 
         <section id="join-team" className="referrals-section-block">
           <h2 className="referrals-section-title">Join the team</h2>
-          <div className="referrals-section-inner treatment-box">
+          <aside className="contact-team-box referrals-join-team-box">
+            <h2>Want to join our team?</h2>
             <p>
-              We welcome health professionals and counsellors interested in
-              psychedelic-assisted or traditional psychotherapy services.
+              Please contact us with a short note about yourself and attach your
+              resume. We will review it and get in touch if there is a good fit.
             </p>
-            <p>
-              Please{" "}
-              <Link to="/contact" className="text-link">
-                contact us
-              </Link>{" "}
-              and share a bit about your background.
-            </p>
-          </div>
+            <a
+              className="btn btn-outline"
+              href="mailto:admin@guidedtc.ca?subject=Joining%20the%20Guided%20team"
+            >
+              Email us
+            </a>
+          </aside>
         </section>
       </div>
     </section>

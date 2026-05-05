@@ -38,6 +38,20 @@ export default function AppLayout() {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (!location.hash) return;
+
+    const targetId = decodeURIComponent(location.hash.slice(1));
+    const scrollTimer = window.setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 0);
+
+    return () => window.clearTimeout(scrollTimer);
+  }, [location.pathname, location.hash]);
+
+  useEffect(() => {
     function handlePointerDown(event) {
       if (
         desktopMenuRef.current &&
@@ -242,7 +256,6 @@ export default function AppLayout() {
     </>
   );
 }
-
 
 
 
