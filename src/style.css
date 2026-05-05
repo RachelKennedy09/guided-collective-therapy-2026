@@ -511,6 +511,12 @@ a {
   }
 }
 
+@media (min-width: 900px) {
+  .home-hero {
+    padding-top: calc(72px + clamp(2.5rem, 7vh, 5rem));
+  }
+}
+
 .home-hero__bg {
   position: absolute;
   inset: 0;
