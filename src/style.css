@@ -501,7 +501,7 @@ a {
   display: grid;
   align-items: start;
   justify-items: center;
-  padding: calc(72px + clamp(1rem, 3vh, 2rem)) 1rem 2rem;
+  padding: calc(72px + clamp(1.8rem, 4vh, 2.6rem)) 1rem 2rem;
 }
 
 @supports (height: 100dvh) {
@@ -511,7 +511,7 @@ a {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 601px) {
   .home-hero {
     padding-top: calc(72px + clamp(2.5rem, 7vh, 5rem));
   }
