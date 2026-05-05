@@ -46,11 +46,18 @@ export default function Home() {
             <div className="home-hero__panel">
               <h1 className="sr-only">Guided Therapy Collective</h1>
               <div className="home-hero__logo-wrap">
-                <div className="home-hero__logo-mask" aria-hidden="true" />
                 <img
-                  src="/guided-home-hero-logo-tight.png"
+                  src="/guided-home-hero-mark.png"
                   alt=""
-                  className="home-hero__logo"
+                  className="home-hero__logo-mark"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+                <img
+                  src="/guided-home-hero-wordmark.png"
+                  alt=""
+                  className="home-hero__logo-wordmark"
                   loading="eager"
                   decoding="async"
                   fetchpriority="high"
