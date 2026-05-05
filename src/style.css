@@ -499,8 +499,9 @@ a {
   min-height: 100svh;
   overflow: hidden;
   display: grid;
-  place-items: center;
-  padding: 6.5rem 1rem 4rem;
+  align-items: start;
+  justify-items: center;
+  padding: calc(72px + clamp(1rem, 3vh, 2rem)) 1rem 2rem;
 }
 
 @supports (height: 100dvh) {
@@ -539,7 +540,6 @@ a {
   position: relative;
   z-index: 1;
   width: min(980px, 92vw);
-  transform: translateY(clamp(-5.75rem, -9vh, -3rem));
 }
 
 .home-hero__content::before {
@@ -664,11 +664,11 @@ a {
 }
 
 .home-hero__logo-mark {
-  width: min(70vw, 410px);
+  width: min(70vw, 52vh, 410px);
 }
 
 .home-hero__logo-wordmark {
-  width: min(70vw, 410px);
+  width: min(70vw, 52vh, 410px);
   margin-top: clamp(1.8rem, 4vh, 3.2rem);
 }
 
@@ -761,7 +761,7 @@ a {
 @media (max-width: 600px) {
   .home-hero__logo-mark,
   .home-hero__logo-wordmark {
-    width: min(58vw, 240px);
+    width: min(58vw, 52vh, 240px);
   }
 
   .home-hero__panel {
