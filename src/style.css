@@ -572,7 +572,7 @@ a {
   isolation: isolate;
   opacity: 0;
   transform: translateY(18px) scale(0.98);
-  animation: homeLogoReveal 1.2s ease-out 0.12s forwards;
+  animation: homeLogoReveal 3.2s ease-out 0.4s forwards;
 }
 
 .home-hero__logo-mask {
@@ -640,7 +640,7 @@ a {
   padding: 0.62rem 0.2rem 0.68rem;
   opacity: 0;
   transform: translateY(14px);
-  animation: homeSubtitleReveal 1.35s ease-out 0.55s forwards;
+  animation: homeSubtitleReveal 3.6s ease-out 1.6s forwards;
 }
 
 .home-hero__subtitle {
