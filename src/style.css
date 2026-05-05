@@ -529,7 +529,7 @@ a {
   position: relative;
   z-index: 1;
   width: min(980px, 92vw);
-  transform: translateY(clamp(-4.5rem, -7vh, -2rem));
+  transform: translateY(clamp(-5.75rem, -9vh, -3rem));
 }
 .home-hero__grid {
   display: grid;
@@ -702,7 +702,7 @@ a {
 
 @media (max-width: 600px) {
   .home-hero__content {
-    transform: translateY(-2.25rem);
+    transform: translateY(-3.25rem);
   }
 
   .home-hero__logo-mark,
