@@ -153,9 +153,9 @@ export default function Team() {
                 witnessed both the subtle and profound shifts it can create in
                 long-standing thought and behavioural patterns. I aim to create a
                 space where every client feels safe, supported and authentically
-                themselves. This is a place where they explore what matters most
-                to them and discover their own path toward healing. My approach
-                is collaborative and relational, informed by a psychodynamic
+                themselves. This is a place where you can explore what matters
+                most and discover your own path to healing. My approach is
+                collaborative and relational, informed by a psychodynamic
                 perspective that explores how past experiences and unconcious
                 patterns shape present thoughts, feelings, and behaviours.
               </p>
