@@ -118,16 +118,16 @@ export default function Contact() {
 
             <div className="contact-hero__blurb-wrap contact-hero__blurb-wrap--one">
               <p className="contact-hero__blurb">
-                Send us a brief note and our team will help you find the right
-                next step, whether you are seeking care, making a referral, or
-                asking a general question.
+                Use this page to request a consultation, ask a general question,
+                connect about a referral, or reach out about joining the Guided
+                team.
               </p>
             </div>
 
             <div className="contact-hero__blurb-wrap contact-hero__blurb-wrap--two">
               <p className="contact-hero__note">
-                Please keep this form general. We will guide you through secure
-                intake or referral steps if they are needed.
+                Please keep your message brief and general. If more information
+                is needed, we will guide you through the appropriate next step.
               </p>
             </div>
           </div>
