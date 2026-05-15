@@ -196,7 +196,7 @@ export default function AppLayout() {
 
       <footer className="site-footer">
         <div className="footer-inner">
-          <h2 className="footer-title">Guided Therapy Collective</h2>
+          <h2 className="footer-title">Guided Therapy Collective Inc.</h2>
 
           <div className="footer-contact">
             <p>
@@ -252,12 +252,11 @@ export default function AppLayout() {
               />
             </div>
 
-            <p className="footer-copy">&copy; 2026 Guided Therapy Collective</p>
+            <p className="footer-copy">&copy; 2026 Guided Therapy Collective Inc.</p>
           </div>
         </div>
       </footer>
     </>
   );
 }
-
 
