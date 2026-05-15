@@ -542,6 +542,7 @@ a {
 
 .home-hero__slide:first-child {
   animation-name: homeHeroFirstSlideFade;
+  object-position: 28% center;
 }
 
 .home-hero__overlay {
@@ -816,6 +817,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .home-hero__slide:first-child {
+    object-position: 22% center;
+  }
+
   .home-hero__logo-mark,
   .home-hero__logo-wordmark {
     width: min(58vw, 52vh, 240px);
