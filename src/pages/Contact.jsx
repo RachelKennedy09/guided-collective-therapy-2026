@@ -400,14 +400,15 @@ export default function Contact() {
             <div className="contact-next-card">
               <p className="contact-form-kicker">What happens next</p>
               <h2>We will point you to the right pathway.</h2>
-              <ul>
-                <li>
-                  New client inquiries begin with a brief conversation about fit
-                  and next steps.
-                </li>
-                <li>Referrals are typically sent by fax: 1-888-897-6501.</li>
-                <li>
-                  Careers, training, media, and partnership messages can use
+            <ul>
+              <li>
+                New client inquiries begin with a brief conversation about fit
+                and next steps.
+              </li>
+              <li>Guided is located in Prince George, British Columbia.</li>
+              <li>Referrals are typically sent by fax: 1-888-897-6501.</li>
+              <li>
+                Careers, training, media, and partnership messages can use
                   this same form.
                 </li>
               </ul>

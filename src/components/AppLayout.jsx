@@ -200,6 +200,9 @@ export default function AppLayout() {
 
           <div className="footer-contact">
             <p>
+              <strong>Location:</strong> Prince George, British Columbia
+            </p>
+            <p>
               <strong>Email:</strong>{" "}
               <a href="mailto:admin@guidedtc.ca">admin@guidedtc.ca</a>
             </p>
@@ -256,6 +259,5 @@ export default function AppLayout() {
     </>
   );
 }
-
 
 
