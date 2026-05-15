@@ -521,6 +521,8 @@ a {
   position: absolute;
   inset: 0;
   z-index: 0;
+  background:
+    #0f1110 url("/images/home-slide-FraserRiverPG-960.webp") center/cover no-repeat;
 }
 
 .home-hero__slide {
@@ -558,12 +560,12 @@ a {
     opacity: 0;
   }
 
-  5%,
-  11% {
+  1.5%,
+  11.5% {
     opacity: 1;
   }
 
-  16%,
+  14%,
   100% {
     opacity: 0;
   }
@@ -571,11 +573,11 @@ a {
 
 @keyframes homeHeroFirstSlideFade {
   0%,
-  11% {
+  11.5% {
     opacity: 1;
   }
 
-  16%,
+  14%,
   100% {
     opacity: 0;
   }
