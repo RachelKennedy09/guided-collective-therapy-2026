@@ -818,7 +818,7 @@ a {
 
 @media (max-width: 600px) {
   .home-hero__slide:first-child {
-    object-position: 22% center;
+    object-position: 35% center;
   }
 
   .home-hero__logo-mark,
