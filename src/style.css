@@ -522,7 +522,7 @@ a {
   inset: 0;
   z-index: 0;
   background:
-    #0f1110 url("/images/home-slide-FraserRiverPG-960.webp") center/cover no-repeat;
+    #0f1110 url("/images/home-slide-pg-video-river-960.webp") center/cover no-repeat;
 }
 
 .home-hero__slide {
@@ -535,7 +535,7 @@ a {
   object-position: center;
   opacity: 0;
   transform: scale(1.03);
-  animation: homeHeroSlideFade 108s ease-in-out infinite;
+  animation: homeHeroSlideFade 120s ease-in-out infinite;
   animation-delay: calc(var(--slide-index) * 12s);
   will-change: opacity;
 }

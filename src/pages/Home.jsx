@@ -2,6 +2,11 @@ import React from "react";
 
 const heroSlides = [
   {
+    src: "/images/home-slide-pg-video-river-960.webp",
+    srcSet:
+      "/images/home-slide-pg-video-river-960.webp 960w, /images/home-slide-pg-video-river-1600.webp 1600w",
+  },
+  {
     src: "/images/home-slide-FraserRiverPG-960.webp",
     srcSet:
       "/images/home-slide-FraserRiverPG-960.webp 960w, /images/home-slide-FraserRiverPG-1600.webp 1600w",
