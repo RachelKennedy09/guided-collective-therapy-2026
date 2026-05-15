@@ -533,9 +533,13 @@ a {
   object-position: center;
   opacity: 0;
   transform: scale(1.03);
-  animation: homeHeroSlideFade 63s ease-in-out infinite;
-  animation-delay: calc(var(--slide-index) * 7s);
+  animation: homeHeroSlideFade 108s ease-in-out infinite;
+  animation-delay: calc(var(--slide-index) * 12s);
   will-change: opacity;
+}
+
+.home-hero__slide:first-child {
+  animation-name: homeHeroFirstSlideFade;
 }
 
 .home-hero__overlay {
@@ -550,18 +554,30 @@ a {
 }
 
 @keyframes homeHeroSlideFade {
-  0%,
-  19% {
-    opacity: 1;
-  }
-
-  25%,
-  94% {
+  0% {
     opacity: 0;
   }
 
-  100% {
+  5%,
+  11% {
     opacity: 1;
+  }
+
+  16%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes homeHeroFirstSlideFade {
+  0%,
+  11% {
+    opacity: 1;
+  }
+
+  16%,
+  100% {
+    opacity: 0;
   }
 }
 
@@ -2281,12 +2297,13 @@ a {
 }
 
 .contact-form-layout {
-  width: min(1120px, 94vw);
+  width: min(1120px, 100%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
   gap: 1.5rem;
   align-items: start;
+  justify-items: stretch;
 }
 
 .contact-form-heading {
@@ -2318,6 +2335,7 @@ a {
 }
 
 .contact-form-panel {
+  width: 100%;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(191, 196, 189, 0.7);
   border-radius: 8px;
@@ -2339,6 +2357,7 @@ a {
 }
 
 .contact-next-panel {
+  width: 100%;
   display: grid;
   gap: 1rem;
   position: sticky;
@@ -2395,8 +2414,14 @@ a {
 }
 
 @media (max-width: 900px) {
+  .contact-form-section {
+    padding-inline: clamp(1rem, 4vw, 1.25rem);
+  }
+
   .contact-form-layout {
     grid-template-columns: 1fr;
+    max-width: 680px;
+    justify-items: center;
   }
 
   .contact-next-panel {
@@ -2405,6 +2430,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .contact-form-section {
+    padding-inline: 0.9rem;
+  }
+
   .contact-consent {
     flex-wrap: wrap;
   }

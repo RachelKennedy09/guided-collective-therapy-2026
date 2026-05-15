@@ -1,15 +1,51 @@
 import React from "react";
 
 const heroSlides = [
-  "/images/FraserRiverPG.jpg",
-  "/images/WarFalls.jpg",
-  "/images/LTMPPGTree-1600.webp",
-  "/images/FrozenPGUniversityHill.webp",
-  "/images/EskersPG.jpg",
-  "/images/DSC03726.webp",
-  "/images/DJI_0267.webp",
-  "/images/AncientForestPG.jpg",
-  "/images/ConnaughtHillRoadPG.webp",
+  {
+    src: "/images/home-slide-FraserRiverPG-1600.webp",
+    srcSet:
+      "/images/home-slide-FraserRiverPG-960.webp 960w, /images/home-slide-FraserRiverPG-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-WarFalls-1600.webp",
+    srcSet:
+      "/images/home-slide-WarFalls-960.webp 960w, /images/home-slide-WarFalls-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-LTMPPGTree-1600-1600.webp",
+    srcSet:
+      "/images/home-slide-LTMPPGTree-1600-960.webp 960w, /images/home-slide-LTMPPGTree-1600-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-FrozenPGUniversityHill-1600.webp",
+    srcSet:
+      "/images/home-slide-FrozenPGUniversityHill-960.webp 960w, /images/home-slide-FrozenPGUniversityHill-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-EskersPG-1600.webp",
+    srcSet:
+      "/images/home-slide-EskersPG-960.webp 960w, /images/home-slide-EskersPG-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-DSC03726-1600.webp",
+    srcSet:
+      "/images/home-slide-DSC03726-960.webp 960w, /images/home-slide-DSC03726-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-DJI_0267-1600.webp",
+    srcSet:
+      "/images/home-slide-DJI_0267-960.webp 960w, /images/home-slide-DJI_0267-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-AncientForestPG-1600.webp",
+    srcSet:
+      "/images/home-slide-AncientForestPG-960.webp 960w, /images/home-slide-AncientForestPG-1600.webp 1600w",
+  },
+  {
+    src: "/images/home-slide-ConnaughtHillRoadPG-1600.webp",
+    srcSet:
+      "/images/home-slide-ConnaughtHillRoadPG-960.webp 960w, /images/home-slide-ConnaughtHillRoadPG-1600.webp 1600w",
+  },
 ];
 
 export default function Home() {
@@ -18,10 +54,12 @@ export default function Home() {
       {/* HERO */}
       <section className="home-hero">
         <div className="home-hero__bg">
-          {heroSlides.map((src, index) => (
+          {heroSlides.map((slide, index) => (
             <img
-              key={src}
-              src={src}
+              key={slide.src}
+              src={slide.src}
+              srcSet={slide.srcSet}
+              sizes="100vw"
               alt=""
               className="home-hero__slide"
               style={{ "--slide-index": index }}
