@@ -9,9 +9,7 @@ export default function Treatments() {
       <div className="treatments-hero">
         <img
           className="treatments-hero__image"
-          src="/images/LTMPPGTree-1280.webp"
-          srcSet="/images/LTMPPGTree-640.webp 640w, /images/LTMPPGTree-960.webp 960w, /images/LTMPPGTree-1280.webp 1280w, /images/LTMPPGTree-1600.webp 1600w, /images/LTMPPGTree.webp 1920w"
-          sizes="100vw"
+          src="/images/WarFalls.jpg"
           alt=""
           aria-hidden="true"
           loading="eager"

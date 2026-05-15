@@ -488,7 +488,7 @@ a {
 }
 /* =========================
    HOME (Clean restart)
-   Hero video + About on same page
+   Hero photo slideshow + About on same page
    ========================= */
 
 .home-hero {
@@ -523,18 +523,24 @@ a {
   z-index: 0;
 }
 
-.home-hero__still,
-.home-hero__video {
+.home-hero__slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* THIS is critical */
+  object-fit: cover;
   object-position: center;
+  opacity: 0;
+  transform: scale(1.03);
+  animation: homeHeroSlideFade 63s ease-in-out infinite;
+  animation-delay: calc(var(--slide-index) * 7s);
+  will-change: opacity;
 }
 
 .home-hero__overlay {
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.1) 0%,
@@ -542,6 +548,23 @@ a {
     rgba(0, 0, 0, 0.14) 100%
   );
 }
+
+@keyframes homeHeroSlideFade {
+  0%,
+  19% {
+    opacity: 1;
+  }
+
+  25%,
+  94% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .home-hero__content {
   position: relative;
   z-index: 1;
@@ -557,9 +580,9 @@ a {
   background:
     radial-gradient(
       ellipse at center,
-      rgba(0, 0, 0, 0.56) 0%,
-      rgba(0, 0, 0, 0.36) 34%,
-      rgba(0, 0, 0, 0.14) 58%,
+      rgba(0, 0, 0, 0.28) 0%,
+      rgba(0, 0, 0, 0.16) 38%,
+      rgba(0, 0, 0, 0.06) 58%,
       rgba(0, 0, 0, 0) 76%
     );
 }
@@ -605,11 +628,11 @@ a {
   pointer-events: none;
   background: radial-gradient(
     ellipse at center,
-    rgba(0, 0, 0, 0.42) 0%,
-    rgba(0, 0, 0, 0.24) 42%,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(83, 122, 93, 0.14) 38%,
     rgba(0, 0, 0, 0) 72%
   );
-  filter: blur(8px);
+  filter: blur(14px);
 }
 
 .home-hero__logo-mask {
@@ -663,8 +686,8 @@ a {
   height: auto;
   margin: 0 auto;
   filter:
-    drop-shadow(0 10px 26px rgba(0, 0, 0, 0.34))
-    drop-shadow(0 2px 6px rgba(0, 0, 0, 0.28));
+    drop-shadow(0 8px 18px rgba(0, 0, 0, 0.22))
+    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.22));
   position: relative;
   z-index: 1;
 }
@@ -726,6 +749,16 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-hero__slide {
+    animation: none;
+    opacity: 0;
+    transform: none;
+  }
+
+  .home-hero__slide:first-child {
+    opacity: 1;
+  }
+
   .home-hero__logo-wrap {
     opacity: 1;
     transform: none;
@@ -1890,6 +1923,58 @@ a {
   border-bottom: none;
 }
 
+.referrals-join-team-section {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.referrals-join-team-section .referrals-section-title {
+  text-align: center;
+}
+
+.referrals-join-team-box {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  gap: 0.85rem;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid rgba(83, 122, 93, 0.24);
+  border-radius: 8px;
+  background: rgba(83, 122, 93, 0.1);
+}
+
+.referrals-join-team-box h2 {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+}
+
+.referrals-join-team-box p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.referrals-join-team-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.referrals-join-team-box .btn {
+  color: var(--green);
+  border-color: rgba(83, 122, 93, 0.45);
+}
+
+.referrals-join-team-box .btn:hover {
+  color: #fff;
+  background: var(--green);
+}
+
 .referrals-section-inner h2 {
   margin: 0 0 0.75rem;
   color: var(--section-title-color);
@@ -2078,9 +2163,9 @@ a {
 }
 
 .contact-form {
-  margin-top: 1.25rem;
+  margin-top: 1.35rem;
   display: grid;
-  gap: 0.95rem;
+  gap: 1rem;
 }
 
 .contact-form-panel .contact-form {
@@ -2090,6 +2175,12 @@ a {
 .contact-field {
   display: grid;
   gap: 0.35rem;
+}
+
+.contact-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .contact-field label {
@@ -2131,6 +2222,23 @@ a {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select {
+  min-height: 48px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
 .contact-form ::placeholder {
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -2169,68 +2277,113 @@ a {
 
 .contact-form-section {
   background: var(--beige);
-  padding: 3.5rem 1.25rem 5rem;
+  padding: 4.25rem 1.25rem 5rem;
 }
 
-.contact-help {
-  width: min(900px, 92vw);
-  margin: 0 auto 2rem;
+.contact-form-layout {
+  width: min(1120px, 94vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.contact-help__title {
-  margin: 0 0 1.25rem;
-  color: var(--section-title-color);
-  font-size: var(--section-title-size);
-  letter-spacing: var(--section-title-spacing);
+.contact-form-heading {
+  display: grid;
+  gap: 0.55rem;
 }
 
-.contact-help__list {
+.contact-form-kicker {
   margin: 0;
-  padding-left: 1.15rem;
-  color: var(--text);
-  line-height: 1.7;
+  color: var(--section-title-color);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-form-heading h2,
+.contact-next-card h2 {
+  margin: 0;
+  color: var(--section-title-color);
+  font-size: clamp(1.55rem, 2.6vw, 2.1rem);
+  line-height: 1.12;
+}
+
+.contact-form-heading p {
+  margin: 0;
+  color: var(--text-subtle);
+  line-height: 1.65;
 }
 
 .contact-form-panel {
-  width: min(900px, 92vw);
-  margin: 0 auto;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(191, 196, 189, 0.7);
-  border-radius: 18px;
-  padding: 1.75rem 1.5rem;
+  border-radius: 8px;
+  padding: clamp(1.35rem, 2.8vw, 2rem);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
-.contact-team-box {
-  width: min(900px, 92vw);
-  margin: 2rem auto 0;
-  background: rgba(83, 122, 93, 0.1);
-  border: 1px solid rgba(83, 122, 93, 0.24);
-  border-radius: 18px;
-  padding: 1.6rem 1.5rem;
+.contact-form .btn {
+  width: fit-content;
+  min-width: 170px;
+  color: #fff;
+  background: var(--green);
+  border-radius: 10px;
 }
 
-.contact-team-box h2 {
-  margin: 0 0 0.6rem;
-  color: var(--green);
-  font-size: 1.35rem;
+.contact-form .btn:hover {
+  color: #fff;
+  background: var(--violet-dark);
 }
 
-.contact-team-box p {
-  max-width: 64ch;
-  margin: 0 0 1rem;
+.contact-next-panel {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 104px;
+}
+
+.contact-next-card,
+.contact-urgent-card {
+  border-radius: 8px;
+  padding: 1.35rem;
+  border: 1px solid rgba(83, 122, 93, 0.2);
+  background: rgba(83, 122, 93, 0.08);
+}
+
+.contact-next-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-next-card ul {
+  margin: 0;
+  padding-left: 1.15rem;
   color: var(--text);
   line-height: 1.65;
 }
 
-.contact-team-box .btn {
-  color: var(--green);
-  border-color: rgba(83, 122, 93, 0.45);
+.contact-next-card li + li {
+  margin-top: 0.45rem;
 }
 
-.contact-team-box .btn:hover {
-  color: #fff;
-  background: var(--green);
+.contact-urgent-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(191, 196, 189, 0.7);
+}
+
+.contact-urgent-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--green);
+  font-size: 1.1rem;
+}
+
+.contact-urgent-card p {
+  margin: 0;
+  color: var(--text-subtle);
+  line-height: 1.6;
 }
 
 @media (max-width: 600px) {
@@ -2241,17 +2394,29 @@ a {
   }
 }
 
+@media (max-width: 900px) {
+  .contact-form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-next-panel {
+    position: static;
+  }
+}
+
 @media (max-width: 600px) {
   .contact-consent {
     flex-wrap: wrap;
   }
 
-  .contact-form-panel {
-    padding: 1.5rem 1.25rem;
+  .contact-field-row {
+    grid-template-columns: 1fr;
   }
 
-  .contact-team-box {
-    padding: 1.4rem 1.25rem;
+  .contact-form-panel,
+  .contact-next-card,
+  .contact-urgent-card {
+    padding: 1.5rem 1.25rem;
   }
 }
 /* ========================

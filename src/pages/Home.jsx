@@ -1,43 +1,36 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+
+const heroSlides = [
+  "/images/FraserRiverPG.jpg",
+  "/images/WarFalls.jpg",
+  "/images/LTMPPGTree-1600.webp",
+  "/images/FrozenPGUniversityHill.webp",
+  "/images/EskersPG.jpg",
+  "/images/DSC03726.webp",
+  "/images/DJI_0267.webp",
+  "/images/AncientForestPG.jpg",
+  "/images/ConnaughtHillRoadPG.webp",
+];
 
 export default function Home() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.7;
-    }
-  }, []);
-
   return (
     <>
       {/* HERO */}
       <section className="home-hero">
         <div className="home-hero__bg">
-          <img
-            src="/images/PgVideoStill-home.webp"
-            alt=""
-            className="home-hero__still"
-            aria-hidden="true"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
-          <video
-            ref={videoRef}
-            className="home-hero__video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/PgVideoStill-home.webp"
-            preload="metadata"
-          >
-            <source
-              src="/images/videos/Pgvideo_h264_1280_hq.mp4"
-              type="video/mp4"
+          {heroSlides.map((src, index) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              className="home-hero__slide"
+              style={{ "--slide-index": index }}
+              aria-hidden="true"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchpriority={index === 0 ? "high" : "auto"}
             />
-          </video>
+          ))}
           <div className="home-hero__overlay" />
         </div>
 

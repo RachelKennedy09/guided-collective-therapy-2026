@@ -6,7 +6,7 @@ export default function Referrals() {
     <section className="referrals-page">
       <div
         className="referrals-hero"
-        style={{ "--bg-image": "url('/images/DJI_0267.webp')" }}
+        style={{ "--bg-image": "url('/images/AncientForestPG.jpg')" }}
       >
         <div className="referrals-hero__overlay" />
 
@@ -127,20 +127,29 @@ export default function Referrals() {
           </div>
         </section>
 
-        <section id="join-team" className="referrals-section-block">
+        <section
+          id="join-team"
+          className="referrals-section-block referrals-join-team-section"
+        >
           <h2 className="referrals-section-title">Join the team</h2>
-          <aside className="contact-team-box referrals-join-team-box">
+          <aside className="referrals-join-team-box">
             <h2>Want to join our team?</h2>
             <p>
-              Please contact us with a short note about yourself and attach your
-              resume. We will review it and get in touch if there is a good fit.
+              Please contact us with a short note about yourself. You can email
+              us directly with your resume, or use our contact form and choose
+              Careers / training.
             </p>
-            <a
-              className="btn btn-outline"
-              href="mailto:admin@guidedtc.ca?subject=Joining%20the%20Guided%20team"
-            >
-              Email us
-            </a>
+            <div className="referrals-join-team-actions">
+              <a
+                className="btn btn-outline"
+                href="mailto:admin@guidedtc.ca?subject=Joining%20the%20Guided%20team"
+              >
+                Email us
+              </a>
+              <Link className="btn btn-outline" to="/contact">
+                Contact form
+              </Link>
+            </div>
           </aside>
         </section>
       </div>
