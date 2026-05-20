@@ -118,18 +118,12 @@ export default function Contact() {
 
             <div className="contact-hero__blurb-wrap contact-hero__blurb-wrap--one">
               <p className="contact-hero__blurb">
-                Use this page to request a consultation, ask a general question,
-                connect about a referral, or reach out about joining the Guided
-                team.
+                Please use this page to request consultation or ask general
+                questions. If you are a health provider, please fill out form
+                below or fax referral to 1-888-897-6501.
               </p>
             </div>
 
-            <div className="contact-hero__blurb-wrap contact-hero__blurb-wrap--two">
-              <p className="contact-hero__note">
-                Please keep your message brief and general. If more information
-                is needed, we will guide you through the appropriate next step.
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -140,11 +134,6 @@ export default function Contact() {
             <div className="contact-form-heading">
               <p className="contact-form-kicker">Start here</p>
               <h2>Request a consultation or send an inquiry</h2>
-              <p>
-                A short, general message is enough. Please do not include
-                diagnoses, medication details, trauma history, or identifying
-                information about another person.
-              </p>
             </div>
 
             <form
@@ -402,8 +391,7 @@ export default function Contact() {
               <h2>We will point you to the right pathway.</h2>
             <ul>
               <li>
-                New client inquiries begin with a brief conversation about fit
-                and next steps.
+                New client inquiries are reviewed for fit and next steps.
               </li>
               <li>Guided is located in Prince George, British Columbia.</li>
               <li>Referrals are typically sent by fax: 1-888-897-6501.</li>

@@ -99,20 +99,6 @@ export default function Header() {
             </NavLink>
           </li>
 
-          <li>
-            <NavLink
-              to="/referrals"
-              onMouseEnter={() =>
-                preloadImage("/images/WarFalls.webp")
-              }
-              onFocus={() =>
-                preloadImage("/images/WarFalls.webp")
-              }
-              onClick={closeMenu}
-            >
-              Referrals
-            </NavLink>
-          </li>
         </ul>
       </nav>
     </header>
