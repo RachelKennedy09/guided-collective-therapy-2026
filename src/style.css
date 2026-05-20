@@ -522,7 +522,7 @@ a {
   inset: 0;
   z-index: 0;
   background:
-    #0f1110 url("/images/home-slide-pg-video-river-960.webp") center/cover no-repeat;
+    #0f1110 url("../assets/mainhero.jpg") center/cover no-repeat;
 }
 
 .home-hero__slide {
@@ -532,17 +532,13 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  opacity: 0;
-  transform: scale(1.03);
-  animation: homeHeroSlideFade 120s ease-in-out infinite;
-  animation-delay: calc(var(--slide-index) * 12s);
-  will-change: opacity;
+  object-position: center center;
+  opacity: 1;
+  transform: none;
 }
 
 .home-hero__slide:first-child {
-  animation-name: homeHeroFirstSlideFade;
-  object-position: 28% center;
+  object-position: center center;
 }
 
 .home-hero__overlay {
@@ -770,7 +766,7 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .home-hero__slide {
     animation: none;
-    opacity: 0;
+    opacity: 1;
     transform: none;
   }
 
@@ -818,7 +814,7 @@ a {
 
 @media (max-width: 600px) {
   .home-hero__slide:first-child {
-    object-position: 35% center;
+    object-position: center center;
   }
 
   .home-hero__logo-mark,

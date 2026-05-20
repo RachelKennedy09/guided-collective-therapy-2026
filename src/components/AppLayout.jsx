@@ -7,7 +7,6 @@ const navItems = [
   { to: "/about", label: "About" },
   { to: "/treatments", label: "Services" },
   { to: "/team", label: "Team" },
-  { to: "/referrals", label: "Referrals" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -259,4 +258,3 @@ export default function AppLayout() {
     </>
   );
 }
-

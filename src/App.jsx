@@ -5,7 +5,6 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Treatments from "./pages/Treatments.jsx";
 import Team from "./pages/Team.jsx";
-import Referrals from "./pages/Referrals.jsx";
 import Contact from "./pages/Contact.jsx";
 import ContactSuccess from "./pages/ContactSuccess.jsx";
 
@@ -17,7 +16,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/treatments" element={<Treatments />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/referrals" element={<Referrals />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact-success" element={<ContactSuccess />} />
       </Route>

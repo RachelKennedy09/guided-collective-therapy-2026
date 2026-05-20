@@ -9,7 +9,7 @@ export default function Treatments() {
       <div className="treatments-hero">
         <img
           className="treatments-hero__image"
-          src="/images/WarFalls.jpg"
+          src="/images/FraserRiverPG.jpg"
           alt=""
           aria-hidden="true"
           loading="eager"
