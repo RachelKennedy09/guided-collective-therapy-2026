@@ -8,11 +8,7 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [contactMethod, setContactMethod] = useState("");
   const [inquiryType, setInquiryType] = useState("");
-  const [supportInterest, setSupportInterest] = useState("");
-  const [careerInterest, setCareerInterest] = useState("");
   const [message, setMessage] = useState("");
   const [hasConsent, setHasConsent] = useState(false);
 
@@ -20,7 +16,6 @@ export default function Contact() {
   const [showConsentError, setShowConsentError] = useState(false);
   const consentWrapRef = useRef(null);
   const formTopRef = useRef(null);
-  const isCareerInquiry = inquiryType === "Careers / training";
 
   useEffect(() => {
     if (showConsentError && consentWrapRef.current) {
@@ -34,11 +29,7 @@ export default function Contact() {
   function resetFormState() {
     setName("");
     setEmail("");
-    setPhone("");
-    setContactMethod("");
     setInquiryType("");
-    setSupportInterest("");
-    setCareerInterest("");
     setMessage("");
     setHasConsent(false);
     setShowConsentError(false);
@@ -50,14 +41,8 @@ export default function Contact() {
 
     if (!name.trim()) errors.push("Please enter your name.");
     if (!email.trim()) errors.push("Please enter your email.");
-    if (!contactMethod) errors.push("Please choose a preferred contact method.");
     if (!inquiryType) errors.push("Please choose what you are reaching out about.");
-    if (isCareerInquiry) {
-      if (!careerInterest) errors.push("Please choose the kind of team inquiry.");
-    } else if (!supportInterest) {
-      errors.push("Please choose the kind of support you are interested in.");
-    }
-    if (!message.trim()) errors.push("Please enter a short message.");
+    if (!message.trim()) errors.push("Please enter your message.");
     if (!hasConsent) errors.push("Please confirm consent before submitting.");
 
     return errors;
@@ -133,7 +118,8 @@ export default function Contact() {
           <div className="contact-form-panel">
             <div className="contact-form-heading">
               <p className="contact-form-kicker">Start here</p>
-              <h2>Request a consultation or send an inquiry</h2>
+              <h2>General inquiries or consultation requests</h2>
+              <p>Please see below</p>
             </div>
 
             <form
@@ -200,37 +186,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="contact-field-row">
-                <div className="contact-field">
-                  <label htmlFor="phone">Phone</label>
-                  <span>Optional, unless you prefer a phone call.</span>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    autoComplete="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                  />
-                </div>
-
-                <div className="contact-field">
-                  <label htmlFor="contactMethod">Preferred contact method</label>
-                  <select
-                    id="contactMethod"
-                    name="preferred-contact-method"
-                    required
-                    value={contactMethod}
-                    onChange={(e) => setContactMethod(e.target.value)}
-                  >
-                    <option value="">Select one</option>
-                    <option value="Email">Email</option>
-                    <option value="Phone">Phone</option>
-                    <option value="No preference">No preference</option>
-                  </select>
-                </div>
-              </div>
-
               <div className="contact-field">
                 <label htmlFor="inquiryType">
                   What are you reaching out about?
@@ -240,104 +195,24 @@ export default function Contact() {
                   name="inquiry-type"
                   required
                   value={inquiryType}
-                  onChange={(e) => {
-                    const nextInquiryType = e.target.value;
-                    setInquiryType(nextInquiryType);
-                    if (nextInquiryType === "Careers / training") {
-                      setSupportInterest("");
-                    } else {
-                      setCareerInterest("");
-                    }
-                  }}
+                  onChange={(e) => setInquiryType(e.target.value)}
                 >
                   <option value="">Select one</option>
-                  <option value="New client consultation">
-                    New client consultation
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Prospective Client">Prospective Client</option>
+                  <option value="Referral / Provider Inquiry">
+                    Referral / Provider Inquiry
                   </option>
-                  <option value="Current client question">
-                    Current client question
-                  </option>
-                  <option value="Referral / provider inquiry">
-                    Referral / provider inquiry
-                  </option>
-                  <option value="General question">General question</option>
-                  <option value="Media / partnership">Media / partnership</option>
-                  <option value="Careers / training">Careers / training</option>
                 </select>
               </div>
 
-              {isCareerInquiry ? (
-                <div className="contact-field">
-                  <label htmlFor="careerInterest">
-                    What best describes your interest?
-                  </label>
-                  <select
-                    id="careerInterest"
-                    name="career-interest"
-                    required
-                    value={careerInterest}
-                    onChange={(e) => setCareerInterest(e.target.value)}
-                  >
-                    <option value="">Select one</option>
-                    <option value="Joining the clinical team">
-                      Joining the clinical team
-                    </option>
-                    <option value="Practicum / training opportunity">
-                      Practicum / training opportunity
-                    </option>
-                    <option value="Administrative or operations role">
-                      Administrative or operations role
-                    </option>
-                    <option value="Collaboration / supervision">
-                      Collaboration / supervision
-                    </option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-              ) : (
-                <div className="contact-field">
-                  <label htmlFor="supportInterest">
-                    What kind of support are you interested in?
-                  </label>
-                  <select
-                    id="supportInterest"
-                    name="support-interest"
-                    required
-                    value={supportInterest}
-                    onChange={(e) => setSupportInterest(e.target.value)}
-                  >
-                    <option value="">Select one</option>
-                    <option value="Ketamine-assisted therapy">
-                      Ketamine-assisted therapy
-                    </option>
-                    <option value="Psychedelic integration">
-                      Psychedelic integration
-                    </option>
-                    <option value="Trauma therapy">Trauma therapy</option>
-                    <option value="Couples / relationship therapy">
-                      Couples / relationship therapy
-                    </option>
-                    <option value="Referral or provider coordination">
-                      Referral or provider coordination
-                    </option>
-                    <option value="Not sure yet">Not sure yet</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-              )}
-
               <div className="contact-field">
-                <label htmlFor="message">Brief message</label>
-                <span>
-                  {isCareerInquiry
-                    ? "Tell us briefly about your background, area of interest, and availability."
-                    : "Keep this general. We can ask for secure details later if needed."}
-                </span>
+                <label htmlFor="message">Brief message (200 words or less)</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
-                  placeholder="A few sentences about what you are hoping for is enough."
+                  placeholder="How can we help?"
                   required
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

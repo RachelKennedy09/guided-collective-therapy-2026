@@ -2561,6 +2561,18 @@ a {
   color: #555;
 }
 
+.footer-credits {
+  display: grid;
+  gap: 0.2rem;
+  justify-items: center;
+}
+
+.footer-photo-credit {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #666;
+}
+
 .footer-flags {
   display: flex;
   justify-content: center;

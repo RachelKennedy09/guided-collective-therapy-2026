@@ -251,7 +251,15 @@ export default function AppLayout() {
               />
             </div>
 
-            <p className="footer-copy">&copy; 2026 Guided Therapy Collective Inc.</p>
+            <div className="footer-credits">
+              <p className="footer-copy">&copy; 2026 Guided Therapy Collective Inc.</p>
+              <p className="footer-photo-credit">
+                Photography by Darrin Rigo Photography
+              </p>
+              <p className="footer-photo-credit">
+                Web Designer Rachel Kennedy
+              </p>
+            </div>
           </div>
         </div>
       </footer>
