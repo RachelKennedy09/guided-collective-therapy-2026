@@ -37,10 +37,10 @@ export default function About() {
               </div>
               <div className="about-hero__blurb-wrap about-hero__blurb-wrap--two">
                 <p className="page-hero__blurb">
-                  In addition to traditional therapeutic methods, we utilize
-                  psychedelics to help individuals connect with deep-seated
-                  patterns that may be difficult to access through standard
-                  talk&nbsp;therapy.
+                  In addition to traditional therapeutic methods, we take a
+                  heart-centered approach with our use of psychedelics to help
+                  individuals connect with deep-seated patterns that may be
+                  difficult to access through standard&nbsp;therapy.
                 </p>
               </div>
               <div className="about-hero__blurb-wrap about-hero__blurb-wrap--three">

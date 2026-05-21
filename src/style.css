@@ -2193,6 +2193,10 @@ a {
   line-height: 1.65;
 }
 
+.contact-hero__nowrap {
+  white-space: nowrap;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .contact-hero__panel,
   .contact-hero__icon-wrap,
@@ -2526,10 +2530,6 @@ a {
 
 .footer-contact a:hover {
   text-decoration: underline;
-}
-
-.footer-hours {
-  margin-top: 0.2rem;
 }
 
 .footer-treaty {

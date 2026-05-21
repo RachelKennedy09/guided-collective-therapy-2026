@@ -205,9 +205,6 @@ export default function AppLayout() {
               <strong>Email:</strong>{" "}
               <a href="mailto:admin@guidedtc.ca">admin@guidedtc.ca</a>
             </p>
-            <p className="footer-hours">
-              <strong>Clinic Hours:</strong> Mon-Fri 9:00am-5:00pm
-            </p>
           </div>
 
           <div className="footer-treaty">
@@ -257,7 +254,7 @@ export default function AppLayout() {
                 Photography by Darrin Rigo Photography
               </p>
               <p className="footer-photo-credit">
-                Web Designer Rachel Kennedy
+                Web Design by Rachel Kennedy
               </p>
             </div>
           </div>

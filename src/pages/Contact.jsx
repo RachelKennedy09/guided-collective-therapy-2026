@@ -105,7 +105,9 @@ export default function Contact() {
               <p className="contact-hero__blurb">
                 Please use this page to request consultation or ask general
                 questions. If you are a health provider, please fill out form
-                below or fax referral to 1-888-897-6501.
+                below or{" "}
+                <span className="contact-hero__nowrap">fax referral</span> to
+                1-888-897-6501.
               </p>
             </div>
 
