@@ -80,29 +80,19 @@ export default function Treatments() {
 
             <div className="treatment-split">
               <div className="treatment-box">
-                <h3>Individual Ketamine Therapy</h3>
+                <h3>Ketamine Assisted Therapy</h3>
                 <ul>
-                  <li>Consultation</li>
-                  <li>2x Preparation Sessions (Group or Individual)</li>
-                  <li>3x Ketamine Treatment Sessions</li>
-                  <li>2x Integration Sessions</li>
-                  <li>Closing Session</li>
+                  <li>1x Consultation</li>
+                  <li>1x Preparation Session (Group or Individual)</li>
+                  <li>3x Ketamine Treatment Sessions (Group or Individual)</li>
+                  <li>2x Integration Sessions (Group or Individual)</li>
+                  <li>1x Closing Session</li>
                 </ul>
-                <p className="price">Investment of $2,975</p>
-              </div>
-
-              <div className="treatment-box">
-                <h3>
-                  Group Ketamine Therapy <small>(*when available)</small>
-                </h3>
-                <ul>
-                  <li>Individual Consultation</li>
-                  <li>2x Group Preparation Sessions</li>
-                  <li>3x Group Ketamine Treatment Sessions</li>
-                  <li>2x Group Integration Sessions</li>
-                  <li>Group Closing Session</li>
-                </ul>
-                <p className="price">Investment of $1,575</p>
+                <p className="price">Investment of $2,700</p>
+                <p>
+                  Please note: this includes 3 medicine sessions. Comparable
+                  clinic offerings are typically offered at a much higher price.
+                </p>
               </div>
             </div>
           </div>
