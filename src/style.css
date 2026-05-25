@@ -254,10 +254,18 @@ a {
   filter: drop-shadow(0 4px 12px rgba(10, 20, 32, 0.18));
 }
 
+.logo__mark--color-reverse {
+  height: 56px;
+}
+
 @media (min-width: 1100px) {
   .logo__mark {
     height: 58px;
     max-width: 460px;
+  }
+
+  .logo__mark--color-reverse {
+    height: 63px;
   }
 }
 
@@ -266,6 +274,10 @@ a {
     height: 34px;
     width: auto;
     max-width: min(58vw, 240px);
+  }
+
+  .logo__mark--color-reverse {
+    height: 37px;
   }
 }
 

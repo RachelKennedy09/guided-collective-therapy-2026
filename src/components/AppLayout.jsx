@@ -30,6 +30,9 @@ export default function AppLayout() {
   };
 
   const isHome = location.pathname === "/";
+  const usesWhiteNavbarLogo = ["/treatments", "/team", "/contact"].includes(
+    location.pathname
+  );
   const showFloatingContact = location.pathname !== "/contact";
 
   useEffect(() => {
@@ -115,9 +118,15 @@ export default function AppLayout() {
           <div className="logo">
             <NavLink to="/" onClick={closeMenu} aria-label="Guided home">
               <img
-                src="/guided-navbar-logo.png"
+                src={
+                  usesWhiteNavbarLogo
+                    ? "/logos/Guided%20Logo%20Set/Office%20_%20Web%20Files/Horizontal/Png/Guided_col_rev_hrztl.png"
+                    : "/guided-navbar-logo.png"
+                }
                 alt="Guided Therapy Collective"
-                className="logo__mark"
+                className={`logo__mark ${
+                  usesWhiteNavbarLogo ? "logo__mark--color-reverse" : ""
+                }`}
                 loading="lazy"
                 decoding="async"
               />
@@ -251,7 +260,7 @@ export default function AppLayout() {
             <div className="footer-credits">
               <p className="footer-copy">&copy; 2026 Guided Therapy Collective Inc.</p>
               <p className="footer-photo-credit">
-                Photography by Darrin Rigo Photography
+                Photography by D. Rigo Media
               </p>
               <p className="footer-photo-credit">
                 Web Design by Rachel Kennedy
