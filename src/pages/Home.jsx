@@ -63,7 +63,7 @@ export default function Home() {
                   Offering a relational, heart-centered approach to
                   psychedelic-assisted therapy.
                 </p>
-                <Link to="/about#what-we-offer">Learn more</Link>
+                <Link to="/about">Learn more</Link>
               </div>
             </div>
           </div>
