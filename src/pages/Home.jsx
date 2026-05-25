@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import mainHero from "../../assets/mainhero.jpg";
 
 const heroSlides = [
@@ -56,6 +57,13 @@ export default function Home() {
               <div className="home-hero__subtitle-wrap">
                 <div className="home-hero__subtitle-mask" aria-hidden="true" />
                 <p className="home-hero__subtitle">We're glad you're here.</p>
+              </div>
+              <div className="home-hero__therapy-note">
+                <p>
+                  Offering a relational, heart-centered approach to
+                  psychedelic-assisted therapy.
+                </p>
+                <Link to="/about#what-we-offer">Learn more</Link>
               </div>
             </div>
           </div>

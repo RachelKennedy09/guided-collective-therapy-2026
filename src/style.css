@@ -224,12 +224,12 @@ a {
   overflow: visible;
 
   /* ⬇️ NEW: very subtle glass background */
-  background: rgba(10, 12, 10, 0.18);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(10, 12, 10, 0.03);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 
   /* ⬇️ optional but helpful on bright videos */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .logo a {
@@ -595,9 +595,9 @@ a {
   background:
     radial-gradient(
       ellipse at center,
-      rgba(0, 0, 0, 0.28) 0%,
-      rgba(0, 0, 0, 0.16) 38%,
-      rgba(0, 0, 0, 0.06) 58%,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.24) 38%,
+      rgba(0, 0, 0, 0.08) 58%,
       rgba(0, 0, 0, 0) 76%
     );
 }
@@ -638,16 +638,23 @@ a {
 .home-hero__logo-wrap::before {
   content: "";
   position: absolute;
-  inset: -2.5rem -3.5rem;
+  inset: -2.2rem -3rem;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(83, 122, 93, 0.14) 38%,
-    rgba(0, 0, 0, 0) 72%
-  );
-  filter: blur(14px);
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(7, 12, 10, 0.42) 0%,
+      rgba(7, 12, 10, 0.3) 42%,
+      rgba(7, 12, 10, 0) 76%
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(83, 122, 93, 0.14) 38%,
+      rgba(0, 0, 0, 0) 72%
+    );
+  filter: blur(12px);
 }
 
 .home-hero__logo-mask {
@@ -701,8 +708,9 @@ a {
   height: auto;
   margin: 0 auto;
   filter:
-    drop-shadow(0 8px 18px rgba(0, 0, 0, 0.22))
-    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.22));
+    drop-shadow(0 12px 22px rgba(0, 0, 0, 0.46))
+    drop-shadow(0 3px 7px rgba(0, 0, 0, 0.42))
+    drop-shadow(0 0 16px rgba(255, 255, 255, 0.14));
   position: relative;
   z-index: 1;
 }
@@ -739,10 +747,59 @@ a {
   font-size: clamp(1.35rem, 2.1vw, 1.8rem);
 }
 
+.home-hero__therapy-note {
+  width: min(92vw, 440px);
+  margin: clamp(0.5rem, 1.6vh, 1rem) auto 0;
+  color: #a8dce4;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: homeTherapyNoteReveal 3.2s ease-out 2.35s forwards;
+}
+
+.home-hero__therapy-note p {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(0.98rem, 1.45vw, 1.16rem);
+  font-weight: 600;
+  line-height: 1.45;
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.72),
+    0 9px 22px rgba(0, 0, 0, 0.55);
+}
+
+.home-hero__therapy-note a {
+  display: inline-block;
+  margin-top: 0.55rem;
+  color: #c7f0f6;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(199, 240, 246, 0.72);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.72);
+}
+
+.home-hero__therapy-note a:hover {
+  border-bottom-color: #c7f0f6;
+}
+
 @keyframes homeSubtitleReveal {
   from {
     opacity: 0;
     transform: translateY(14px);
+  }
+
+  to {
+    opacity: 0.92;
+    transform: translateY(0);
+  }
+}
+
+@keyframes homeTherapyNoteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
   }
 
   to {
@@ -781,6 +838,12 @@ a {
   }
 
   .home-hero__subtitle {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .home-hero__therapy-note {
     opacity: 1;
     transform: none;
     animation: none;
@@ -836,6 +899,15 @@ a {
 
   .home-hero__subtitle {
     padding: 0.55rem 0.15rem 0.62rem;
+  }
+
+  .home-hero__therapy-note {
+    width: min(88vw, 310px);
+  }
+
+  .home-hero__therapy-note p {
+    font-size: 0.94rem;
+    line-height: 1.42;
   }
 }
 
