@@ -30,9 +30,6 @@ export default function AppLayout() {
   };
 
   const isHome = location.pathname === "/";
-  const usesWhiteNavbarLogo = ["/treatments", "/team", "/contact"].includes(
-    location.pathname
-  );
   const showFloatingContact = location.pathname !== "/contact";
 
   useEffect(() => {
@@ -118,15 +115,9 @@ export default function AppLayout() {
           <div className="logo">
             <NavLink to="/" onClick={closeMenu} aria-label="Guided home">
               <img
-                src={
-                  usesWhiteNavbarLogo
-                    ? "/logos/Guided%20Logo%20Set/Office%20_%20Web%20Files/Horizontal/Png/Guided_col_rev_hrztl.png"
-                    : "/guided-navbar-logo.png"
-                }
+                src="/guided-navbar-logo.png"
                 alt="Guided Therapy Collective"
-                className={`logo__mark ${
-                  usesWhiteNavbarLogo ? "logo__mark--color-reverse" : ""
-                }`}
+                className="logo__mark"
                 loading="lazy"
                 decoding="async"
               />

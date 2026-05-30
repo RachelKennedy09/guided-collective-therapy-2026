@@ -107,7 +107,7 @@ export default function Contact() {
                 questions. If you are a health provider, please fill out form
                 below or{" "}
                 <span className="contact-hero__nowrap">fax referral</span> to
-                1-888-897-6501.
+                <span className="contact-hero__nowrap"> 1-888-897-6501</span>.
               </p>
             </div>
 
@@ -271,7 +271,10 @@ export default function Contact() {
                 New client inquiries are reviewed for fit and next steps.
               </li>
               <li>Guided is located in Prince George, British Columbia.</li>
-              <li>Referrals are typically sent by fax: 1-888-897-6501.</li>
+              <li>
+                Referrals are typically sent by fax:{" "}
+                <span className="contact-hero__nowrap">1-888-897-6501</span>.
+              </li>
               <li>
                 Careers, training, media, and partnership messages can use
                   this same form.

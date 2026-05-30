@@ -95,7 +95,7 @@ export default function Team() {
               <p>
                 I am grateful to live and work on the unceded traditional
                 territory of the Lheidli T'enneh Nation. I was raised in the North
-                and am honored to continue to serve and work with people in
+                and am honoured to continue to serve and work with people in
                 Northern BC. In my general practice I offer psychodynamic therapy
                 with a relational approach, focusing on attachment and emotional
                 processing.
@@ -154,7 +154,7 @@ export default function Team() {
                 long-standing thought and behavioural patterns. I aim to create a
                 space where every client feels safe, supported and authentically
                 themselves. This is a place where you can explore what matters
-                most and discover your own path to healing. My approach is
+                most and find your way toward growth and balance. My approach is
                 collaborative and relational, informed by a psychodynamic
                 perspective that explores how past experiences and unconcious
                 patterns shape present thoughts, feelings, and behaviours.

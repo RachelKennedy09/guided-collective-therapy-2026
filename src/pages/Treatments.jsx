@@ -33,8 +33,7 @@ export default function Treatments() {
             <p className="treatments-intro__blurb">
               We at Guided offer medicine-assisted psychotherapy for a variety
               of mental health diagnoses, including, but not limited to,
-              treatment-resistant depression, PTSD, C-PTSD, anxiety disorders and
-              chronic pain.
+              depression, PTSD, C-PTSD, and anxiety disorders.
             </p>
 
             {/* Directory / On this page */}
@@ -80,7 +79,7 @@ export default function Treatments() {
 
             <div className="treatment-split">
               <div className="treatment-box">
-                <h3>Ketamine Assisted Therapy</h3>
+                <h3>Ketamine-Assisted Therapy</h3>
                 <ul>
                   <li>1x Consultation</li>
                   <li>1x Preparation Session (Group or Individual)</li>
@@ -90,7 +89,7 @@ export default function Treatments() {
                 </ul>
                 <p className="price">Investment of $2,700</p>
                 <p>
-                  Please note: this includes 3 medicine sessions. Comparable
+                  Please note: This includes 3 medicine sessions. Comparable
                   clinic offerings are typically offered at a much higher price.
                 </p>
               </div>
@@ -130,14 +129,14 @@ export default function Treatments() {
               <div className="treatment-box">
                 <h3>Perinatal Psychiatry</h3>
                 <p>
-                  Psychiatric care for pregnant and post-partum patients (up to
-                  1 year post-partum) is available. We strive to support these
-                  individuals with supportive, emotional and cognitive therapy
-                  along with psychiatric medication management for pregnancy and
-                  in the first year following birth.
+                  Psychiatric care for pregnant and postpartum patients (up to
+                  1 year postpartum) is available. We strive to support these
+                  individuals with supportive, emotional, and cognitive therapy,
+                  along with psychiatric medication management during pregnancy
+                  and in the first year following birth.
                 </p>
                 <p>
-                  If you are interested, please have your physicians send in a
+                  If you are interested, please have your physician send in a
                   referral.
                 </p>
               </div>
@@ -152,12 +151,12 @@ export default function Treatments() {
                   This is a parenting group program based on theories of
                   attachment and the principles that secure relationships are
                   important for children&apos;s well-being, and these
-                  attachments are amendable to positive change.
+                  attachments are amenable to positive change.
                 </p>
                 <p>
-                  Format is 8 weeks of weekly groups run by Dr. Christine
-                  Kennedy - contact to see availability or to be put onto a
-                  waitlist.
+                  The format is 8 weeks of weekly groups led by Dr. Christine
+                  Kennedy. Contact us to ask about availability or to be added
+                  to a waitlist.
                 </p>
               </div>
             </div>
@@ -173,7 +172,7 @@ export default function Treatments() {
               <div className="treatment-box">
                 <h3>General Outpatient Psychiatry Services</h3>
                 <p>
-                  Currently Dr. Christine Kennedy&apos;s waitlist is closed to
+                  Currently, Dr. Christine Kennedy&apos;s waitlist is closed to
                   general outpatient psychiatric care. Please check back in the
                   future.
                 </p>
@@ -183,24 +182,24 @@ export default function Treatments() {
                 <h3>Individual and/or Group Psychodynamic Therapy</h3>
                 <p>
                   This is a relational, emotionally focused and psychodynamic
-                  approach to in depth, long-term therapy. When with a
-                  psychiatrist this is covered by MSP, however acceptance will
-                  be dependent on availability, suitability and compatibility
-                  with the therapist and this type of work.
+                  approach to in-depth, long-term therapy. When provided by a
+                  psychiatrist, this is covered by MSP; however, acceptance
+                  depends on availability, suitability, and compatibility with
+                  the therapist and this type of work.
                 </p>
                 <p>
                   Please reach out to be potentially added to a waitlist.
-                  Short-term group offerings are available intermittently,
+                  Short-term group offerings are available intermittently;
                   contact for more information.
                 </p>
               </div>
 
               <div className="treatment-box">
-                <h3>Couple&apos;s Therapy</h3>
+                <h3>Couples Therapy</h3>
                 <p>
                   Attachment-focused, emotionally oriented psychotherapy for
-                  couples. Custom treatment plans available, please reach out if
-                  interested.
+                  couples. Custom treatment plans are available; please reach
+                  out if interested.
                 </p>
               </div>
 
@@ -229,7 +228,7 @@ export default function Treatments() {
         >
           <div className="treatment-section-inner">
             <p>
-              <b>Please note:</b> some of the treatment is covered by MSP if
+              <b>Please note:</b> Some treatments are covered by MSP if
               you have a doctor&apos;s referral. We encourage those who also
               have private health insurance to inquire with their respective
               health plans to see if they can seek any additional coverage.
