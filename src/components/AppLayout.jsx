@@ -163,17 +163,18 @@ export default function AppLayout() {
             </div>
           </div>
 
-          {/* Hamburger button (mobile) */}
+          {/* Mobile menu button */}
           <button
             className="menu-toggle"
             type="button"
-            aria-label="Toggle navigation"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
           >
-            <span className="bar" />
-            <span className="bar" />
-            <span className="bar" />
+            <span>Menu</span>
+            <span
+              className={`desktop-nav__chevron ${menuOpen ? "is-open" : ""}`}
+              aria-hidden="true"
+            />
           </button>
 
           {/* Nav links */}
