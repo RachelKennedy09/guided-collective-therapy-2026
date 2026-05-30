@@ -224,12 +224,13 @@ a {
   overflow: visible;
 
   /* ⬇️ NEW: very subtle glass background */
-  background: rgba(10, 12, 10, 0.03);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   /* ⬇️ optional but helpful on bright videos */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 3px 10px rgba(18, 63, 107, 0.025);
 }
 
 .logo a {
@@ -319,12 +320,12 @@ a {
   align-items: center;
   gap: 0.7rem;
   padding: 0.72rem 1.1rem;
-  border: 1px solid rgba(166, 224, 181, 0.28);
+  border: 1px solid rgba(18, 63, 107, 0.28);
   border-radius: 999px;
   background: linear-gradient(
     135deg,
-    rgba(29, 164, 188, 0.3),
-    rgba(146, 206, 144, 0.22)
+    rgba(18, 63, 107, 0.94),
+    rgba(29, 164, 188, 0.86)
   );
   color: #fff;
   font-family: var(--font-serif);
@@ -332,8 +333,8 @@ a {
   font-weight: 600;
   cursor: pointer;
   box-shadow:
-    0 12px 30px rgba(9, 73, 92, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    0 12px 30px rgba(18, 63, 107, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.12s ease;
@@ -342,10 +343,10 @@ a {
 .desktop-nav__toggle:hover {
   background: linear-gradient(
     135deg,
-    rgba(29, 164, 188, 0.4),
-    rgba(146, 206, 144, 0.3)
+    rgba(18, 63, 107, 1),
+    rgba(29, 164, 188, 0.96)
   );
-  border-color: rgba(185, 233, 193, 0.42);
+  border-color: rgba(18, 63, 107, 0.42);
   transform: translateY(-1px);
 }
 
@@ -415,10 +416,14 @@ a {
 /* HAMBURGER BUTTON */
 .menu-toggle {
   display: none;
-  border: none;
-  background: transparent;
-  width: 42px;
-  height: 42px;
+  border: 1px solid rgba(18, 63, 107, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(18, 63, 107, 0.95),
+    rgba(29, 164, 188, 0.86)
+  );
+  width: 46px;
+  height: 46px;
   padding: 0;
   cursor: pointer;
 
@@ -427,7 +432,30 @@ a {
   flex-direction: column;
 
   z-index: 3000; /* 🔑 ensures it's clickable */
+  border-radius: 999px;
+  box-shadow:
+    0 12px 28px rgba(18, 63, 107, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.2s ease, transform 0.12s ease, border-color 0.2s ease;
 }
+
+.menu-toggle:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(18, 63, 107, 1),
+    rgba(29, 164, 188, 0.96)
+  );
+  border-color: rgba(18, 63, 107, 0.42);
+  transform: translateY(-1px);
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid rgba(18, 63, 107, 0.35);
+  outline-offset: 4px;
+}
+
 .menu-toggle .bar {
   width: 26px;
   height: 2px;
