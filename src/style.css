@@ -320,34 +320,31 @@ a {
   align-items: center;
   gap: 0.7rem;
   padding: 0.72rem 1.1rem;
-  border: 1px solid rgba(18, 63, 107, 0.28);
+  border: 1px solid rgba(166, 224, 181, 0.38);
   border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(18, 63, 107, 0.94),
-    rgba(29, 164, 188, 0.86)
-  );
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.36), rgba(146, 206, 144, 0.28));
   color: #fff;
   font-family: var(--font-serif);
   font-size: 0.98rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow:
-    0 12px 30px rgba(18, 63, 107, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 12px 30px rgba(9, 73, 92, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.12s ease;
+  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .desktop-nav__toggle:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(18, 63, 107, 1),
-    rgba(29, 164, 188, 0.96)
-  );
-  border-color: rgba(18, 63, 107, 0.42);
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.46), rgba(146, 206, 144, 0.36));
+  border-color: rgba(185, 233, 193, 0.5);
   transform: translateY(-1px);
+  box-shadow:
+    0 16px 40px rgba(9, 73, 92, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .desktop-nav__toggle:focus-visible {
@@ -416,14 +413,11 @@ a {
 /* HAMBURGER BUTTON */
 .menu-toggle {
   display: none;
-  border: 1px solid rgba(18, 63, 107, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(18, 63, 107, 0.95),
-    rgba(29, 164, 188, 0.86)
-  );
-  width: 46px;
-  height: 46px;
+  border: 1px solid rgba(166, 224, 181, 0.38);
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.36), rgba(146, 206, 144, 0.28));
+  width: 44px;
+  height: 44px;
   padding: 0;
   cursor: pointer;
 
@@ -434,25 +428,25 @@ a {
   z-index: 3000; /* 🔑 ensures it's clickable */
   border-radius: 999px;
   box-shadow:
-    0 12px 28px rgba(18, 63, 107, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 12px 30px rgba(9, 73, 92, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  transition: background 0.2s ease, transform 0.12s ease, border-color 0.2s ease;
+  transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .menu-toggle:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(18, 63, 107, 1),
-    rgba(29, 164, 188, 0.96)
-  );
-  border-color: rgba(18, 63, 107, 0.42);
+  background:
+    linear-gradient(135deg, rgba(29, 164, 188, 0.46), rgba(146, 206, 144, 0.36));
+  border-color: rgba(185, 233, 193, 0.5);
   transform: translateY(-1px);
+  box-shadow:
+    0 16px 40px rgba(9, 73, 92, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .menu-toggle:focus-visible {
-  outline: 2px solid rgba(18, 63, 107, 0.35);
+  outline: 2px solid rgba(255, 255, 255, 0.7);
   outline-offset: 4px;
 }
 
