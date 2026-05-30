@@ -322,18 +322,16 @@ a {
   align-items: center;
   gap: 0.7rem;
   padding: 0.72rem 1.1rem;
-  border: 1px solid rgba(166, 224, 181, 0.38);
+  border: 1px solid transparent;
   border-radius: 999px;
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.68), rgba(146, 206, 144, 0.56));
+    linear-gradient(135deg, rgba(29, 164, 188, 0.54), rgba(139, 188, 144, 0.48));
   color: #fff;
   font-family: var(--font-serif);
   font-size: 0.98rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow:
-    0 14px 34px rgba(9, 73, 92, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.26);
+  box-shadow: none;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -341,12 +339,10 @@ a {
 
 .desktop-nav__toggle:hover {
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.82), rgba(146, 206, 144, 0.68));
-  border-color: rgba(185, 233, 193, 0.68);
+    linear-gradient(135deg, rgba(29, 164, 188, 0.64), rgba(139, 188, 144, 0.58));
+  border-color: transparent;
   transform: translateY(-1px);
-  box-shadow:
-    0 18px 44px rgba(9, 73, 92, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: none;
 }
 
 .desktop-nav__toggle:focus-visible {
@@ -415,9 +411,9 @@ a {
 /* Mobile menu button */
 .menu-toggle {
   display: none;
-  border: 1px solid rgba(166, 224, 181, 0.38);
+  border: 1px solid transparent;
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.68), rgba(146, 206, 144, 0.56));
+    linear-gradient(135deg, rgba(29, 164, 188, 0.54), rgba(139, 188, 144, 0.48));
   gap: 0.7rem;
   min-height: 44px;
   padding: 0.72rem 1.1rem;
@@ -433,9 +429,7 @@ a {
   font-family: var(--font-serif);
   font-size: 0.98rem;
   font-weight: 600;
-  box-shadow:
-    0 14px 34px rgba(9, 73, 92, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.26);
+  box-shadow: none;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -443,12 +437,10 @@ a {
 
 .menu-toggle:hover {
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.82), rgba(146, 206, 144, 0.68));
-  border-color: rgba(185, 233, 193, 0.68);
+    linear-gradient(135deg, rgba(29, 164, 188, 0.64), rgba(139, 188, 144, 0.58));
+  border-color: transparent;
   transform: translateY(-1px);
-  box-shadow:
-    0 18px 44px rgba(9, 73, 92, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: none;
 }
 
 .menu-toggle:focus-visible {
