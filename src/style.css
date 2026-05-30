@@ -224,13 +224,13 @@ a {
   overflow: visible;
 
   /* ⬇️ NEW: very subtle glass background */
-  background: rgba(255, 255, 255, 0.045);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   /* ⬇️ optional but helpful on bright videos */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 3px 10px rgba(18, 63, 107, 0.025);
+  border-bottom: 1px solid rgba(18, 63, 107, 0.12);
+  box-shadow: 0 8px 24px rgba(18, 63, 107, 0.1);
 }
 
 .logo a {
@@ -252,6 +252,8 @@ a {
   max-width: min(48vw, 420px);
   display: block;
   object-fit: contain;
+  opacity: 1;
+  mix-blend-mode: normal;
   filter: drop-shadow(0 4px 12px rgba(10, 20, 32, 0.18));
 }
 
@@ -323,15 +325,15 @@ a {
   border: 1px solid rgba(166, 224, 181, 0.38);
   border-radius: 999px;
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.36), rgba(146, 206, 144, 0.28));
+    linear-gradient(135deg, rgba(29, 164, 188, 0.68), rgba(146, 206, 144, 0.56));
   color: #fff;
   font-family: var(--font-serif);
   font-size: 0.98rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow:
-    0 12px 30px rgba(9, 73, 92, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    0 14px 34px rgba(9, 73, 92, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -339,12 +341,12 @@ a {
 
 .desktop-nav__toggle:hover {
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.46), rgba(146, 206, 144, 0.36));
-  border-color: rgba(185, 233, 193, 0.5);
+    linear-gradient(135deg, rgba(29, 164, 188, 0.82), rgba(146, 206, 144, 0.68));
+  border-color: rgba(185, 233, 193, 0.68);
   transform: translateY(-1px);
   box-shadow:
-    0 16px 40px rgba(9, 73, 92, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 18px 44px rgba(9, 73, 92, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .desktop-nav__toggle:focus-visible {
@@ -415,7 +417,7 @@ a {
   display: none;
   border: 1px solid rgba(166, 224, 181, 0.38);
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.36), rgba(146, 206, 144, 0.28));
+    linear-gradient(135deg, rgba(29, 164, 188, 0.68), rgba(146, 206, 144, 0.56));
   width: 44px;
   height: 44px;
   padding: 0;
@@ -428,8 +430,8 @@ a {
   z-index: 3000; /* 🔑 ensures it's clickable */
   border-radius: 999px;
   box-shadow:
-    0 12px 30px rgba(9, 73, 92, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    0 14px 34px rgba(9, 73, 92, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -437,12 +439,12 @@ a {
 
 .menu-toggle:hover {
   background:
-    linear-gradient(135deg, rgba(29, 164, 188, 0.46), rgba(146, 206, 144, 0.36));
-  border-color: rgba(185, 233, 193, 0.5);
+    linear-gradient(135deg, rgba(29, 164, 188, 0.82), rgba(146, 206, 144, 0.68));
+  border-color: rgba(185, 233, 193, 0.68);
   transform: translateY(-1px);
   box-shadow:
-    0 16px 40px rgba(9, 73, 92, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 18px 44px rgba(9, 73, 92, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .menu-toggle:focus-visible {
