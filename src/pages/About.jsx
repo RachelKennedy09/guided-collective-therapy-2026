@@ -1,5 +1,6 @@
 // src/pages/About.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -67,7 +68,8 @@ export default function About() {
             <h2 className="about-intro__title">What we offer</h2>
             <p className="about-intro__text">
               Our care is grounded in safety, preparation, and integration — so
-              you feel supported before, during, and after sessions.
+              you feel supported before, during, and after sessions. For current
+              offerings and treatment pathways, visit Guided Services.
             </p>
           </header>
 
@@ -84,26 +86,29 @@ export default function About() {
             </article>
 
             <article className="about-card">
-              <h3 className="about-card__title">What to expect from Psychedelic-Assisted Therapy</h3>
-              <ul className="about-list">
-                <li>Consultation and screening</li>
-                <li>Preparation</li>
-                <li>Medicine sessions</li>
-                <li>Integration to support long-term change</li>
-              </ul>
+              <h3 className="about-card__title">Psychedelic-assisted therapy</h3>
+              <p className="about-card__text">
+                We offer psychedelic-assisted therapy with careful consultation,
+                preparation, medicine sessions, and integration to support
+                long-term change.
+              </p>
+              <Link className="about-card__link" to="/treatments">
+                View Guided Services →
+              </Link>
             </article>
 
             <article className="about-card">
-              <h3 className="about-card__title">Referrals</h3>
+              <h3 className="about-card__title">Referrals and next steps</h3>
               <p className="about-card__text">
-                If you’re a clinician or a patient looking to refer, please
-                contact us and we’ll guide you through next steps.
+                If you’re a clinician, patient, or prospective client wondering
+                where to begin, contact us and we’ll help guide you toward the
+                right next step.
               </p>
 
               {/* Optional: small “button” link style */}
-              <a className="about-card__link" href="/contact">
+              <Link className="about-card__link" to="/contact">
                 Contact us →
-              </a>
+              </Link>
             </article>
           </div>
         </div>
