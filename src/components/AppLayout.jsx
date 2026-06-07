@@ -167,14 +167,13 @@ export default function AppLayout() {
           <button
             className="menu-toggle"
             type="button"
+            aria-label="Toggle navigation"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
           >
-            <span>Menu</span>
-            <span
-              className={`desktop-nav__chevron ${menuOpen ? "is-open" : ""}`}
-              aria-hidden="true"
-            />
+            <span className="menu-toggle__bar" aria-hidden="true" />
+            <span className="menu-toggle__bar" aria-hidden="true" />
+            <span className="menu-toggle__bar" aria-hidden="true" />
           </button>
 
           {/* Nav links */}
