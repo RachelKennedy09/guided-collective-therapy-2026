@@ -487,6 +487,11 @@ a {
 /* Mobile nav */
 
 @media (max-width: 900px) {
+  .site-header {
+    top: constant(safe-area-inset-top);
+    top: env(safe-area-inset-top, 0px);
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -496,7 +501,7 @@ a {
     top: 100%;
     right: 0;
     left: auto;
-    max-height: calc(100vh - 90px);
+    max-height: calc(100dvh - 90px - env(safe-area-inset-top, 0px));
     overflow: auto;
     display: none;
     flex-direction: column;
